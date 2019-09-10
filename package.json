@@ -1,0 +1,41 @@
+{
+  "name": "esnext-training",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "bases": "jasmine exercises/bases/test.spec.js",
+    "promises": "jasmine exercises/promises/test.spec.js",
+    "classes": "jasmine exercises/classes/test.spec.js",
+    "proxies": "jasmine exercises/proxies/test.spec.js",
+    "generators": "jasmine exercises/generators/test.spec.js",
+    "modules": "rollup exercises/modules/module-A.js -o exercises/modules/bundle.js",
+    "functional": "jasmine exercises/functional/test.spec.js",
+    "reactive": "jasmine exercises/reactive/test.spec.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/florianorpeliere/ESNext-training.git"
+  },
+  "keywords": [
+    "es6",
+    "es2015",
+    "ItsJustJavaScript",
+    "js",
+    "training"
+  ],
+  "author": "Florian Orpeliere",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/florianorpeliere/ESNext-training/issues"
+  },
+  "homepage": "https://github.com/florianorpeliere/ESNext-training#readme",
+  "devDependencies": {
+    "jasmine": "^2.5.3",
+    "rxjs": "^6.4.0"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "rollup": "^0.41.4"
+  }
+}
