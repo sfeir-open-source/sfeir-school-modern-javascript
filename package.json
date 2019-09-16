@@ -11,7 +11,7 @@
     "generators": "jasmine exercises/generators/test.spec.js",
     "modules": "rollup exercises/modules/module-A.js -o exercises/modules/bundle.js",
     "functional": "jasmine exercises/functional/test.spec.js",
-    "reactive": "jasmine exercises/reactive/test.spec.js"
+    "typescript": "tsc"
   },
   "repository": {
     "type": "git",
@@ -32,7 +32,8 @@
   "homepage": "https://github.com/florianorpeliere/ESNext-training#readme",
   "devDependencies": {
     "jasmine": "^2.5.3",
-    "rxjs": "^6.4.0"
+    "rxjs": "^6.4.0",
+    "typescript": "^3.4.5"
   },
   "dependencies": {
     "axios": "^0.18.0",
