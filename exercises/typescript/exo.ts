@@ -1,5 +1,5 @@
-const add = (a: number, b: number): number => a + b;
-const includeInListOfString = (list: string[]) => (item: string): boolean => {
+const add = (a, b) => a + b;
+const includeInListOfString = (list) => (item) => {
   return list.indexOf(item) !== -1;
 };
 
@@ -9,55 +9,29 @@ includeInListOfString(['1', '3'])(3); // should Error
 
 
 // EVehicleName
-enum EVehicleName { DS3 = 'DS3', BMW = 'BMW' }
-
 const includeInIllegalVehicle = includeInListOfString([EVehicleName.BMW]);
 
 
 // IVehicle
-interface IVehicle {
-  name: EVehicleName;
-}
+const isIllegalVehicle = ({ name }) => includeInIllegalVehicle(name);
 
-const isIllegalVehicle = ({ name }: IVehicle) => includeInIllegalVehicle(name);
-
-const vehicle = {
-  name: EVehicleName.BMW
-};
-
-isIllegalVehicle(vehicle);
+isIllegalVehicle(?);
 
 
 // IVehicleOptions
-interface IVehicleOptions {
-  pricing: IPricing;
-}
-
-interface IPricing {
-  netPriceInclTax: number;
-  netPriceNotInclTax: number;
-}
-
-const getVehiclePricesOptions = (vehicleOptions: IVehicleOptions[]): number => {
+const getVehiclePricesOptions = (vehicleOptions) => {
   if (vehicleOptions && vehicleOptions.length > 0) {
-    return vehicleOptions.reduce((acc: number, o) => add(acc, o.pricing.netPriceInclTax), 0);
+    return vehicleOptions.reduce((acc, o) => add(acc, o.pricing.netPriceInclTax), 0);
   }
   return 0;
 };
 
-const vehicleOptions: IVehicleOptions = {
-  pricing: {
-    netPriceInclTax: 12,
-    netPriceNotInclTax: 15
-  }
-};
-
-getVehiclePricesOptions([vehicleOptions]);
+getVehiclePricesOptions(?);
 
 // Generic
-function combineData<First, Second>(first: First, second: Second): First & Second {
-  return { ...first, ...second };
+function combineData(first, second) {
+  return {...first, ...second};
 }
 
 // TFullVehicleInformation
-const getFullVehicleInformation = (vehicle: IVehicle, vehicleOption: IVehicleOptions) => combineData(vehicle, vehicleOption);
+const getFullVehicleInformation = (vehicle, vehicleOptions) => combineData(vehicle, vehicleOptions);
