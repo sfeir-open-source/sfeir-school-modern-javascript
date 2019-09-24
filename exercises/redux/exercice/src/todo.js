@@ -1,15 +1,15 @@
 import React from 'react';
 import {getState, dispatch} from './myRedux'
 
-const TODO_ACTION = () => ({
+const TODO_ACTION = (val) => ({
     type: 'ADD_TODO',
-    text: this.input.value
+    text: val
 });
 
 class Todo extends React.Component {
     OnAddHandler = () => {
         if (this.input.value)
-            dispatch(TODO_ACTION());
+            dispatch(TODO_ACTION(this.input.value));
         this.input.value = ''
     };
 
