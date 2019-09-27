@@ -1,0 +1,8 @@
+@import url(../node_modules/highlight.js/styles/darcula.css);
+.with-code-dark { }
+
+.reveal .slides section[data-background].last-slide div.sfeir-logo::before {
+  top: 258px;
+  line-height: 1; }
+
+/*# sourceMappingURL=modern-js.css.map */
