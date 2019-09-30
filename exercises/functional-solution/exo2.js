@@ -1,9 +1,25 @@
-const map = fn => mappable => mappable.map(fn);
-const pipe = (...fns) => x => fns.reduce((y, f) => f(y), x);
-const log = (...args) => console.log(...args);
+let shoppingCart = [
+  { productTitle: 'Functional Programming', type: 'books', amount: 10 },
+  { productTitle: 'Kindle', type: 'eletronics', amount: 30 },
+  { productTitle: 'Shoes', type: 'fashion', amount: 20 },
+  { productTitle: 'Clean Code', type: 'books', amount: 60 }
+];
 
-const arr = [1, 2, 3, 4];
+const byBooks = order => order.type === 'books';
+const getAmount = order => order.amount;
+const sumAmount = (acc, amount) => acc + amount;
 
-/* Start here */
+const pipe = (...fns) => x => fns.reduce((acc, f) => f(acc), x);
+const filter = fn => value => value.filter(fn);
+const map = fn => value => value.map(fn);
+const reduce = (fn, initial) => value => value.reduce(fn, initial);
 
-const isEven = /**/
+const getTotalAmountViaPipe = pipe(
+  filter(byBooks),
+  map(getAmount),
+  reduce(sumAmount, 0)
+);
+
+const totalAmount = getTotalAmountViaPipe(shoppingCart);
+
+module.exports = { totalAmount } ;
