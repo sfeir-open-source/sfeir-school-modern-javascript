@@ -8,3 +8,11 @@ const generator = function* () {
 };
 
 module.exports = {generator};
+
+
+const generatoRecursive = function* (current = 0, next = 1) {
+  yield current;
+  yield* generatoRecursive(next, current + next);
+};
+
+module.exports = { generatoRecursive };
