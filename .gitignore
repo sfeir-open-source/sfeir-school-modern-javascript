@@ -76,4 +76,4 @@ exercises/typescript/exo.js.map
 exercises/redux-solution/exercice/
 
 # IntelliJ
-*workspace.xml
+.idea/workspace.xml
