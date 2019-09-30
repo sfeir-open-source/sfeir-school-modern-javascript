@@ -11,4 +11,4 @@ function getTotalAmount() {
 
 const totalAmount = getTotalAmount(shoppingCart);
 
-module.exports = totalAmount;
+module.exports = { totalAmount };
