@@ -67,16 +67,21 @@ interface IPlane {
   fly: () => void
 }
 
+interface ITrain {
+  tchoo: () => void
+}
+
 const isPlane =
-  (entity: IVehicle | IPlane): entity is IPlane => {
+  (entity: ITrain | IPlane): entity is IPlane => {
     return (<IPlane>entity).fly !== undefined;
   };
 
-let entity: IVehicle | IPlane;
-entity = vehicle;
+let entity: ITrain | IPlane;
+entity = { tchoo: () => console.log('tchooooo tchoooo')};
 
 if (isPlane(entity)) {
   entity.fly();
 } else {
-  const carBrand = entity.name === EVehicleName.BMW ? 'BMV' : 'DS3';
+  entity.tchoo()
 }
+
