@@ -13,4 +13,8 @@ La fonction doit :
 Aide pour coder pipe
 
 1. Pipe prend un nombre indéterminé de fonctions en entrée
-2. Pipe est appelé en deux temps : Une première fois pour déclarer ses fonctions, une seconde pour lui passer sa valeur d'entrée
+2. La méthode pipe prend deux paramètres appelés en deux temps différents.
+   D’abord une liste de fonctions chaînées
+3. Puis un paramètre qui sera la valeur initiale passée à la première fonction.
+4. Ensuite, chaque fonction suivante de la liste prend en entrée le retour de la fonction précédente.
+5. Pipe renvoie la valeur de sortie de la dernière fonction de la chaîne.

@@ -37,6 +37,7 @@
   },
   "dependencies": {
     "axios": "^0.18.0",
+    "ramda": "^0.26.1",
     "rollup": "^0.41.4"
   }
 }
