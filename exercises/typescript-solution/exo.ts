@@ -61,3 +61,22 @@ function combineData<First, Second>(first: First, second: Second): First & Secon
 
 // TFullVehicleInformation
 const getFullVehicleInformation = (vehicle: IVehicle, vehicleOption: IVehicleOptions) => combineData(vehicle, vehicleOption);
+
+// Typegard
+interface IPlane {
+  fly: () => void
+}
+
+const isPlane =
+  (entity: IVehicle | IPlane): entity is IPlane => {
+    return (<IPlane>entity).fly !== undefined;
+  };
+
+let entity: IVehicle | IPlane;
+entity = vehicle;
+
+if (isPlane(entity)) {
+  entity.fly();
+} else {
+  const carBrand = entity.name === EVehicleName.BMW ? 'BMV' : 'DS3';
+}

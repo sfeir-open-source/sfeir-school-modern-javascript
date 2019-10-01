@@ -13,9 +13,11 @@ const includeInIllegalVehicle = includeInListOfString([EVehicleName.BMW]);
 
 
 // IVehicle
-const isIllegalVehicle = ({ name }) => includeInIllegalVehicle(name);
+const isIllegalVehicle = ({ name }) => includeInIllegalVehicle(name); // Type a vehicle with IVehicle
 
-isIllegalVehicle(?);
+// Declare a vehicle
+
+isIllegalVehicle(?); // Use your vehicle here
 
 
 // IVehicleOptions
@@ -35,3 +37,24 @@ function combineData(first, second) {
 
 // TFullVehicleInformation
 const getFullVehicleInformation = (vehicle, vehicleOptions) => combineData(vehicle, vehicleOptions);
+
+
+// Typegard
+interface IPlane {
+  fly: () => void
+}
+
+interface ITrain {
+  tchoo: () => void
+}
+
+const isPlane =
+
+let entity: ITrain | IPlane;
+entity = { tchoo: () => console.log('tchooooo tchoooo')};
+
+if (isPlane(entity)) {
+  entity.fly();
+} else {
+  entity.tchoo()
+}
