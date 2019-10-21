@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import {getState, dispatch} from './myRedux'
 
 const TODO_ACTION = (val) => ({
@@ -6,31 +6,30 @@ const TODO_ACTION = (val) => ({
     text: val
 });
 
-class Todo extends React.Component {
-    OnAddHandler = () => {
-        if (this.input.value)
-            dispatch(TODO_ACTION(this.input.value));
-        this.input.value = ''
+
+const Todo = () => {
+    const input = useRef();
+
+    const onAddHandler = () => {
+        if (!input.current) return;
+        if (input.current.value)
+            dispatch(TODO_ACTION(input.current.value));
+        input.current.value = ''
     };
 
-    render() {
-        return (
-            <div>
-                <input placeholder="Some Text" ref={node => {
-                    this.input = node
-                }}
-                />
-                <button onClick={this.OnAddHandler}>Add Todo</button>
-                <ul>
-                    {getState().todos.map((tod) =>
-                        <li key={Math.random()}>{tod}</li>
-                    )}
-                </ul>
+    return (
+        <div>
+            <input placeholder="Some Text" ref={input}
+            />
+            <button onClick={onAddHandler}>Add Todo</button>
+            <ul>
+                {getState().todos.map((tod) =>
+                    <li key={Math.random()}>{tod}</li>
+                )}
+            </ul>
 
-            </div>
-        )
-
-    }
-}
+        </div>
+    )
+};
 
 export default Todo;
