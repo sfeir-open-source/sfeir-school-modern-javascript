@@ -1,0 +1,53 @@
+{
+  "name": "sfeirschoolmodernjs",
+  "version": "1.0.0",
+  "description": "Sfeir School Modern Javascript with revealJS",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass ./scss/slides.scss -o ./css/ --source-map=true --watch=\"scss\" --recursive=\"scss\"",
+    "sass-once": "node-sass ./scss/slides.scss -o ./css/ --source-map=true ",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "live-server --port=4242 --open=\"./index.html\" --watch=\"markdown,scripts/\"",
+    "start": "parallelshell \"npm run serve\" \"npm run sass\"",
+    "copy-reveal": "cpx \"node_modules/reveal.js/**/*\" \"web_modules/reveal.js\" ",
+    "prepare": "parallelshell \"npm run copy-reveal\" \"snowpack\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jefBinomed/SfeirSchoolTheme.git"
+  },
+  "keywords": [
+    "es6",
+    "esnext",
+    "javascript",
+    "sfeir"
+  ],
+  "author": "jefbinomed",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jefBinomed/SfeirSchoolTheme/issues"
+  },
+  "homepage": "https://github.com/jefBinomed/SfeirSchoolTheme#readme",
+  "dependencies": {
+    "chokidar-cli": "^1.2.3",
+    "cpx": "^1.5.0",
+    "highlight.js": "^9.18.1",
+    "live-server": "^1.2.1",
+    "node-sass": "^4.13.1",
+    "parallelshell": "3.0.1",
+    "lit-html": "^1.2.1",
+    "reveal.js": "^3.9.2",
+    "sfeir-school-theme": "^2.0.1"
+  },
+  "devDependencies": {
+    "node-sass": "^4.12.0",
+    "snowpack": "^1.6.0"
+  },
+  "snowpack": {
+    "webDependencies": [
+      "sfeir-school-theme/dist/**/*",
+      "lit-html",
+      "highlight.js/styles/**/*"
+    ]
+  }
+}

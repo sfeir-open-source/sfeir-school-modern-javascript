@@ -1,0 +1,45 @@
+.red {
+  color: red;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.underline {
+  text-decoration: underline !important;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+p.text-center {
+  text-align: center;
+}
+
+.reveal .slides .two-column-layout span.withdrawal-margin {
+  margin-left: 5%;
+}
+
+// Fix School name on two lines
+.reveal .slides section[data-background] {
+  &.first-slide div.sfeir-logo::before,
+  &.last-slide div.sfeir-logo::before {
+    top: 258px;
+    line-height: 1;
+  }
+}
+
+
+img[alt*=person] {
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+
+.person h3 {
+  color:#0B4269;
+}
+
+.with-code-dark {
+  @import "../node_modules/highlight.js/styles/darcula";
+}
