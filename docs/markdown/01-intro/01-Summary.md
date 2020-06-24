@@ -10,7 +10,7 @@ I. Back to the core
 - Closures, Variables & Hoisting
 - Property Descriptor
 - This
-- Asynchronism
+- Asynchronicity
 - Prototypes & Classes
 - Iterators & Generators
 - Symbols
@@ -21,7 +21,7 @@ I. Back to the core
 
 II. Maintainable JavaScript
 
-1. Typescript
+1. TypeScript
 1. Fn(JS)
    - Writing Testable code (Avoid Side Effects + Modular code)
    - Functions as values
@@ -30,4 +30,4 @@ II. Maintainable JavaScript
    - Write a pipe()
 1. A better Front Architecture -> CQRS !
    - Let's write our own Redux Impl°
-1. Bonux: RxJS
+1. Bonus: RxJS
