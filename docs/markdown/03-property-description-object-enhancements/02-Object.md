@@ -65,6 +65,31 @@ l'autre manière de copier un objet est le spread operator
 
 <!-- .slide: class="with-code" -->
 
+# Object.assign
+
+- Attention la copie est superficielle (shallow).
+
+```javascript
+const o1 = { a: 1, foo: { bar: 'baz' }};
+const o2 = Object.assign({}, o1);
+
+o1.foo;                   // { bar: 'baz' }
+o2.foo;                   // { bar: 'baz' }
+
+o2.a = 2;
+o2.foo.bar = 'fizz';
+
+o1.foo;                   // { bar: 'fizz' }
+o2.foo;                   // { bar: 'fizz' }
+
+o1.a                      // 1
+o2.a                      // 2
+```
+
+##==##
+
+<!-- .slide: class="with-code" -->
+
 # Fonctions utilitaires sur Object
 
 - Nouvelles fonctions utilitaires values() et entries(), keys() déjà en ES5
