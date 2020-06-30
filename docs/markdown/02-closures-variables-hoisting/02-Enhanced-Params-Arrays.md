@@ -195,8 +195,9 @@ var alice = people.filter(person => person.name === "Alice")[0];
 ```javascript
 const numbers = [ 1, 2, 3 ];
 // Vérifier si un tableau inclut une valeur
-const hasOne = numbers.includes(1);// Remplir un tableau d'une valeur unique
-const listOfTens = numbers.fill(10);
+const hasOne = numbers.includes(1);
+// Remplir un tableau d'une valeur unique
+const listOfTens = numbers.slice().fill(10); // .slice évite de modifier numbers
 
 const people = [{
   name: "Alice",
