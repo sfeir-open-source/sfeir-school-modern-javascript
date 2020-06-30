@@ -59,3 +59,50 @@ Object.defineProperty(sword, 'blade', {
 sword.blade; // steel
 ```
 <!-- .element: class="fragment" -->
+
+##==##
+
+<!-- .slide: class="with-code" -->
+
+# Object.freeze
+
+- Permet de geler un objet déjà défini, c'est-à-dire rendre ses propriétés non modifiables.
+
+```javascript
+'use strict';
+const o1 = { a: 1 };
+Object.freeze(o1);
+
+o1.a = 2; // Error: Cannot assign to read only property 'a' of object '#<Object>'
+```
+<!-- .element: class="fragment" -->
+
+##==##
+
+<!-- .slide: class="with-code" -->
+
+# Object.freeze
+
+- Attention le gel est superficiel (shallow).
+
+```javascript
+'use strict';
+const o1 = { foo: { bar: 'baz' }};
+Object.freeze(o1);
+
+o1.foo.bar = 'fizz';
+o1.foo;                   // { bar: 'fizz' }
+```
+<!-- .element: class="fragment" -->
+
+##==##
+
+<!-- .slide -->
+
+# Object.freeze / preventExtensions / seal
+
+||Pas de nouvelles propriétés|Propriétés non configurables|Propriété non modifiables|
+|-|-|-|-|
+Object.preventExtensions|X|||
+Object.seal|X|X||
+Object.freeze|X|X|X|
