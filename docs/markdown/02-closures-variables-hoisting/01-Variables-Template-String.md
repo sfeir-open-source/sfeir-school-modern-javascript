@@ -48,7 +48,7 @@ IIFE = Immediately Invoked Function Expression
 
 en ES6, les accolades nous permettent de créer des scopes sans IIFE.
 
-Le mot clé function revient à une déclaration globale de la fonction
+Le mot-clé function revient à une déclaration globale de la fonction
 
 ##==##
 
@@ -158,4 +158,21 @@ const myTemplateHTML = `
 Notes:
 \${} contient des expressions javascript
 
-et les templates string peuvent aussi servir pour autre chose cf lit-html
+##==##
+
+<!-- .slide: class="with-code" -->
+
+# Tagged template literals
+
+```javascript
+function bbCode(strings, ...values) {
+    return `${strings[0].replace("[b]", "<strong>")}${values[0]}${strings[1].replace("[/b]", "</strong>")}`;
+}
+
+bbCode`foo [b]${42}[/b] bar` // foo <strong>42</strong> bar
+```
+
+Notes:
+Les tagged templates literals sont plus expressifs que de simples fonctions sur des strings
+
+Ex: lit-html, styled-component
