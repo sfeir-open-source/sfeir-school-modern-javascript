@@ -125,19 +125,6 @@ fn(1, 2, "hello", true, 7) === 6;
 
 Notes:
 default params -> revenir sur concept de falsy truthy
-
-```javascript
-function fn(x, y) {
-  if (x === undefined) {
-    x = 2;
-  }
-  if (y === undefined) {
-    y = 3;
-  }
-  return x + y;
-}
-```
-
 rest params -> arguments n'est pas un array à proprement parlé, du coup, on est obligé de le caster en array
 
 ##==##
