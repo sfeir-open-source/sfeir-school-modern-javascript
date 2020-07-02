@@ -18,7 +18,14 @@
 <!-- .element: class="fragment" -->
 
 Notes:
-**const** n'est pas une vrai const en effet, si on const un objet, on pourra toucher à l'objet => const c'est une constante de référence
+**const** n'est pas une vraie const. En effet, si on const un objet, on pourra toucher à l'objet => const c'est une constante de référence
+
+Uniquement dans Chrome, dans la console des Devtools, on peut redéclarer une variable même avec let :
+let x = 5;
+let x = 7;
+On peut ainsi utiliser l'historique des commandes au lieu de devoir faire :
+let x = 5;
+x = 7;
 
 ##==##
 
