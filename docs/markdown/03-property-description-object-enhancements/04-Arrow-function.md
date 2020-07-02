@@ -51,13 +51,13 @@ const pairs = nums.map(v => ({ even: v, odd: v + 1 }));
 ```javascript
 const nums = [1, 2, 3, 4, 5, 6];
 
-const add  = nums.map((v, _,i) => v + i)
+const add  = nums.map((v, i) => v + i)
 // ou
 const add2  = nums.map((v, i) => { return v + i;});
 ```
 
 Notes:
-dans le deuxième cas, les parenthèse représentent une expression JS et permettent à l'interpréteur de ne pas s'emmêler les pinceaux pour savoir qu'on retourne un objet
+dans le deuxième cas, les parenthèses représentent une expression JS et permettent à l'interpréteur de ne pas s'emmêler les pinceaux pour savoir qu'on retourne un objet
 
 ##==##
 
