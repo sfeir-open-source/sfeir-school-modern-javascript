@@ -241,3 +241,23 @@ Notes:
 |Shift|X||Retire le premier élément, qui est retourné.|
 |Unshift|X||Insère un ou plusieurs éléments au début et retourne la nouvelle longueur.|
 |Pop|X||Retire le dernier élément, qui est retourné.|
+
+##==##
+
+<!-- .slide: class="with-code" -->
+
+# Array.from
+
+- Créé un tableau à partir d'un objet semblable à un tableau.
+<!-- .element: class="fragment" -->
+
+```javascript
+Array.from(document.querySelectorAll('body'));      // []
+Array.from(Array(2).keys());                        // [1, 2]
+Array.from({ length: 2 }, () => 0);                 // [0, 0]
+Array.from(function* () {
+  yield 1;
+  yield 2;
+}());                                               // [1, 2]
+```
+<!-- .element: class="fragment" -->
