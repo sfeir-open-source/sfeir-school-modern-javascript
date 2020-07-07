@@ -37,7 +37,7 @@ function combineData(user: IUser, login: ILogin): TAllUserInfo {
  &nbsp;  
  &nbsp;
 
-<pre class="fragment" data-fragment-index="1"><code data-trim class="javascript">
+```javascript
 const user: IUser = { name: 'Brice' };
 const login: ILogin = { login: 'log', password: 'pass' };
 const result: TAllUserInfo = combineData(user, login);
@@ -45,7 +45,8 @@ const result: TAllUserInfo = combineData(user, login);
 
 const result: string = combineData(user, login);
 // Type 'IUser & ILogin' is not assignable to type 'string'.
-</code></pre>
+```
+<!-- .element: class="fragment" -->
 
 ##==##
 
@@ -88,7 +89,8 @@ toString(age);
  &nbsp;
 
 ```javascript
-interface Bird { fly(); layEggs();}interface Fish { swim(); layEggs();}
+interface Bird { fly(); layEggs();}
+interface Fish { swim(); layEggs();}
 function getSmallPet(): Fish | Bird {// ...}
 let pet = getSmallPet();
 

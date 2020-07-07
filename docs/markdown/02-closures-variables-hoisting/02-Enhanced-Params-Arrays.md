@@ -2,45 +2,53 @@
 
 # Enhanced Objects
 
-<pre class="fragment" data-fragment-index="1"><code data-trim class="javascript">
+```javascript
 var x = 0, y = 1;
 var object = { x: x, y: y };
-</code></pre>
+```
+<!-- .element: class="fragment" -->
 
-<pre class="fragment" data-fragment-index="2"><code data-trim class="javascript">
+```javascript
 let x = 0, y = 1;
 const object = { x, y };
-</code></pre>
+```
+<!-- .element: class="fragment" -->
 
-<span class="fragment" data-fragment-index="3">Créer un attribut paramétré</span>
+Créer un attribut paramétré
+<!-- .element: class="fragment" -->
 
-<pre class="fragment" data-fragment-index="4"><code data-trim class="javascript">
+```javascript
 var object = {
     foo: 'bar'
 };
 object[ 'baz' + quux() ] = 42;
-</code></pre>
+```
+<!-- .element: class="fragment" -->
 
-<pre class="fragment" data-fragment-index="5"><code data-trim class="javascript">
+```javascript
 const object = {
     foo: 'bar',
     [ 'baz' + quux() ]: 42
 };
-</code></pre>
+```
+<!-- .element: class="fragment" -->
 
-<span class="fragment" data-fragment-index="6">Ajouter une fonction en tant qu'attribut</span>
+Ajouter une fonction en tant qu'attribut
+<!-- .element: class="fragment" -->
 
-<pre class="fragment" data-fragment-index="7"><code data-trim class="javascript">
+```javascript
 var object = {
     foo: function (x, y) {}
 };
-</code></pre>
+```
+<!-- .element: class="fragment" -->
 
-<pre class="fragment" data-fragment-index="8"><code data-trim class="javascript">
+```javascript
 const object = {
     foo (x, y) {}
 };
-</code></pre>
+```
+<!-- .element: class="fragment" -->
 
 ##==##
 
@@ -48,38 +56,44 @@ const object = {
 
 # Default Params, Rest params, Spread Operator
 
-<span class="fragment" data-fragment-index="1">Default params</span>
+Default params
+<!-- .element: class="fragment" -->
 
-<pre class="fragment" data-fragment-index="2"><code data-trim class="javascript">
+```javascript
 function fn (x, y, z) {
    x || x = 2;
    y || y = 3;
    return x + y + z;
 }
-</code></pre>
+```
+<!-- .element: class="fragment" -->
 
-<pre class="fragment" data-fragment-index="3"><code data-trim class="javascript">
+```javascript
 function fn (x = 2, y = 3, z) {
     return x + y + z;
 }
-</code></pre>
+```
+<!-- .element: class="fragment" -->
 
-<span class="fragment" data-fragment-index="4">Rest params</span>
+Rest params
+<!-- .element: class="fragment" -->
 
-<pre class="fragment" data-fragment-index="5"><code data-trim class="javascript">
+```javascript
 function fn (x, y) {
     var z = Array.prototype.slice.call(arguments, 2);
     return (x + y) + z.length;
 }
 fn(1, 2, "hello", true, 7) === 6;
-</code></pre>
+```
+<!-- .element: class="fragment" -->
 
-<pre class="fragment" data-fragment-index="6"><code data-trim class="javascript">
+```javascript
 function fn (x, y, ...z) {
     return (x + y) + z.length;
 }
 fn(1, 2, "hello", true, 7) === 6;
-</code></pre>
+```
+<!-- .element: class="fragment" -->
 
 Notes:
 default params -> revenir sur concept de falsy truthy
@@ -104,17 +118,20 @@ rest params -> arguments n'est pas un array à proprement parlé, du coup, on es
 
 # Default Params, Rest params, Spread Operator
 
-<span class="fragment" data-fragment-index="1">Spread operator</span>
+Spread operator
+<!-- .element: class="fragment" -->
 
-<pre class="fragment" data-fragment-index="2"><code data-trim class="javascript">
+```javascript
 var array = [ "Abc", true, 3 ];
 fn.apply(undefined, [ 1, 2 ].concat(array));
-</code></pre>
+```
+<!-- .element: class="fragment" -->
 
-<pre class="fragment" data-fragment-index="3"><code data-trim class="javascript">
+```javascript
 const array = [ "Abc", true, 7 ];
 fn(1, 2, ...array)
-</code></pre>
+```
+<!-- .element: class="fragment" -->
 
 ##==##
 
@@ -122,7 +139,7 @@ fn(1, 2, ...array)
 
 # Fonctions utilitaires - Array
 
-<pre class="fragment" data-fragment-index="1"><code data-trim class="javascript">
+```javascript
 var numbers = [ 1, 2, 3 ];
 // Vérifier si un tableau inclut une valeurvar hasOne = numbers.indexOf(1) !== -1;
 // Remplir un tableau d'une valeur unique
@@ -138,7 +155,8 @@ var people = [{
 
 // Trouver la première valeur qui remplit une condition
 var alice = people.filter(person => person.name === "Alice")[0];
-</code></pre>
+```
+<!-- .element: class="fragment" -->
 
 ##==##
 
@@ -146,7 +164,7 @@ var alice = people.filter(person => person.name === "Alice")[0];
 
 # Fonctions utilitaires - Array
 
-<pre class="fragment" data-fragment-index="1"><code data-trim class="javascript">
+```javascript
 const numbers = [ 1, 2, 3 ];
 // Vérifier si un tableau inclut une valeur
 const hasOne = numbers.includes(1);// Remplir un tableau d'une valeur unique
@@ -162,7 +180,8 @@ const people = [{
 
 // Trouver la première valeur qui remplit une condition
 const alice = people.find(person => person.name === "Alice");
-</code></pre>
+```
+<!-- .element: class="fragment" -->
 
 Notes:
 /!\ includes est vachement moins performant

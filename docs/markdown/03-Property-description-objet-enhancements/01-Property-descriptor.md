@@ -2,12 +2,15 @@
 
 # Le Property Descriptor
 
-<br/><br/><br/>
+<br/>
+<br/>
+<br/>
 
-<ul class="fragment" data-fragment-index="1"><li>Permet de créer des objets immutables</li></ul>
+- Permet de créer des objets immutables
 <br/>
 <br/>
-<ul class="fragment" data-fragment-index="2"><li>Chaque propriété d'un objet est pourvu d'un property descriptor</li></ul>
+- Chaque propriété d'un objet est pourvu d'un property descriptor
+<!-- .element: class="list-fragment" -->
 
 ##==##
 
@@ -15,7 +18,7 @@
 
 # Le Property Descriptor
 
-<pre class="fragment" data-fragment-index="1"><code data-trim class="javascript">
+```javascript
 var sword = { blade: 'iron' };
 
 Object.getOwnPropertyDescriptor( sword, 'blade');
@@ -25,21 +28,17 @@ Object.getOwnPropertyDescriptor( sword, 'blade');
 //   enumerable: true,
 //   configurable: true
 // }
-</code></pre>
+```
+<!-- .element: class="fragment" -->
 
-<br/><br/>
+<br/>
+<br/>
 
-<ul class="fragment" data-fragment-index="2">
-<li>writable : modifier la valeur de la propriété</li>
-<li>enumerable : affichage de la propriété lors d'un for...in ou un for...of</li>
-<li>configurable : modifier le property descriptor et utiliser l'opérateur delete</li>
-<li>(writable: false + configurable: false) permet de créer un objet constant</li>
-</ul>
-
-Notes:
-Object.freeze() => Attention c'est que de niveau 1, les sous objets seront modifiables avec freeze
-
-Sinon, il y a immutable.js :)
+- writable : modifier la valeur de la propriété
+- enumerable : affichage de la propriété lors d'un for...in ou un for...of
+- configurable : modifier le property descriptor et utiliser l'opérateur delete
+- (writable: false + configurable: false) permet de créer un objet constant
+<!-- .element: class="list-fragment" -->
 
 ##==##
 
@@ -59,3 +58,4 @@ Object.defineProperty(sword, 'blade', {
 
 sword.blade; // steel
 ```
+<!-- .element: class="fragment" -->

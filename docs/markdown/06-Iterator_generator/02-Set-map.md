@@ -40,7 +40,7 @@
 
 <br/><br/>
 
-<pre class="fragment" data-fragment-index="1"><code data-trim class="javascript">
+```javascript
 let data = new Set();
 data.add('hello').add('goodbye').add('hello');
 data.size === 2;
@@ -53,7 +53,8 @@ for (let key of data) {
 // goodbye
 const getUniq = (array) => [...new Set(array)];
 getUniq([1, 1, 2]); // [1, 2]
-</code></pre>
+```
+<!-- .element: class="fragment" -->
 
 Notes:
 "Les objets Set sont des ensembles de valeurs. Il est possible de les parcourir dans l'ordre d'insertion des éléments.
@@ -85,7 +86,7 @@ https://developer.mozilla.org/fr/docs/Web/JavaScript/Guide/Collections_avec_cl%C
 
 <br/><br/>
 
-<pre class="fragment" data-fragment-index="1"><code data-trim class="javascript">
+```javascript
 let data = new Map();
 let s = {example: "cat"}
 data.set("hello", 42);
@@ -98,7 +99,8 @@ for (let [ key, val ] of data) {
 
 // hello 42
 // [object Object] 34
-</code></pre>
+```
+<!-- .element: class="fragment" -->
 
 Notes:
 "Un objet Map représente une collection de données qui sont des correspondances entre des clés ou valeurs et pour lequel on peut itérer dans l'ordre d'insertion pour lister les différentes clés / valeurs."

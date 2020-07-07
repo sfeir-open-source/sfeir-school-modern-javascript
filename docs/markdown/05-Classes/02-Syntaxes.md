@@ -42,12 +42,12 @@ class SuperCat extends Cat
 # Classes
 
 <div class="full-center">
-    <pre><code data-trim class="javascript">
+    ```javascript
     constructor(name) {
         super(name);
         this.superPower = SuperCat.MegaMeow();
     }
-</code></pre>
+    ```
 </div>
 
 ##==##
@@ -57,12 +57,12 @@ class SuperCat extends Cat
 # Classes
 
 <div class="full-center">
-    <pre><code data-trim class="javascript">
+    ```javascript
     meow() {
         //...
         super.meow();
     }
-    </code></pre>
+    ```
 </div>
 
 ##==##
@@ -79,7 +79,8 @@ static MegaMeow() {
 }
 ```
 
-<br/><br/>
+<br/>
+<br/>
 
 - `static` : attache une fonction à une classe et non à une instance
 
@@ -89,13 +90,15 @@ static MegaMeow() {
 
 # Classes
 
-<br/><br/>
+<br/>
+<br/>
 
 ```javascript
 let myCat = new SuperCat('Minet');
 ```
 
-<br/><br/>
+<br/>
+<br/>
 
 - une erreur survient si on n'utilise pas le mot clé `new`
 
@@ -105,16 +108,17 @@ let myCat = new SuperCat('Minet');
 
 # Classes (mais pas tout à fait)
 
-  &nbsp;  
-  &nbsp;  
+&nbsp;
+&nbsp;
+ 
 Attention, cela reste du sucre syntaxique. Nous restons au final dans un modèle prototypal !
 <!-- .element: class="red" -->
 
 <div class="flex-row">
 
-![](./assets/images/Classes_01.png) <!-- .element: class="fragment" data-fragment-index="1"-->
+![](./assets/images/Classes_01.png) <!-- .element: class="fragment" -->
 
-![](./assets/images/Classes_02.png) <!-- .element: class="fragment" data-fragment-index="2"-->
+![](./assets/images/Classes_02.png) <!-- .element: class="fragment" -->
 
 </div>
 
@@ -155,7 +159,7 @@ cat;
 
 => ça devient un chien
 
-JS nous permet de modifiier le prototype au runtime !! => JS n'est pas un langage de classe au sens qu'on à l'habitude de le manipuler. La classe n'est que du sucre syntaxique !! C'est un accès aux références du prototype
+JS nous permet de modifiier le prototype au runtime !! => JS n'est pas un langage de classe au sens qu'on a l'habitude de manipuler. La classe n'est que du sucre syntaxique !! C'est un accès aux références du prototype
 
 ##==##
 
@@ -165,18 +169,20 @@ JS nous permet de modifiier le prototype au runtime !! => JS n'est pas un langag
 
 <div class="flex-row">
 
-![h-400](./assets/images/Classes_03.png) <!-- .element: class="fragment" data-fragment-index="1"-->
+![h-400](./assets/images/Classes_03.png) <!-- .element: class="fragment" -->
 
-![h-400](./assets/images/Classes_04.png) <!-- .element: class="fragment" data-fragment-index="2"-->
+![h-400](./assets/images/Classes_04.png) <!-- .element: class="fragment" -->
 
 </div>
 
 <div class="flex-row">
 
-<br/>![](./assets/images/arrow_right.png)
-<span class="fragment" data-fragment-index="1">"Copie des valeurs"</span>
+<br/>
 
-![](./assets/images/arrow_right.png) <!-- .element: class="fragment" data-fragment-index="2"-->
+![](./assets/images/arrow_right.png)
+"Copie des valeurs" <!-- .element: class="fragment" -->
+
+![](./assets/images/arrow_right.png) <!-- .element: class="fragment" -->
 "Référence"
 </div>
 

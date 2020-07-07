@@ -124,18 +124,18 @@ Petit exercice :
 <br/>
 
 <p class="bold text-center">:-)</p>
-
 </div>
 
 <br/>
 
-<pre class="fragment" data-fragment-index="2"><code data-trim class="javascript">
+```javascript
 for (var i = 0; i < 5; i++) {
   counter.call(randomFn, i);
 }
 
 // randomFn.iterations = 5 ! ENFIN !!!
-</code></pre>
+```
+<!-- .element: class="fragment" -->
 
 Notes:
 l'autre alternative au call c'est le bind

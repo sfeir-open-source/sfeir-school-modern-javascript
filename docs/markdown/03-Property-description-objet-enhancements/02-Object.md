@@ -4,7 +4,7 @@
 
 - JS nous permet enfin de **copier** un objet ou d'en **fusionner** plusieurs !
 
-<pre class="fragment" data-fragment-index="1"><code data-trim class="javascript">
+```javascript
 const o1 = { a: 1 }, o2 = { b: 2 };
 
 Object.defineProperty(o2, 'f', {
@@ -16,9 +16,10 @@ Object.defineProperty(o2, 'g', {
     value: 8,
     enumerable: true
 });
-</code></pre>
+```
+<!-- .element: class="fragment" -->
 
-<pre class="fragment" data-fragment-index="2"><code data-trim class="javascript">
+```javascript
 const newO = Object.assign(target, o1, o2 );
 
 // seuls a, b et Symbol('h') sont copiés
@@ -32,7 +33,8 @@ newO.a;                 // 1
 newO.b;                 // 2
 newO.f;                 // undefined
 newO.g;                 // 8
-</code></pre>
+```
+<!-- .element: class="fragment" -->
 
 Notes:
 f est undefined car non enumerable dans l'objet d'origine.
@@ -66,6 +68,7 @@ console.log(values); // ["Alice", "Nantes"]
 console.log(entries);
 // [["name", "Alice"], ["city", "Nantes"]]
 ```
+<!-- .element: class="fragment" -->
 
 ##==##
 
@@ -75,7 +78,7 @@ console.log(entries);
 
 - Nouvelles fonctions utilitaires values() et entries(), keys() déjà en ES5
 
-<pre class="fragment" data-fragment-index="1"><code data-trim class="javascript">
+```javascript
 var person = {
   name: 'Alice',
   city: 'Nantes',
@@ -95,4 +98,5 @@ console.log(values); // ["Alice", "Nantes"]
 
 console.log(entries);
 // [["name", "Alice"], ["city", "Nantes"]]
-</code></pre>
+```
+<!-- .element: class="fragment" -->

@@ -114,14 +114,16 @@ export function diag(x, y) {
 
 <p class="fragment text-center" data-fragment-index="1"><span class="bold">Import</span> pour récupérer ce que l'on souhaite</p>
 
-<br/><br/>
+<br/>
+<br/>
 
-<pre class="fragment" data-fragment-index="1"><code data-trim class="javascript">
+```javascript
 // ------ main.js ------
 import { square, diag } from 'lib';
 console.log(square(11)); // 121
 console.log(diag(4, 3)); // 5
-</code></pre>
+```
+<!-- .element: class="fragment" -->
 
 ##==##
 
@@ -152,17 +154,20 @@ export default function square(x) {
 ##--##
 
 <!-- .slide: class="with-code" -->
-<pre class="fragment" data-fragment-index="1"><code data-trim class="javascript">
+
+```javascript
 // ------ main.js ------
 import { square } from 'lib';
 // ou
 import * as myLib from 'lib';
 myLib.square; // function square ...
-</code></pre>
+```
+<!-- .element: class="fragment" -->
 
 <br/>
 
-<pre class="fragment" data-fragment-index="2"><code data-trim class="javascript">
+```javascript
 // ------ main.js ------
 import square from 'lib';
-</code></pre>
+```
+<!-- .element: class="fragment" -->

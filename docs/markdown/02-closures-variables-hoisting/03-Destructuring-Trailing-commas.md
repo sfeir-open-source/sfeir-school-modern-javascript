@@ -2,21 +2,23 @@
 
 # Destructuring, des Arrays
 
-<pre class="fragment" data-fragment-index="1"><code data-trim class="javascript">
+```javascript
 var list = [ 1, 2, 3 ];
 // Récupérer deux valeurs
 var a = list[0], b = list[2];
 // Echanger les valeurs
 var tmp = a; a = b; b = tmp;
-</code></pre>
+```
+<!-- .element: class="fragment" -->
 
-<pre class="fragment" data-fragment-index="2"><code data-trim class="javascript">
+```javascript
 const list = [ 1, 2, 3 ];
 // Récupérer la première valeur, ignorer la seconde et prendre la troisième
 let [ a, , b ] = list;
 // Echanger les valeurs
 [ b, a ] = [ a, b ];
-</code></pre>
+```
+<!-- .element: class="fragment" -->
 
 Notes:
 Primitives in Javascript : BONNUSS
@@ -34,7 +36,7 @@ string
 
 # Destructuring, des Objects
 
-<pre class="fragment" data-fragment-index="1"><code data-trim class="javascript">
+```javascript
 function getObject () {
    return {
      foo: 'foofoo',
@@ -49,7 +51,8 @@ var foo  = tmp.foo;
 var bar = tmp.bar;
 var quux = tmp.quux;
 var toto = tmp.toto;
-</code></pre>
+```
+<!-- .element: class="fragment" -->
 
 ##==##
 
@@ -57,7 +60,7 @@ var toto = tmp.toto;
 
 # Destructuring, des Objects
 
-<pre class="fragment" data-fragment-index="1"><code data-trim class="javascript">
+```javascript
 function getObject () {
    return {
      foo: 'foofoo',
@@ -76,7 +79,8 @@ console.log(foo); // foofoo
 const { foo: otherFoo } = getObject();
 
 console.log(otherFoo); // foofoo
-</code></pre>
+```
+<!-- .element: class="fragment" -->
 
 Notes:
 double destructuration à évoquer {obj: {test}, name} nested object destructuring
@@ -87,7 +91,7 @@ double destructuration à évoquer {obj: {test}, name} nested object destructuri
 
 # Destructuring, dans les fonctions
 
-<pre class="fragment" data-fragment-index="1"><code data-trim class="javascript">
+```javascript
 function f (arg) {
     var name = arg[0];
     var val  = arg[1];
@@ -95,17 +99,19 @@ function f (arg) {
 }
 
 f([ 'bar', 42 ]); // bar, 42
-</code></pre>
+```
+<!-- .element: class="fragment" -->
 
-<pre class="fragment" data-fragment-index="2"><code data-trim class="javascript">
+```javascript
 function f ([ name, val ]) {
     console.log(name, val)
 }
 
 f([ 'bar', 42 ]); // bar, 42
-</code></pre>
+```
+<!-- .element: class="fragment" -->
 
-<pre class="fragment" data-fragment-index="3"><code data-trim class="javascript">
+```javascript
 function f (obj) {
     var name = obj.name;
     var val  = obj.val;
@@ -113,15 +119,17 @@ function f (obj) {
 }
 
 f({name: 'bar', val: 42 }); // bar, 42
-</code></pre>
+```
+<!-- .element: class="fragment" -->
 
-<pre class="fragment" data-fragment-index="4"><code data-trim class="javascript">
+```javascript
 function f ({ name, val }) {
     console.log(name, val)
 }
 
 f({name: 'bar', val: 42 }); // bar, 42
-</code></pre>
+```
+<!-- .element: class="fragment" -->
 
 ##==##
 
@@ -154,7 +162,7 @@ function(a,b,) { // maintenant OK (ES2017)
 
 # Trailing commas
 
-<pre class="fragment" data-fragment-index="1"><code data-trim class="javascript">
+```javascript
 var array = [
   "foo",
   "bar", // ok
@@ -167,4 +175,5 @@ var object = {
 function(a,b,) { // SyntaxError
   return a + b;
 }
-</code></pre>
+```
+<!-- .element: class="fragment" -->

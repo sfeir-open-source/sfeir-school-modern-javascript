@@ -9,13 +9,12 @@
 - Souscrire à l'observable en sortie souscrit également à l'observable en entrée
 </div>
 
-<pre class="fragment" data-fragment-index="3">
-  <code data-trim class="javascript">
+```javascript
     function multiplyByTen(input) {
       var output = Rx.Observable.create(function subscribe(observer) {
         input.subscribe({
-          next: (v) => observer.next(10 \* v),
-          error: (err) => observer.error(err),
+          next: v => observer.next(10 * v),
+          error: err => observer.error(err),
           complete: () => observer.complete()
         });
       });
@@ -25,8 +24,9 @@
     var input = Rx.Observable.from([1, 2, 3, 4]);
     var output = multiplyByTen(input);
     output.subscribe(x => console.log(x));
-  </code>
-</pre>
+```
+<!-- .element: class="fragment" data-fragment-index="3" -->
+
 ##==##
 
 <!-- .slide: class="with-code" -->
