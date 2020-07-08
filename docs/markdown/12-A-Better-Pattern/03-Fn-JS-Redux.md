@@ -171,19 +171,18 @@ Let's Play ! <!-- .element: class="text-center" -->
 
 ##--##
 
-<!-- .slide: -->
+<!-- .slide -->
 
-  &nbsp;  
-  &nbsp;  
-  &nbsp;  
-  
-
-Meet your new best friend <!-- .element: class="text-center" -->
-
-Redux DevTools ! <!-- .element: class="bold text-center" -->
+![h-800 center](./assets/images/devTools.png)
 
 ##--##
 
-<!-- .slide: -->
+<!-- .slide -->
 
-![h-800 center](./assets/images/devTools.png)
+&nbsp;  
+&nbsp;  
+&nbsp;  
+  
+Meet your new best friend <!-- .element: class="text-center" -->
+
+Redux DevTools ! <!-- .element: class="bold text-center" -->

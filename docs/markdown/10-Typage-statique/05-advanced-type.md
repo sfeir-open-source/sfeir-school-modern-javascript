@@ -34,8 +34,8 @@ function combineData(user: IUser, login: ILogin): TAllUserInfo {
 <!-- .slide: class="with-code" -->
 
 &nbsp;  
- &nbsp;  
- &nbsp;
+&nbsp;  
+&nbsp;
 
 ```javascript
 const user: IUser = { name: 'Brice' };
@@ -54,7 +54,7 @@ const result: string = combineData(user, login);
 
 # Advanced Type
 
-- Union => Peut être un parmis plusieurs type
+- Union => Peut être un parmi plusieurs types
   - IFish | IBird
 
 ##--##
@@ -62,8 +62,8 @@ const result: string = combineData(user, login);
 <!-- .slide: class="with-code" -->
 
 &nbsp;  
- &nbsp;  
- &nbsp;
+&nbsp;  
+&nbsp;
 
 ```javascript
 let age: string | number;
@@ -85,8 +85,8 @@ toString(age);
 <!-- .slide: class="with-code" -->
 
 &nbsp;  
- &nbsp;  
- &nbsp;
+&nbsp;  
+&nbsp;
 
 ```javascript
 interface Bird { fly(); layEggs();}
@@ -112,8 +112,8 @@ pet.swim(); // errors
 <!-- .slide: class="with-code" -->
 
 &nbsp;  
- &nbsp;  
- &nbsp;
+&nbsp;  
+&nbsp;
 
 ```javascript
 const isFish =
@@ -136,8 +136,8 @@ else {
 <!-- .slide: class="with-code" -->
 
 &nbsp;  
- &nbsp;  
- &nbsp;
+&nbsp;  
+&nbsp;
 
 ```javascript
 const isLoginError = (
@@ -159,7 +159,7 @@ le type guard est identifié par le mot clé "is"
 
 ##==##
 
-<!-- .slide:-->
+<!-- .slide -->
 
 # Typescript - Let's Play !
 

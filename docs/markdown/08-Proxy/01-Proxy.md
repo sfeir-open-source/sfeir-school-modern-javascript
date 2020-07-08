@@ -1,4 +1,4 @@
-<!-- .slide:-->
+<!-- .slide -->
 
 # Le Property Descriptor
 
@@ -9,14 +9,17 @@
 <br/>
 <br/>
 - Chaque propriété d'un objet est pourvue d'un property descriptor
-<br/>
 <!-- .element: class="list-fragment" -->
 
 ##==##
 
-<!-- .slide: class="with-code" -->
+<!-- .slide: class="two-column-layout" -->
 
 # Le Property Descriptor
+
+##--##
+
+<!-- .slide: class="with-code" -->
 
 ```javascript
 var sword = { blade: 'iron' };
@@ -45,23 +48,39 @@ sword.blade; // steel
 ```
 <!-- .element: class="fragment" -->
 
+##--##
+
+<!-- .slide -->
+
+<br />
+<br />
+<br />
+
 - writable : modifier la valeur de la propriété
+<!-- .element: class="withdrawal-margin" -->
 - enumerable : affichage de la propriété lors d'un for...in
+<!-- .element: class="withdrawal-margin" -->
 - configurable : modifier le property descriptor et utiliser l'opérateur delete
+<!-- .element: class="withdrawal-margin" -->
 - (writable: false + configurable: false) permet de créer un objet constant
-<!-- .element: class="list-fragment" -->
+<!-- .element: class="list-fragment withdrawal-margin" -->
 
 ##==##
 
-<!-- .slide:-->
+<!-- .slide -->
 
 # Proxies
 
-
-- Un <span class="bold">proxy</span> est un <span class="italic">"wrapper"</span> <span class="bold">d'objet</span><br/><br/>
-- Il permet d'intercepter, <span class="bold">surcharger</span> et/ou de <span class="bold">remplacer</span> le <span class="bold">comportement</span> d'un objet<br/><br/>
-- Le <span class="bold">proxy</span> devient <span class="bold italic">l'interface</span> de votre objet avec lequel vous interagissez, <span class="italic">votre objet est donc <span class="bold">intouché</span> et <span class="bold">protégé</span></span><br/><br/>
-- Pas d'outil comparable pre-ES6</li>
+- Un **proxy** est un _"wrapper"_ **d'objet**
+<br/>
+<br/>
+- Il permet d'intercepter, **surcharger** et / ou de **remplacer** le **comportement**d'un objet
+<br/>
+<br/>
+- Le **proxy** devient *l'interface* de votre objet avec lequel vous interagissez, _votre objet est donc **intouché** et **protégé**_
+<br/>
+<br/>
+- Pas d'outil comparable pre-ES6
 <!-- .element: class="list-fragment" -->
 
 
@@ -79,9 +98,11 @@ let p = new Proxy(cible, handler);
 ```
 <!-- .element: class="fragment" -->
 
-"cible" : l'objet à proxifier <!-- .element: class="fragment" -->
+"cible" : l'objet à proxifier
+<!-- .element: class="fragment" -->
 
-"handler" : Un objet contenant des "**traps**" qui sont des fonctions <!-- .element: class="fragment" -->
+"handler" : Un objet contenant des "**traps**" qui sont des fonctions
+<!-- .element: class="fragment" -->
 
 ```javascript
 let handler = {
@@ -142,28 +163,20 @@ let proxy_pilote = new Proxy(pilote, traps);
 <br/>
 
 ```javascript
-pilote;
-// Object {name: "Le Guennec", jours_de_vol: 50}
-proxy_pilote;
-// Proxy {name: "Le Guennec", jours_de_vol: 50}
+pilote; // Object {name: "Le Guennec", jours_de_vol: 50}
+proxy_pilote; // Proxy {name: "Le Guennec", jours_de_vol: 50}
 
 proxy_pilote.jours_de_vol = 40;
-pilote;
-// Object {name: "Le Guennec", jours_de_vol: 50}
-proxy_pilote;
-// Proxy {name: "Le Guennec", jours_de_vol: 50}
+pilote; // Object {name: "Le Guennec", jours_de_vol: 50}
+proxy_pilote; // Proxy {name: "Le Guennec", jours_de_vol: 50}
 
 proxy_pilote.jours_de_vol = 60;
-proxy_pilote;
-// Proxy {name: "Le Guennec", jours_de_vol: 60}
-pilote;
-// Object {name: "Le Guennec", jours_de_vol: 60}
+proxy_pilote; // Proxy {name: "Le Guennec", jours_de_vol: 60}
+pilote; // Object {name: "Le Guennec", jours_de_vol: 60}
 
 pilote.jours_de_vol = 30;
-pilote;
-// Object {name: "Le Guennec", jours_de_vol: 30}
-proxy_pilote;
-// Proxy {name: "Le Guennec", jours_de_vol: 30}
+pilote; // Object {name: "Le Guennec", jours_de_vol: 30}
+proxy_pilote; // Proxy {name: "Le Guennec", jours_de_vol: 30}
 ```
 <!-- .element: class="fragment" -->
 
@@ -187,7 +200,6 @@ let traps = {
 
 <br/>
 
-<ul class="fragment" data-fragment-index="1">
-    <li>Liste complete : <a class="underline" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy" target="_blank">Global Object Proxy</a></li>
-    <li>Awesome Use Cases : <a class="underline" href="https://github.com/mikaelbr/awesome-es2015-proxy" target="_blank">https://github.com/mikaelbr/awesome-es2015-proxy</a></li>
-</ul>
+ - Liste complete : <a class="underline" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy" target="_blank">Global Object Proxy</a></li>
+ - Awesome Use Cases : <a class="underline" href="https://github.com/mikaelbr/awesome-es2015-proxy" target="_blank">https://github.com/mikaelbr/awesome-es2015-proxy</a></li>
+<!-- .element: class="list-fragment" -->

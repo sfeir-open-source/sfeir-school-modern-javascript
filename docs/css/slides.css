@@ -13,13 +13,22 @@
 p.text-center {
   text-align: center; }
 
-.reveal .slides .two-column-layout span.withdrawal-margin {
+.reveal .slides .two-column-layout .withdrawal-margin {
   margin-left: 5%; }
 
 .reveal .slides section[data-background].first-slide div.sfeir-logo::before,
 .reveal .slides section[data-background].last-slide div.sfeir-logo::before {
   top: 258px;
   line-height: 1; }
+
+/* double .slides is a little specificity hack */
+.reveal .slides.slides section.sfeir-basic-slide.present.exercice.smaller-font p {
+  font-size: 1.05em; }
+
+.reveal .slides .sfeir-basic-slide.two-column-layout.present {
+  display: grid;
+  grid-column-gap: 20px;
+  grid-template-columns: 1fr 1fr; }
 
 img[alt*=person] {
   clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); }

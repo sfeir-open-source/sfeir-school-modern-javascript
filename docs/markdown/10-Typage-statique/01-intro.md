@@ -1,6 +1,6 @@
 <!-- .slide:-->
 
-# Why Typescript
+# Why TypeScript
 
 - Améliorer et sécuriser la production de code JavaScript
 - Harmoniser la qualité de code dans une équipe
@@ -46,8 +46,8 @@ let color: Color = Color.Red
 <!-- .slide: class="with-code" -->
 
 &nbsp;  
- &nbsp;  
- &nbsp;
+&nbsp;  
+&nbsp;
 
 ```javascript
 // Any

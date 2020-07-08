@@ -33,28 +33,31 @@ console.log(generatorHello.next());
 
 <!-- .slide: class="with-code" -->
 
-<div class="fragment" data-fragment-index="1">
 ```javascript
 function* () {}
 ```
-<span class="withdrawal-margin">Permet de créer une fonction générateur</span>
-</div>
+<!-- .element: class="fragment" data-fragment-index="1" -->
+Permet de créer une fonction générateur
+<!-- .element: class="fragment" data-fragment-index="1" -->
 
-<div class="fragment" data-fragment-index="2">
 ```javascript
 helloWorld()
 ```
-<span class="withdrawal-margin">On instancie un générateur</span>
-</div>
+<!-- .element: class="fragment" data-fragment-index="2" -->
+On instancie un générateur
+<!-- .element: class="fragment" data-fragment-index="2" -->
 
-<div class="fragment" data-fragment-index="3">
 ```javascript
 generatorHello.next()
 ```
-<span class="withdrawal-margin">On va à la prochaine étape de notre générateur</span>
+<!-- .element: class="fragment" data-fragment-index="3" -->
+On va à la prochaine étape de notre générateur
+<!-- .element: class="fragment" data-fragment-index="3" -->
+
 <br/>
-<span class="withdrawal-margin">=> Le prochain <span class="bold">yield</span></span>
-</div>
+
+=> Le prochain **yield**
+<!-- .element: class="fragment" data-fragment-index="4" -->
 
 ##==##
 
@@ -125,13 +128,17 @@ console.log(generatorHello.next());
 
 ##--##
 
-1er `console.log`, on va jusqu'au premier **yield** <!-- .element: class="fragment" data-fragment-index="2" -->
+1er `console.log`, on va jusqu'au premier **yield**.
+<!-- .element: class="fragment" -->
 
-![](./assets/images/Generator_01.png) <!-- .element: class="fragment" data-fragment-index="1" -->
+2ème `console.log`, on va jusqu'au second **yield**.
+<!-- .element: class="fragment" -->
 
-2ème `console.log`, on va jusqu'au second **yield**<!-- .element: class="fragment" data-fragment-index="3" -->
+3éme `console.log`, il n'y a plus de **yield**, notre générateur est **terminé**.
+<!-- .element: class="fragment" -->
 
-3éme `console.log`, il n'y a plus de **yield**, notre générateur est **terminé**.<!-- .element: class="fragment" data-fragment-index="4" -->
+![](./assets/images/Generator_01.png)
+<!-- .element: class="fragment" -->
 
 ##==##
 
@@ -193,7 +200,7 @@ console.log(generatorHello.next());
 
 <!-- .slide: class="two-column-layout" -->
 
-# Les générateurs: communication
+# Les générateurs : communication
 
 ##--##
 
@@ -217,9 +224,10 @@ console.log(generatorHello.next());
 
 ![](./assets/images/Generator_03.png) <!-- .element: class="fragment" -->
 
-1. Pas encore de yield, cette valeur est ignorée</span> <!-- .element: class="fragment" -->
-
-2. On passe une valeur au premier yield <!-- .element: class="fragment" -->
+1. Pas encore de yield, cette valeur est ignorée</span>
+<!-- .element: class="withdrawal-margin" -->
+1. On passe une valeur au premier yield
+<!-- .element: class="list-fragment withdrawal-margin" -->
 
 ##==##
 
@@ -233,7 +241,7 @@ let helloWorld = function* () {
   yield 'world';
 };
 
-for (elem of helloWorld()) {
+for (const elem of helloWorld()) {
   console.log(elem);
 }
 

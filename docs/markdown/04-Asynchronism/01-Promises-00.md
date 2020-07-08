@@ -175,13 +175,13 @@ a()
 
 ##==##
 
-<!-- .slide: class=""-->
+<!-- .slide -->
 
 # Promises
 
 ![h-400 center](./assets/images/Promises_03.png)
 
-https://bevacqua.github.io/promisees
+<p class="text-center">https://bevacqua.github.io/promisees</p>
 
 ##==##
 
@@ -287,26 +287,22 @@ Promise.race([Promise.resolve(4), Promise.resolve('toto')])
 
 <!-- .slide: class="with-code" -->
 
-<br/><br/>
+<br/>
+<br/>
 
 ```javascript
 function asyncFn(callback) {
   var request = new XMLHttpRequest();
   request.open('GET', 'http://www.wikipedia.org/', false);
-  request.onreadystatechange = (event) => {
-    if (request.readyState == 4) {
-      if (request.status == 200) callback(null, request.responseText);
-      else callback('Erreur pendant le chargement de la page.\n');
-    }
+  request.onreadystatechange = event => {
+    if (request.readyState == 4) return;
+    if (request.status == 200) callback(null, request.responseText);
+    else callback('Erreur pendant le chargement de la page.\n');
   };
 }
 
 asyncFn(function callback(err, value) {
-  if (err) {
-    console.log(err);
-  } else {
-    console.log(value);
-  }
+    console.log(err ? err : value);
 });
 ```
 

@@ -69,16 +69,11 @@ function getObject () {
    };
 }
 
-// Variable avec le même nom que l'attribut de l'objet
-const { foo, bar, quux, toto } = getObject();
-
-console.log(foo); // foofoo
-
-
-// Variable avec un nom différent de l'attribut de l'objet
-const { foo: otherFoo } = getObject();
+// Variable avec le même nom que l'attribut de l'objet ou un nom différent
+const { foo: otherFoo, bar, quux, toto } = getObject();
 
 console.log(otherFoo); // foofoo
+console.log(bar); // barbar
 ```
 <!-- .element: class="fragment" -->
 
@@ -87,9 +82,13 @@ double destructuration à évoquer {obj: {test}, name} nested object destructuri
 
 ##==##
 
-<!-- .slide: class="with-code" -->
+<!-- .slide: class="two-column-layout" -->
 
 # Destructuring, dans les fonctions
+
+##--##
+
+<!-- .slide: class="with-code" -->
 
 ```javascript
 function f (arg) {
@@ -110,6 +109,10 @@ function f ([ name, val ]) {
 f([ 'bar', 42 ]); // bar, 42
 ```
 <!-- .element: class="fragment" -->
+
+##--##
+
+<!-- .slide: class="with-code" -->
 
 ```javascript
 function f (obj) {

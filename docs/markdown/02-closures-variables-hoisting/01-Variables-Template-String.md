@@ -52,9 +52,13 @@ Le mot clé function revient à une déclaration globale de la fonction
 
 ##==##
 
-<!-- .slide: class="with-code" -->
+<!-- .slide: class="two-column-layout" -->
 
-# Const et let : Mais où sont les var ?
+# Const et let : Mais où sont les vars ?
+
+##--##
+
+<!-- .slide: class="with-code" -->
 
 ```javascript
 (function() {
@@ -72,6 +76,10 @@ Le mot clé function revient à une déclaration globale de la fonction
 })();
 ```
 <!-- .element: class="fragment" -->
+
+##--##
+
+<!-- .slide: class="with-code" -->
 
 ```javascript
 {
@@ -119,6 +127,14 @@ var myTemplateHTML = '<div class="sfeirschool">\n<p>'+welcome+'</p>\n<p>'+sujet+
 */
 ```
 <!-- .element: class="fragment" -->
+
+##==##
+
+<!-- .slide: class="with-code" -->
+
+# Template String
+
+On utilise les back **quotes ``** et on peut créer des expressions avec **\${}**
 
 ```javascript
 const welcome = 'Welcome';

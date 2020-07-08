@@ -9,10 +9,10 @@
 <!-- .slide: class="with-code" -->
 
 &nbsp;  
- &nbsp;  
- &nbsp;
+&nbsp;  
+&nbsp;
 
-```javascript
+```typescript
 function identity(arg: number): number {
   return arg;
 }
@@ -27,14 +27,14 @@ function identity(arg: any): any {
 <!-- .slide: class="with-code" -->
 
 &nbsp;  
- &nbsp;  
- &nbsp;
+&nbsp;  
+&nbsp;
 
-```javascript
+```typescript
 function identity<T>(arg: T): T {
   return arg;
 }
-let output = identity < string > 'myString';
+let output = identity<string>('myString');
 let output = identity(42);
 ```
 
@@ -53,7 +53,7 @@ pratique lors d'exposition d'API, … sur des choses génériques !
 
 &nbsp;
 
-```javascript
+```typescript
 const user: IUser = { name: 'Dexter' };
 const user2: IUser2 = { name: { first: { pseudo: 'toto' } } };
 
@@ -67,30 +67,34 @@ getIn(user2, ['name', 'first', 'pseudo']);
 
 &nbsp;
 
-<pre class="fragment" data-fragment-index="1"><code data-trim class="javascript">
+```typescript
 function getIn(obj, arrayOfNestedKeys) {}
-</code></pre>
+```
+<!-- .element: class="fragment" -->
 
-<pre class="fragment" data-fragment-index="2"><code data-trim class="javascript">
+```typescript
 function getIn<T>(obj: T, arrayOfNestedKeys) {}
-</code></pre>
+```
+<!-- .element: class="fragment" -->
 
-<pre class="fragment" data-fragment-index="3"><code data-trim class="javascript">
+```typescript
 function getIn<T, K extend keyof T>(obj: T, arrayOfNestedKeys: [K]): … ? {}
-</code></pre>
+```
+<!-- .element: class="fragment" -->
 
 &nbsp;
 
-- Quel est le type de retour de getIn ?<!-- .element: class="fragment" data-fragment-index="4"-->
+- Quel est le type de retour de getIn ?
+<!-- .element: class="fragment"-->
 
 Notes:
 la partie de droite est à expliquer séquentiellement :
 
-On explique le use case : on a un obj et on veut aller chercher sur cet objet une donnée d'un object nested
+On explique le use case : on a un obj et on veut aller chercher sur cet objet une donnée d'un objet imbriqué
 
 On commence à rendre ça générique
 
-On utilise extend keyof pour préciser qu'on veut que récupérer uniquement les clés de l'objet (/!\ sur le premier niveau => ça va pêter et on a la solution 3 slides plus loin)
+On utilise extend keyof pour préciser qu'on veut récupérer uniquement les clés de l'objet (/!\ sur le premier niveau => ça va péter et on a la solution 3 slides plus loin)
 
 ##==##
 
@@ -103,12 +107,13 @@ On utilise extend keyof pour préciser qu'on veut que récupérer uniquement les
 <!-- .slide: class="with-code" -->
 
 &nbsp;  
- &nbsp;  
- &nbsp;
+&nbsp;  
+&nbsp;
 
-```javascript
+```typescript
 function loggingIdentity<T>(arg: T): T {
-  console.log(arg.length); // Error: T doesn't have .length
+  // Error: T doesn't have .length
+  console.log(arg.length); 
   return arg;
 }
 ```
@@ -118,27 +123,31 @@ function loggingIdentity<T>(arg: T): T {
 <!-- .slide: class="with-code" -->
 
 &nbsp;  
- &nbsp;  
- &nbsp;
+&nbsp;  
+&nbsp;
 
-```javascript
+```typescript
 interface Lengthwise {
-length: number;
+  length: number;
 }
 
 function loggingIdentity<T extends Lengthwise>(arg: T): T {
-console.log(arg.length); // Now we know it has a .length property, so no more error
-return arg;
+    // Now we know it has a .length property, so no more error
+    console.log(arg.length); 
+    return arg;
 }
 ```
+<!-- .element: class="fragment" -->
 
-```javascript
+```typescript
 loggingIdentity(3); // Error, number doesn't have a .length property
 ```
+<!-- .element: class="fragment" -->
 
-```javascript
+```typescript
 loggingIdentity({ length: 10, value: 3 });
 ```
+<!-- .element: class="fragment" -->
 
 Notes:
 explication plus simple et explicite de "l'héritage" des génériques
@@ -149,7 +158,7 @@ explication plus simple et explicite de "l'héritage" des génériques
 
 # Generics
 
-```javascript
+```typescript
 function getProperty<T, K extends keyof T>(obj: T, key: K) {
   return obj[key];
 }

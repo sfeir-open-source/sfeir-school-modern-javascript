@@ -35,20 +35,21 @@ Logicien & Mathématicien
 <!-- .slide: class="with-code" -->
 
 &nbsp;  
- &nbsp;  
- &nbsp;
+&nbsp;  
+&nbsp;
 
 ![h-500 center](./assets/images/haskell.png)
 ##--##
 
 <!-- .slide: class="with-code" -->
 
-&nbsp;  
- &nbsp;  
- &nbsp;  
- &nbsp;  
- &nbsp;  
-On lui doit notoirement :
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+
+On lui doit notamment :
 
 1. Le Langage **Haskell**
 2. L'opération de **Currying**
@@ -79,9 +80,9 @@ La programmation fonctionnelle
 <!-- .slide:  -->
 
 &nbsp;  
- &nbsp;  
- &nbsp;  
- &nbsp;  
- &nbsp;
+&nbsp;  
+&nbsp;  
+&nbsp;  
+&nbsp;
 
 Basé sur Scheme, un dialect de Lisp, JS est dès sa conception pensé comme un langage fonctionnel

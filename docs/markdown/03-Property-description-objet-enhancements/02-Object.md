@@ -1,8 +1,16 @@
-<!-- .slide: class="with-code" -->
+<!-- .slide: class="two-column-layout" -->
 
 # Object.assign
 
 - JS nous permet enfin de **copier** un objet ou d'en **fusionner** plusieurs !
+
+##--##
+
+<!-- .slide: class="with-code" -->
+
+<br />
+<br />
+<br />
 
 ```javascript
 const o1 = { a: 1 }, o2 = { b: 2 };
@@ -18,6 +26,14 @@ Object.defineProperty(o2, 'g', {
 });
 ```
 <!-- .element: class="fragment" -->
+
+##--##
+
+<!-- .slide: class="with-code" -->
+
+<br />
+<br />
+<br />
 
 ```javascript
 const newO = Object.assign(target, o1, o2 );
@@ -83,9 +99,7 @@ var person = {
   name: 'Alice',
   city: 'Nantes',
 };
-var keys = [],
-  values = [],
-  entries = [];
+var keys = [], values = [], entries = [];
 for (var key in person) {
   if (Object.prototype.hasOwnProperty.call(person, key)) {
     keys.push(key);
@@ -95,8 +109,6 @@ for (var key in person) {
 }
 console.log(keys); // ["name", "city"]
 console.log(values); // ["Alice", "Nantes"]
-
-console.log(entries);
-// [["name", "Alice"], ["city", "Nantes"]]
+console.log(entries); // [["name", "Alice"], ["city", "Nantes"]]
 ```
 <!-- .element: class="fragment" -->

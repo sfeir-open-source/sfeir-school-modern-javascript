@@ -53,8 +53,7 @@ Alors c'est quoi this ? <!-- .element: class="fragment bold text-center" data-fr
 ```javascript
 function counter(iterator) {
   console.log(`counter is @ ${iterator}`);
-  // conserver le nombre d'appel à counter()
-  this.iterations++;
+  this.iterations++; // conserver le nombre d'appel à counter()
 }
 
 counter.iterations = 0;
@@ -69,7 +68,7 @@ for (i = 0; i < 5; i++) {
 
 ##--##
 
-<ul class="fragment" data-fragment-index="1">
+<ul class="fragment withdrawal-margin" data-fragment-index="1">
     <li>this.iterations++ ne pointe pas sur la fonction counter</li>
     <li>this fait référence au <span class="bold">contexte d'exécution (call site</span> lors du <span class="bold">runtime)</span></li>
     <li class="red"><span class="italic">counter(i) est <span class="bold">appelé dans l'objet Global</span>, c'est son <span class="bold">call site</span></span></li>
@@ -77,7 +76,7 @@ for (i = 0; i < 5; i++) {
 
 <br/>
 
-<ul class="fragment" data-fragment-index="2">
+<ul class="fragment withdrawal-margin" data-fragment-index="2">
     <li><span>sans 'use strict'</span> si le call site est l'objet global, alors iterations est une variable globale (i.e, propriété de l'objet global) qui vaut désormais 5;</li>
     <li><span>avec 'use strict'</span> si le call site est l'objet global, alors iterations est NaN.</li>
 </ul>
@@ -95,8 +94,7 @@ for (i = 0; i < 5; i++) {
 ```javascript
 function counter(iterator) {
   console.log(`counter is @ ${iterator}`);
-  // conserver le nombre d'appel à counter()
-  this.iterations++;
+  this.iterations++; // conserver le nombre d'appel à counter()
 }
 
 function randomFn() {
@@ -104,9 +102,7 @@ function randomFn() {
     counter(i);
   }
 }
-var iterations = 0;
-counter.iterations = 0;
-randomFn.iterations = 0;
+var iterations = counter.iterations = randomFn.iterations = 0;
 
 window.randomFn();
 

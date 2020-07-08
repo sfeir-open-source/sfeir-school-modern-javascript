@@ -1,4 +1,4 @@
-<!-- .slide: class="with-code" -->
+<!-- .slide: class="two-column-layout with-code" -->
 
 # Enhanced Objects
 
@@ -13,6 +13,16 @@ let x = 0, y = 1;
 const object = { x, y };
 ```
 <!-- .element: class="fragment" -->
+
+##--##
+
+<!-- .slide: class="with-code" -->
+
+<br />
+<br />
+<br />
+<br />
+<br />
 
 Créer un attribut paramétré
 <!-- .element: class="fragment" -->
@@ -33,6 +43,16 @@ const object = {
 ```
 <!-- .element: class="fragment" -->
 
+##--##
+
+<!-- .slide: class="with-code" -->
+
+<br />
+<br />
+<br />
+<br />
+<br />
+
 Ajouter une fonction en tant qu'attribut
 <!-- .element: class="fragment" -->
 
@@ -52,9 +72,13 @@ const object = {
 
 ##==##
 
-<!-- .slide: class="with-code" -->
+<!-- .slide: class="two-column-layout" -->
 
 # Default Params, Rest params, Spread Operator
+
+##--##
+
+<!-- .slide: class="with-code" -->
 
 Default params
 <!-- .element: class="fragment" -->
@@ -74,6 +98,10 @@ function fn (x = 2, y = 3, z) {
 }
 ```
 <!-- .element: class="fragment" -->
+
+##--##
+
+<!-- .slide: class="with-code" -->
 
 Rest params
 <!-- .element: class="fragment" -->

@@ -63,11 +63,11 @@ Non
 
 <!-- .slide: class="with-code" -->
 
-&nbsp;  
- &nbsp;  
- &nbsp;  
- &nbsp;  
- &nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
 
 ```javascript
 var numbers = [1, 4, 9];
@@ -83,11 +83,11 @@ return num \* 2;
 
 <!-- .slide: class="with-code" -->
 
-&nbsp;  
- &nbsp;  
- &nbsp;  
- &nbsp;  
- &nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
 
 ```javascript
 var kvArray = [

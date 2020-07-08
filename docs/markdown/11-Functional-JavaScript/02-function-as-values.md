@@ -4,7 +4,7 @@
 
 **En JavaScript, une fonction est une variable**
 
-- Elle peut être définit en tant que variable
+- Elle peut être définie en tant que variable
 - Elle peut être utilisée en tant qu'argument d'une autre fonction
 - Elle peut être retournée d'une autre fonction
 
@@ -12,12 +12,12 @@
 
 <!-- .slide: class="with-code" -->
 
-&nbsp;  
- &nbsp;  
- &nbsp;  
- &nbsp;  
- &nbsp;  
- &nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
 
 ```javascript
 const doubleSum = (a, b) => (a + b) \* 2;
@@ -30,11 +30,11 @@ const doubleSubtraction = (a, b) => (a - b) \* 2;
 <!-- .slide: class="with-code" -->
 
 &nbsp;  
- &nbsp;  
- &nbsp;  
- &nbsp;  
- &nbsp;  
- &nbsp;
+&nbsp;  
+&nbsp;  
+&nbsp;  
+&nbsp;  
+&nbsp;
 
 ```javascript
 const sum = (a, b) => a + b;

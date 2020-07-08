@@ -27,7 +27,7 @@ class SuperCat extends Cat {
 <br/><br/>
 
 ```javascript
-class SuperCat extends Cat
+class SuperCat extends Cat {}
 ```
 
 <br/><br/>
@@ -41,14 +41,15 @@ class SuperCat extends Cat
 
 # Classes
 
-<div class="full-center">
-    ```javascript
-    constructor(name) {
-        super(name);
-        this.superPower = SuperCat.MegaMeow();
-    }
-    ```
-</div>
+<br/>
+<br/>
+
+```javascript
+constructor(name) {
+    super(name);
+    this.superPower = SuperCat.MegaMeow();
+}
+```
 
 ##==##
 
@@ -56,14 +57,15 @@ class SuperCat extends Cat
 
 # Classes
 
-<div class="full-center">
-    ```javascript
-    meow() {
-        //...
-        super.meow();
-    }
-    ```
-</div>
+<br/>
+<br/>
+
+```javascript
+meow() {
+    //...
+    super.meow();
+}
+```
 
 ##==##
 
@@ -71,7 +73,8 @@ class SuperCat extends Cat
 
 # Classes
 
-<br/><br/>
+<br/>
+<br/>
 
 ```javascript
 static MegaMeow() {
@@ -159,19 +162,19 @@ cat;
 
 => ça devient un chien
 
-JS nous permet de modifiier le prototype au runtime !! => JS n'est pas un langage de classe au sens qu'on a l'habitude de manipuler. La classe n'est que du sucre syntaxique !! C'est un accès aux références du prototype
+JS nous permet de modifier le prototype au runtime !! => JS n'est pas un langage de classe au sens qu'on a l'habitude de manipuler. La classe n'est que du sucre syntaxique !! C'est un accès aux références du prototype
 
 ##==##
 
-<!-- .slide:-->
+<!-- .slide -->
 
 # Classes (Java) VS Prototype
 
 <div class="flex-row">
 
-![h-400](./assets/images/Classes_03.png) <!-- .element: class="fragment" -->
+![h-400](./assets/images/Classes_03.png) <!-- .element: class="fragment" data-fragment-index="1" -->
 
-![h-400](./assets/images/Classes_04.png) <!-- .element: class="fragment" -->
+![h-400](./assets/images/Classes_04.png) <!-- .element: class="fragment" data-fragment-index="2" -->
 
 </div>
 
@@ -179,11 +182,11 @@ JS nous permet de modifiier le prototype au runtime !! => JS n'est pas un langag
 
 <br/>
 
-![](./assets/images/arrow_right.png)
-"Copie des valeurs" <!-- .element: class="fragment" -->
+![](./assets/images/arrow_right.png) <!-- .element: class="fragment" data-fragment-index="1" -->
+<span class="fragment" data-fragment-index="1">"Copie des valeurs"</span> 
 
-![](./assets/images/arrow_right.png) <!-- .element: class="fragment" -->
-"Référence"
+![](./assets/images/arrow_right.png) <!-- .element: class="fragment" data-fragment-index="2" -->
+<span class="fragment" data-fragment-index="2">"Référence"</span>
 </div>
 
 Notes:
