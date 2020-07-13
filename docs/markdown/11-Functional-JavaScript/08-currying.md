@@ -1,4 +1,4 @@
-<!-- .slide:-->
+<!-- .slide -->
 
 # Fn JS : Currying
 
@@ -12,21 +12,19 @@ Le Currying, ce n'est pas ça... <!-- .element: class="text-center" -->
 
 # Fn JS : Currying
 
-**What is Currying?**
+## What is Currying?
 
 Currying is a process in functional programming in which we can transform a function with multiple arguments into a sequence of nesting functions. It returns a new function that expects the next argument inline.
 
 It keeps returning a new function until all the arguments are exhausted.
 
 ```javascript
-function multiply(a, b, c) {
-  return a * b * c;
-}
+function multiply(a, b, c) { return a * b * c; }
 multiply(1, 2, 3); // 6
 
 function multiply(a) {
-  return (b) => {
-    return (c) => {
+  return function (b) {
+    return function (c) {
       return a * b * c;
     };
   };
@@ -47,9 +45,9 @@ bien insister sur le fait que le currying est bien un appel multiple de fonction
 
 # Fn JS : Currying
 
-**What is Currying?**
+## What is Currying?
 
-The arguments are kept "alive"(via closure) and all are used in execution when the final function in the currying chain is returned and executed.
+The arguments are kept "alive" (via closure) and all are used in execution when the final function in the currying chain is returned and executed.
 
 Let's see in details how our function works
 
@@ -57,12 +55,9 @@ Let's see in details how our function works
 
 <!-- .slide: class="with-code" -->
 
-&nbsp;  
- &nbsp;  
- &nbsp;  
- &nbsp;  
- &nbsp;  
- &nbsp;
+<br />
+<br />
+<br />
 
 ```javascript
 const mul1 = multiply(1);
@@ -73,35 +68,28 @@ log(result); // 6
 
 ```javascript
 let mul1 = multiply(1);
-/*
 // mul1 renvoi
-function (b) {
+/* function (b) {
   return (c) => {
     return a * b * c
   }
-}
-*/
+} */
 ```
 
 ##--##
 
 <!-- .slide: class="with-code" -->
 
-&nbsp;  
- &nbsp;  
- &nbsp;  
- &nbsp;  
- &nbsp;  
- &nbsp;
+<br />
+<br />
+<br />
 
 ```javascript
 let mul2 = mul1(2);
 // mul2 renvoi
-/*
-function (c) {
+/* function (c) {
   return a * b * c
-}
-*/
+} */
 ```
 
 ```javascript
@@ -118,7 +106,7 @@ const result = mul2(3);
 
 # Fn JS : Currying
 
-**What is Currying?**
+## What is Currying?
 
 Another practical example
 
@@ -146,7 +134,7 @@ const doubled = map(doubler)(arr) === arr.map(doubler);
 
 # Fn JS : Currying
 
-**What is Currying?**
+## What is Currying?
 
 Reprenons l'exercice précédent,
 
@@ -159,11 +147,11 @@ Nous pouvons observer l'objectif à atteindre sur ce Repl Ramda : https://frama.
 
 ##==##
 
-<!-- .slide:-->
+<!-- .slide -->
 
 # Fn JS : Currying
 
-**What is Currying? (suite)**
+## What is Currying? (suite)
 
 Définition de la fonction pipe :
 

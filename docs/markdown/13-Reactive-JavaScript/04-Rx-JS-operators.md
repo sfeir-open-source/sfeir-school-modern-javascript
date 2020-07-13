@@ -9,13 +9,12 @@
 - Souscrire à l'observable en sortie souscrit également à l'observable en entrée
 </div>
 
-<pre class="fragment" data-fragment-index="3">
-  <code data-trim class="javascript">
+```javascript
     function multiplyByTen(input) {
       var output = Rx.Observable.create(function subscribe(observer) {
         input.subscribe({
-          next: (v) => observer.next(10 \* v),
-          error: (err) => observer.error(err),
+          next: v => observer.next(10 * v),
+          error: err => observer.error(err),
           complete: () => observer.complete()
         });
       });
@@ -25,8 +24,9 @@
     var input = Rx.Observable.from([1, 2, 3, 4]);
     var output = multiplyByTen(input);
     output.subscribe(x => console.log(x));
-  </code>
-</pre>
+```
+<!-- .element: class="fragment" data-fragment-index="3" -->
+
 ##==##
 
 <!-- .slide: class="with-code" -->
@@ -35,24 +35,21 @@
 
 ```typescript
 // 1. Get the maximal value of a series of number
-Rx.Observable.of(5, 4, 7, 2, 8)
-  .max()
-  .subscribe((x) => console.log(x));
+Rx.Observable.of(5, 4, 7, 2, 8).max().subscribe(x => console.log(x));
 // Result In: 8
 
 // 2. Map every click to the clientX position of that click
-var clicks = Rx.Observable.fromEvent(document, 'click');
-var positions = clicks.map((ev) => ev.clientX);
-positions.subscribe((x) => console.log(x));
+const clicks = Rx.Observable.fromEvent(document, 'click');
+const positions = clicks.map(ev => ev.clientX);
+positions.subscribe(x => console.log(x));
 
 // 3. Chaining operators
 const input = Rx.Observable.fromEvent(node, 'input')
   .pipe(
-    map((event) => event.target.value),
-    filter((value) => value.length >= 2)
-    // use the `value`
+    map(event => event.target.value),
+    filter(value => value.length >= 2)
   )
-  .subscribe((value) => {});
+  .subscribe(value => {});
 ```
 
 ##==##

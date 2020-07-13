@@ -1,10 +1,18 @@
-<!-- .slide: class="with-code" -->
+<!-- .slide: class="two-column-layout" -->
 
 # Object.assign
 
 - JS nous permet enfin de **copier** un objet ou d'en **fusionner** plusieurs !
 
-<pre class="fragment" data-fragment-index="1"><code data-trim class="javascript">
+##--##
+
+<!-- .slide: class="with-code" -->
+
+<br />
+<br />
+<br />
+
+```javascript
 const o1 = { a: 1 }, o2 = { b: 2 };
 
 Object.defineProperty(o2, 'f', {
@@ -16,9 +24,18 @@ Object.defineProperty(o2, 'g', {
     value: 8,
     enumerable: true
 });
-</code></pre>
+```
+<!-- .element: class="fragment" -->
 
-<pre class="fragment" data-fragment-index="2"><code data-trim class="javascript">
+##--##
+
+<!-- .slide: class="with-code" -->
+
+<br />
+<br />
+<br />
+
+```javascript
 const newO = Object.assign(target, o1, o2 );
 
 // seuls a, b et Symbol('h') sont copiés
@@ -32,7 +49,8 @@ newO.a;                 // 1
 newO.b;                 // 2
 newO.f;                 // undefined
 newO.g;                 // 8
-</code></pre>
+```
+<!-- .element: class="fragment" -->
 
 Notes:
 f est undefined car non enumerable dans l'objet d'origine.
@@ -66,6 +84,7 @@ console.log(values); // ["Alice", "Nantes"]
 console.log(entries);
 // [["name", "Alice"], ["city", "Nantes"]]
 ```
+<!-- .element: class="fragment" -->
 
 ##==##
 
@@ -75,14 +94,12 @@ console.log(entries);
 
 - Nouvelles fonctions utilitaires values() et entries(), keys() déjà en ES5
 
-<pre class="fragment" data-fragment-index="1"><code data-trim class="javascript">
+```javascript
 var person = {
   name: 'Alice',
   city: 'Nantes',
 };
-var keys = [],
-  values = [],
-  entries = [];
+var keys = [], values = [], entries = [];
 for (var key in person) {
   if (Object.prototype.hasOwnProperty.call(person, key)) {
     keys.push(key);
@@ -92,7 +109,6 @@ for (var key in person) {
 }
 console.log(keys); // ["name", "city"]
 console.log(values); // ["Alice", "Nantes"]
-
-console.log(entries);
-// [["name", "Alice"], ["city", "Nantes"]]
-</code></pre>
+console.log(entries); // [["name", "Alice"], ["city", "Nantes"]]
+```
+<!-- .element: class="fragment" -->

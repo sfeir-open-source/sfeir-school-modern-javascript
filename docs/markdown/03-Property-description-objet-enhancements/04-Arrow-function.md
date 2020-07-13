@@ -6,55 +6,55 @@
 
 <!-- .slide: class="with-code" -->
 
-<pre><code data-trim class="javascript">
-var nums = [1, 2, 3, 4, 5, 6];
+```javascript
+var nums = [2, 4, 6, 8, 10];
 
 
 var odds  = nums.map(function (v) { return v + 1; });
-</code></pre>
+```
 
-<pre><code data-trim class="javascript">
-var nums = [1, 2, 3, 4, 5, 6];
+```javascript
+var nums = [2, 4, 6, 8, 10];
 
+var pairs = nums.map(function (v) {
+    return { even: v, odd: v + 1 }; 
+});
+```
 
-var pairs = nums.map(function (v) { return { even: v,
-odd: v + 1 }; });
-</code></pre>
-
-<pre><code data-trim class="javascript">
+```javascript
 var nums = [1, 2, 3, 4, 5, 6];
 
 
 
 var nums  = nums.map(function (v, i) { return v + i; });
-</code></pre>
+```
 
 ##--##
 
 <!-- .slide: class="with-code" -->
 
-<pre class="fragment" data-fragment-index="4"><code data-trim class="javascript">
-const nums = [1, 2, 3, 4, 5, 6];
+```javascript
+const nums = [2, 4, 6, 8, 10];
 
 
 const odds  = nums.map(v => v + 1);
-</code></pre>
+```
 
-<pre class="fragment" data-fragment-index="5"><code data-trim class="javascript">
-const nums = [1, 2, 3, 4, 5, 6];
+```javascript
+const nums = [2, 4, 6, 8, 10];
 
 
 
 const pairs = nums.map(v => ({ even: v, odd: v + 1 }));
-</code></pre>
+```
 
-<pre class="fragment" data-fragment-index="6"><code data-trim class="javascript">
+```javascript
 const nums = [1, 2, 3, 4, 5, 6];
 
 const add  = nums.map((v, _,i) => v + i)
 // ou
 const add2  = nums.map((v, i) => { return v + i;});
-</code></pre>
+```
 
 Notes:
 dans le deuxième cas, les parenthèse représentent une expression JS et permettent à l'interpréteur de ne pas s'emmêler les pinceaux pour savoir qu'on retourne un objet
@@ -69,7 +69,7 @@ dans le deuxième cas, les parenthèse représentent une expression JS et permet
 
 <!-- .slide: class="with-code" -->
 
-<pre class="fragment" data-fragment-index="1"><code data-trim class="javascript">
+```javascript
 
    var f = {
       nums: [1, 2, 3, 4, 5, 6],
@@ -82,15 +82,14 @@ dans le deuxième cas, les parenthèse représentent une expression JS et permet
       }
    };
    f.each();
-</code></pre>
+```
 
 ##--##
 
 <!-- .slide: class="with-code" -->
 
-<pre class="fragment" data-fragment-index="2"><code data-trim class="javascript">
-//Correction
-
+```javascript
+// Correction
 var f = {
     nums: [1, 2, 3, 4, 5, 6],
     even: [],
@@ -98,41 +97,32 @@ var f = {
     var self = this;
       this.nums.forEach(function(v) {
           if (v % 2 === 0)
-          self.even.push(v);
+            self.even.push(v);
       });
     }
 };
 f.each();
-</code></pre>
+```
 
 Notes:
 on peut aussi binder
 
+```javascript
 var f = {
-
-      nums: [1, 2, 3, 4, 5, 6],
-
-      even: [],
-
-      each() {
-
-        var self = this;
-
-        this.nums.forEach(function(v) {
-
-          if (v % 2 === 0)
-
-            this.even.push(v);
-
-        }.bind(this));
-
-        console.log(this.even)
-
-      }
-
+  nums: [1, 2, 3, 4, 5, 6],
+  even: [],
+  each() {
+    var self = this;
+    this.nums.forEach(function(v) {
+      if (v % 2 === 0)
+        this.even.push(v);
+    }.bind(this));
+    console.log(this.even)
+  }
 };
 
 f.each();
+```
 
 ##==##
 
@@ -140,7 +130,7 @@ f.each();
 
 # Résolution avec une Arrow function
 
-<pre class="fragment" data-fragment-index="1"><code data-trim class="javascript">
+```javascript
 var f = {
   nums: [1, 2, 3, 4, 5, 6],
   even: [],
@@ -151,5 +141,5 @@ var f = {
   }
 };
 f.each(); // [2, 4, 6]
-    f.even; // [2, 4, 6]
-</code></pre>
+f.even; // [2, 4, 6]
+```

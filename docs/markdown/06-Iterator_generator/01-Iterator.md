@@ -39,19 +39,18 @@ string
 
 <!-- .slide: class="with-code" -->
 
-<pre><code data-trim class="javascript">
-    let myArray = [1, 2, 'foo', 3];
+```javascript
+let myArray = [1, 2, 'foo', 3];
 
-    for (elem of myArray) {
-        console.log(elem);
-    }
+for (elem of myArray) {
+    console.log(elem);
+}
 
-    // 1
-    // 2
-    // foo
-    // 3
-
-</code></pre>
+// 1
+// 2
+// foo
+// 3
+```
 
 ##--##
 

@@ -4,19 +4,23 @@
 
 <ul class="fragment" data-fragment-index="1"><li>Nouveau type primitif (Donc pas besoin de new)</li></ul>
 
-<pre class="fragment" data-fragment-index="1"><code data-trim class="javascript">
+```javascript
 var key = Symbol("key");
 
 typeof key === "symbol"; // true
-</code></pre>
+```
+<!-- .element: class="fragment" -->
 
-<br/><br/>
+<br/>
+<br/>
 
-<ul class="fragment" data-fragment-index="2"><li>C'est un type de données unique et inchangeable</li></ul>
+- C'est un type de données unique et inchangeable
+<!-- .element: class="fragment" -->
 
-<pre class="fragment" data-fragment-index="2"><code data-trim class="javascript">
+```javascript
 Symbol("toto") === Symbol("toto"); // false
-</code></pre>
+```
+<!-- .element: class="fragment" -->
 
 Notes:
 Un
@@ -33,7 +37,7 @@ symbole.
 
 # Symbols
 
-Liste des symbols proposés<!-- .element: class="fragment" data-fragment-index="1" -->
+Liste des symbols proposés <!-- .element: class="fragment" data-fragment-index="1" -->
 
 <ul class="fragment" data-fragment-index="1">
     <li>Symbol.match</li>

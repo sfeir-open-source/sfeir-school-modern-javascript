@@ -2,7 +2,10 @@
 
 # Async/Await
 
-<br/><br/><br/><br/>
+<br/>
+<br/>
+<br/>
+<br/>
 
 - Utiliser des promesses dans un style d'écriture synchrone
 
@@ -12,13 +15,14 @@
 
 # Async/Await
 
-- **Avant la fonction async, le problème de l'asynchronisme**
+- **Avant la fonction async, le problème de l'asynchronicité**
 
 ##--##
 
 <!-- .slide: class="with-code" -->
 
-<br/><br/>
+<br/>
+<br/>
 
 ```javascript
 function getData() {
@@ -34,14 +38,15 @@ function getData() {
 
 <!-- .slide: class="with-code" -->
 
-<br/><br/>
+<br/>
+<br/>
 
-<pre class="fragment" data-fragment-index="1"><code data-trim class="javascript">
+```javascript
 function main() {
   var data = getData();
   console.log(data); // undefined
 }
-</code></pre>
+```
 
 ##==##
 
@@ -55,7 +60,8 @@ function main() {
 
 <!-- .slide: class="with-code" -->
 
-<br/><br/>
+<br/>
+<br/>
 
 ```javascript
 function logData() {
@@ -70,16 +76,17 @@ function logData() {
 
 <!-- .slide: class="with-code" -->
 
-<br/><br/>
+<br/>
+<br/>
 
-<pre class="fragment" data-fragment-index="1"><code data-trim class="javascript">
+```javascript
 async function logData() {
     const result = await getData();
     console.log(result);
 } 
 
 // ES2017 | On utilise async/await
-</code></pre>
+```
 
 ##==##
 

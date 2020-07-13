@@ -12,7 +12,7 @@ function Aristocat(name) {
 var felix = new Aristocat('felix');
 var berlioz = new Aristocat('berlioz');
 felix.meow = function () {
-  console.log('Meow froam felix');
+  console.log('Meow from felix');
 };
 console.log(felix.__proto__ === Aristocat.prototype);
 // true

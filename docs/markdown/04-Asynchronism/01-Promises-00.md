@@ -4,7 +4,7 @@
 
 C'est une "façon" de gérer les traitements asynchrones avec une api unique en utilisant les callbacks !
 
-![h-700 center](./assets/images/Promises_00.png) <!-- .element: class="fragment" data-fragment-index="1"-->
+![h-700 center](./assets/images/Promises_00.png) <!-- .element: class="fragment" -->
 
 Notes:
 explication de l'event loop
@@ -33,7 +33,7 @@ p.then(value => ...);
 
 ##--##
 
-![center h-500](./assets/images/Promises_01.png) <!-- .element: class="fragment" data-fragment-index="1"-->
+![center h-500](./assets/images/Promises_01.png) <!-- .element: class="fragment" -->
 
 ##==##
 
@@ -44,17 +44,17 @@ p.then(value => ...);
 Elles viennent résoudre un problème simple : aplatir une pile d'appels de **callback** aussi nommée **"Callback Hell"**
 
 ```javascript
-a(function (resultA){
-  b(resultA, function (resultB){
-    c(resultB, function (resultC){
-      d(resultC, function (resultD){
-        e(resultD, function (resultE){
+a(function (resultA) {
+  b(resultA, function (resultB) {
+    c(resultB, function (resultC) {
+      d(resultC, function (resultD) {
+        e(resultD, function (resultE) {
           console.log(resultE);
-        }
-      }
-    }
-  }
-}
+        });
+      });
+    });
+  });
+});
 ```
 
 ##==##
@@ -70,17 +70,17 @@ a(function (resultA){
 Pour cela, on peut chaîner les promesses !
 
 ```javascript
-a(function (resultA){
-  b(resultA, function (resultB){
-    c(resultB, function (resultC){
-      d(resultC, function (resultD){
-        e(resultD, function (resultE){
+a(function (resultA) {
+  b(resultA, function (resultB) {
+    c(resultB, function (resultC) {
+      d(resultC, function (resultD) {
+        e(resultD, function (resultE) {
           console.log(resultE);
-        }
-      }
-    }
-  }
-}
+        });
+      });
+    });
+  });
+});
 ```
 
 ##--##
@@ -91,11 +91,11 @@ a(function (resultA){
 
 ```javascript
 a()
-  .then((resultA) => b(resultA))
-  .then((resultB) => c(resultB))
-  .then((resultC) => d(resultC))
-  .then((resultD) => e(resultD))
-  .then((resultE) => console.log(resultE));
+  .then(resultA => b(resultA))
+  .then(resultB => c(resultB))
+  .then(resultC => d(resultC))
+  .then(resultD => e(resultD))
+  .then(resultE => console.log(resultE));
 ```
 
 ##==##
@@ -112,11 +112,11 @@ Pour cela, on peut chaîner les promesses !
 
 ```javascript
 a()
-  .then((resultA) => b(resultA))
-  .then((resultB) => c(resultB))
-  .then((resultC) => d(resultC))
-  .then((resultD) => e(resultD))
-  .then((resultE) => console.log(resultE));
+  .then(resultA => b(resultA))
+  .then(resultB => c(resultB))
+  .then(resultC => d(resultC))
+  .then(resultD => e(resultD))
+  .then(resultE => console.log(resultE));
 ```
 
 ##--##
@@ -151,11 +151,11 @@ On peut faire encore mieux !
 
 ```javascript
 a()
-  .then((resultA) => b(resultA))
-  .then((resultB) => c(resultB))
-  .then((resultC) => d(resultC))
-  .then((resultD) => e(resultD))
-  .then((resultE) => console.log(resultE));
+  .then(resultA => b(resultA))
+  .then(resultB => c(resultB))
+  .then(resultC => d(resultC))
+  .then(resultD => e(resultD))
+  .then(resultE => console.log(resultE));
 ```
 
 ##--##
@@ -164,28 +164,28 @@ a()
 
 &nbsp;
 
-<pre><code data-trim class="javascript">
+```javascript
 a()
   .then(b)
   .then(c)
   .then(d)
   .then(e)
   .then(console.log);
-</code></pre>
+```
 
 ##==##
 
-<!-- .slide: class=""-->
+<!-- .slide -->
 
 # Promises
 
 ![h-400 center](./assets/images/Promises_03.png)
 
-https://bevacqua.github.io/promisees
+<p class="text-center">https://bevacqua.github.io/promisees</p>
 
 ##==##
 
-<!-- .slide:-->
+<!-- .slide -->
 
 # Promises
 
@@ -200,7 +200,7 @@ On résume
 Notes:
 /!\ un catch depuis être suivi d'un then
 
-Maintenant, il y a le .finally() qui permet d'executer un truc à la fin que l'on ai un catch ou un then
+Maintenant, il y a le .finally() qui permet d'executer un truc à la fin que l'on ait un catch ou un then
 
 ##==##
 
@@ -215,12 +215,11 @@ L'API Promise
 
 Créer une nouvelle promesse
 
-<pre><code data-trim class="javascript">
+```javascript
 new Promise(function(resolveFn, rejectFn) {
   // Votre code asynchrone
 });
-</code></pre>
-
+```
 </div>
 
 <br/>
@@ -228,14 +227,14 @@ new Promise(function(resolveFn, rejectFn) {
 <div class="fragment" data-fragment-index="2">
 Créer une nouvelle promesse à partir d'une valeur ou d'une autre promesse
 
-<pre><code data-trim class="javascript">
+```javascript
 Promise.resolve(/* valeur ou une promesse */) // Renvoie une promesse résolue
 Promise.reject(/* valeur ou une promesse */) // Renvoie une promesse rejetée
 
 // Exemple
 Promise.resolve(4).then(value => console.log(value)) // 4
 Promise.resolve(Promise.resolve('toto')).then(value => console.log(value)) // 'toto'
-</code></pre>
+```
 </div>
 
 ##==##
@@ -251,15 +250,14 @@ L'API Promise
 
 Attendre plusieurs promesses et les fusionner en une
 
-<pre><code data-trim class="javascript">
+```javascript
 Promise.all([promises...]) // Renvoie une promesse
 
 // Exemple
 Promise.all([Promise.resolve(4), Promise.resolve('toto')])
 .then(values => console.log(values));
 // [4, 'toto']
-</code></pre>
-
+```
 </div>
 
 <br/>
@@ -267,14 +265,14 @@ Promise.all([Promise.resolve(4), Promise.resolve('toto')])
 <div class="fragment" data-fragment-index="2">
 Attendre plusieurs promesses, premier arrivé => premier servi
 
-<pre><code data-trim class="javascript">
+```javascript
 Promise.race([promises...]) // Renvoie une promesse
 
 // Exemple
 Promise.race([Promise.resolve(4), Promise.resolve('toto')])
 .then(value => console.log(value));
 // 4
-</code></pre>
+```
 </div>
 
 ##==##
@@ -289,26 +287,22 @@ Promise.race([Promise.resolve(4), Promise.resolve('toto')])
 
 <!-- .slide: class="with-code" -->
 
-<br/><br/>
+<br/>
+<br/>
 
 ```javascript
 function asyncFn(callback) {
   var request = new XMLHttpRequest();
   request.open('GET', 'http://www.wikipedia.org/', false);
-  request.onreadystatechange = (event) => {
-    if (request.readyState == 4) {
-      if (request.status == 200) callback(null, request.responseText);
-      else callback('Erreur pendant le chargement de la page.\n');
-    }
+  request.onreadystatechange = event => {
+    if (request.readyState == 4) return;
+    if (request.status == 200) callback(null, request.responseText);
+    else callback('Erreur pendant le chargement de la page.\n');
   };
 }
 
 asyncFn(function callback(err, value) {
-  if (err) {
-    console.log(err);
-  } else {
-    console.log(value);
-  }
+    console.log(err ? err : value);
 });
 ```
 
@@ -316,9 +310,10 @@ asyncFn(function callback(err, value) {
 
 <!-- .slide: class="with-code" -->
 
-<br/><br/>
+<br/>
+<br/>
 
-<pre class="fragment" data-fragment-index="1"><code data-trim class="javascript">
+```javascript
 function asyncFn() {
   return new Promise((resolve, reject) => {
     var request = new XMLHttpRequest();
@@ -333,6 +328,6 @@ function asyncFn() {
 }
 
 asyncFn()
-.then(result => console.log(result))
-.catch(error => console.error(error));
-</code></pre>
+  .then(result => console.log(result))
+  .catch(error => console.error(error));
+```

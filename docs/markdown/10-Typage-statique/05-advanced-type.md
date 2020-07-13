@@ -34,10 +34,10 @@ function combineData(user: IUser, login: ILogin): TAllUserInfo {
 <!-- .slide: class="with-code" -->
 
 &nbsp;  
- &nbsp;  
- &nbsp;
+&nbsp;  
+&nbsp;
 
-<pre class="fragment" data-fragment-index="1"><code data-trim class="javascript">
+```javascript
 const user: IUser = { name: 'Brice' };
 const login: ILogin = { login: 'log', password: 'pass' };
 const result: TAllUserInfo = combineData(user, login);
@@ -45,7 +45,8 @@ const result: TAllUserInfo = combineData(user, login);
 
 const result: string = combineData(user, login);
 // Type 'IUser & ILogin' is not assignable to type 'string'.
-</code></pre>
+```
+<!-- .element: class="fragment" -->
 
 ##==##
 
@@ -53,7 +54,7 @@ const result: string = combineData(user, login);
 
 # Advanced Type
 
-- Union => Peut être un parmis plusieurs type
+- Union => Peut être un parmi plusieurs types
   - IFish | IBird
 
 ##--##
@@ -61,8 +62,8 @@ const result: string = combineData(user, login);
 <!-- .slide: class="with-code" -->
 
 &nbsp;  
- &nbsp;  
- &nbsp;
+&nbsp;  
+&nbsp;
 
 ```javascript
 let age: string | number;
@@ -84,11 +85,12 @@ toString(age);
 <!-- .slide: class="with-code" -->
 
 &nbsp;  
- &nbsp;  
- &nbsp;
+&nbsp;  
+&nbsp;
 
 ```javascript
-interface Bird { fly(); layEggs();}interface Fish { swim(); layEggs();}
+interface Bird { fly(); layEggs();}
+interface Fish { swim(); layEggs();}
 function getSmallPet(): Fish | Bird {// ...}
 let pet = getSmallPet();
 
@@ -110,8 +112,8 @@ pet.swim(); // errors
 <!-- .slide: class="with-code" -->
 
 &nbsp;  
- &nbsp;  
- &nbsp;
+&nbsp;  
+&nbsp;
 
 ```javascript
 const isFish =
@@ -134,8 +136,8 @@ else {
 <!-- .slide: class="with-code" -->
 
 &nbsp;  
- &nbsp;  
- &nbsp;
+&nbsp;  
+&nbsp;
 
 ```javascript
 const isLoginError = (
@@ -157,7 +159,7 @@ le type guard est identifié par le mot clé "is"
 
 ##==##
 
-<!-- .slide:-->
+<!-- .slide -->
 
 # Typescript - Let's Play !
 

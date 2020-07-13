@@ -20,12 +20,11 @@
 
 <!-- .slide: class="with-code" -->
 
-&nbsp;  
- &nbsp;  
- &nbsp;  
- &nbsp;  
- &nbsp;  
- &nbsp;
+<br />
+<br />
+<br />
+<br />
+<br />
 
 ```javascript
 var numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
@@ -44,12 +43,11 @@ console.log(evenNumbers); // (6) [0, 2, 4, 6, 8, 10]
 
 <!-- .slide: class="with-code" -->
 
-&nbsp;  
- &nbsp;  
- &nbsp;  
- &nbsp;  
- &nbsp;  
- &nbsp;
+<br />
+<br />
+<br />
+<br />
+<br />
 
 ```javascript
 const even = (n) => n % 2 == 0;
@@ -81,12 +79,14 @@ var people = [
 
 <!-- .slide: class="with-code" -->
 
-&nbsp;  
- &nbsp;  
- &nbsp;  
- &nbsp;  
- &nbsp;  
- &nbsp;
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
 
 ```javascript
 var peopleSentences = [];
@@ -102,12 +102,14 @@ console.log(peopleSentences);
 
 <!-- .slide: class="with-code" -->
 
-&nbsp;  
- &nbsp;  
- &nbsp;  
- &nbsp;  
- &nbsp;  
- &nbsp;
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
 
 ```javascript
 const makeSentence = (person) => `${person.name} is ${person.age} years old`;
@@ -140,13 +142,15 @@ var orders = [
 
 <!-- .slide: class="with-code" -->
 
-&nbsp;  
- &nbsp;  
- &nbsp;  
- &nbsp;  
- &nbsp;  
- &nbsp;  
- &nbsp;
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
 
 ```javascript
 var totalAmount = 0;
@@ -162,16 +166,18 @@ console.log(totalAmount); // 120
 
 <!-- .slide: class="with-code" -->
 
-&nbsp;  
- &nbsp;  
- &nbsp;  
- &nbsp;  
- &nbsp;  
- &nbsp;  
- &nbsp;
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
 
 ```javascript
-const sumAmount = (currentTotalAmount, order) => currentTotalAmount + order.amount;
+const sumAmount = (currentTotal, order) => currentTotal + order.amount;
 
 const getTotalAmount = (shoppingCart) => shoppingCart.reduce(sumAmount, 0);
 
