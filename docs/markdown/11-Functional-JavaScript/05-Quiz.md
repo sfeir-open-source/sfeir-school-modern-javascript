@@ -6,8 +6,8 @@
 
 - La fonction Array.prototype.some est-elle pure ?
 
-&nbsp;  
- &nbsp;
+<br />
+<br />
 
 ```javascript
 var array = [1, 2, 3, 4, 5];
@@ -34,8 +34,8 @@ Oui
 
 - La fonction Array.prototype.forEach est-elle pure ?
 
-&nbsp;  
- &nbsp;
+<br />
+<br />
 
 ```javascript
 const items = ['item1', 'item2', 'item3'];
@@ -63,16 +63,15 @@ Non
 
 <!-- .slide: class="with-code" -->
 
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
+<br />
+<br />
+<br />
+<br />
 
 ```javascript
 var numbers = [1, 4, 9];
 var doubles = numbers.map(function(num) {
-return num \* 2;
+return num * 2;
 });
 
 // doubles is now [2, 8, 18]
@@ -83,11 +82,10 @@ return num \* 2;
 
 <!-- .slide: class="with-code" -->
 
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
+<br />
+<br />
+<br />
+<br />
 
 ```javascript
 var kvArray = [

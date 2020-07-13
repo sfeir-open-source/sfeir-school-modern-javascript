@@ -6,7 +6,8 @@
 
 <!-- .slide:  -->
 
-&nbsp;
+<br />
+<br />
 
 ![h-500 person center](./assets/images/Haskell-Brooks-Curry.png)
 
@@ -14,9 +15,11 @@
 
 <!-- .slide: class="person"-->
 
-&nbsp;  
- &nbsp;  
- &nbsp;
+<br />
+<br />
+<br />
+<br />
+<br />
 
 ### Haskell Brooks Curry
 
@@ -34,20 +37,22 @@ Logicien & Mathématicien
 
 <!-- .slide: class="with-code" -->
 
-&nbsp;  
-&nbsp;  
-&nbsp;
+<br />
+<br />
+<br />
+<br />
 
 ![h-500 center](./assets/images/haskell.png)
+
 ##--##
 
 <!-- .slide: class="with-code" -->
 
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
+<br />
+<br />
+<br />
+<br />
+<br />
 
 On lui doit notamment :
 
@@ -69,9 +74,10 @@ La programmation fonctionnelle
 
 <!-- .slide: -->
 
-&nbsp;  
- &nbsp;  
- &nbsp;
+<br />
+<br />
+<br />
+<br />
 
 ![h-500 center](./assets/images/livescript.png)
 
@@ -79,10 +85,12 @@ La programmation fonctionnelle
 
 <!-- .slide:  -->
 
-&nbsp;  
-&nbsp;  
-&nbsp;  
-&nbsp;  
-&nbsp;
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
 
 Basé sur Scheme, un dialect de Lisp, JS est dès sa conception pensé comme un langage fonctionnel

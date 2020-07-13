@@ -55,11 +55,9 @@ Let's see in details how our function works
 
 <!-- .slide: class="with-code" -->
 
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;  
+<br />
+<br />
+<br />
 
 ```javascript
 const mul1 = multiply(1);
@@ -82,11 +80,9 @@ let mul1 = multiply(1);
 
 <!-- .slide: class="with-code" -->
 
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;  
+<br />
+<br />
+<br />
 
 ```javascript
 let mul2 = mul1(2);

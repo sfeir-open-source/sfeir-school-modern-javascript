@@ -11,12 +11,12 @@
 
 <!-- .slide: class="with-code" -->
 
-&nbsp;  
-&nbsp;  
-&nbsp;  
-&nbsp;  
-&nbsp;  
-&nbsp;
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
 
 ```javascript
 const coteA = 10;
@@ -31,12 +31,12 @@ impureRectangle(5); //50
 
 <!-- .slide: class="with-code" -->
 
-&nbsp;  
-&nbsp;  
-&nbsp;  
-&nbsp;  
-&nbsp;  
-&nbsp;
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
 
 ```javascript
 const pureRectangle = (coteA, coteB) => {
@@ -58,12 +58,12 @@ pureRectangle(10, 5); //50
 
 <!-- .slide: class="with-code" -->
 
-&nbsp;  
-&nbsp;  
-&nbsp;  
-&nbsp;  
-&nbsp;  
-&nbsp;
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
 
 ```javascript
 let compteur = 1;
@@ -80,12 +80,12 @@ console.log(compteur); // 2
 
 <!-- .slide: class="with-code" -->
 
-&nbsp;  
-&nbsp;  
-&nbsp;  
-&nbsp;  
-&nbsp;  
-&nbsp;
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
 
 ```javascript
 const compteur = 1;
