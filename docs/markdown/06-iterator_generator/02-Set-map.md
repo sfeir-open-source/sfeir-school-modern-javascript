@@ -83,14 +83,11 @@ https://developer.mozilla.org/fr/docs/Web/JavaScript/Guide/Collections_avec_cl%C
 <br/>
   - Les clefs peuvent être de tout type
   <br/>
-  <br/>
   - <em>Size</em> est propriété de la Map
-  <br/>
   <br/>
   - Itération dans l'ordre d'insertion des éléments
   <br/>
-  <br/>
-  - N'hérite pas du prototype d'Object
+  - Possède une fonction de vérification de présence de clé
 
 ##--##
 
@@ -106,6 +103,7 @@ data.set("hello", 42);
 data.set(s, 34);
 data.get(s) === 34;
 data.size === 2;
+data.has("hello") === true;
 for (let [ key, val ] of data) { 
     console.log(`${key} ${val}`);
 }
@@ -123,3 +121,51 @@ Petit point sur For In vs For Of :
 https://jsperf.com/foreach-vs-for-loop-vs-for-in-vs-for-of-vs-babel-for-of
 
 For In est moins performant car il replique tout le temps l'itération -> on passe et repasse en permanence dans les boucles
+
+##==##
+
+<!-- .slide: class="two-column-layout" -->
+
+# Set & Map
+
+Si on utilise **uniquement des clés de type string**, on peut simuler une Map avec `Object.create(null)`
+
+##--##
+
+<!-- .slide -->
+
+<br/>
+<br/>
+<br/>
+<br/>
+
+- On bénéficie de __certains__ avantages de la Map sur l'Objet :
+<br/>
+<br/>
+  - <strike>Les clefs peuvent être de tout type</strike>
+  <br/>
+  - <strike><em>Size</em> est propriété de la Map</strike>
+  <br/>
+  - <strike>Itération dans l'ordre d'insertion des éléments</strike>
+  <br/>
+  - Possède une fonction de vérification de présence de clé
+  
+##--##
+
+<!-- .slide: class="with-code" -->
+
+<br/>
+<br/>
+<br/>
+<br/>
+
+```javascript
+let data = Object.create(null);
+data["hello"] = 42;
+data["hello"] === 42;
+"hello" in data === true;
+for (let key in data) { 
+    console.log(`${key} ${data[key]}`);
+}
+```
+<!-- .element: class="fragment" -->
