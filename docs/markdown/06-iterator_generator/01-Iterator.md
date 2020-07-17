@@ -2,47 +2,44 @@
 
 # Itérateur et itérable
 
-<span class="fragment" data-fragment-index="1">"Un **itérateur** est un objet sachant comment accéder aux éléments d'une collection un par un et qui connaît leur position dans la collection.</span>
+Un **itérateur** est un objet sachant comment accéder aux éléments d'une collection un par un et qui connaît leur position dans la collection.
+<!-- .element: class="fragment" -->
+En JavaScript, un **itérateur** expose une méthode **next()** qui retourne l'élément suivant dans la séquence.
+<!-- .element: class="fragment" -->
+Un objet est considéré comme **itérable** s'il définit le comportement qu'il aura lors de l'itération
+<!-- .element: class="fragment" -->
+Pour qu'un objet soit **itérable**, un objet doit implémenter la méthode **@@iterator** (qui est un **Symbol**)
+<!-- .element: class="fragment" -->
 
-<span class="fragment" data-fragment-index="2">En JavaScript, un **itérateur** expose une méthode **next()** qui retourne l'élément suivant dans la séquence.</span>
-
-<span class="fragment" data-fragment-index="3">Un objet est considéré comme **itérable** s'il définit le comportement qu'il aura lors de l'itération</span>
-
-<span class="fragment" data-fragment-index="4">Pour qu'un objet soit **itérable**, un objet doit implémenter la méthode **@@iterator** (qui est un **Symbol**)"
-[MDN](https://developer.mozilla.org/fr/docs/Web/JavaScript/Guide/iterateurs_et_generateurs) <!-- .element: class="underline" -->
-</span>
+[MDN](https://developer.mozilla.org/fr/docs/Web/JavaScript/Guide/iterateurs_et_generateurs)
+<!-- .element: class="fragment underline" -->
 
 Notes:
-Primitives in Javascript : BONNUSS
+Primitives in Javascript : BONUS
 
-boolean
-
-object
-
-number
-
-null
-
-undefined
-
-symbol
-
-string
+boolean, object, number, null, undefined, symbol, string
 
 ##==##
 
 <!-- .slide: class="two-column-layout" -->
 
-# Itérable : Utilisation de for … of
+# Itérables : Comment les parcourir
+
+<br />
+
+## La boucle for-of
 
 ##--##
 
 <!-- .slide: class="with-code" -->
 
+<br />
+<br />
+
 ```javascript
 let myArray = [1, 2, 'foo', 3];
 
-for (elem of myArray) {
+for (const elem of myArray) {
     console.log(elem);
 }
 
@@ -54,9 +51,69 @@ for (elem of myArray) {
 
 ##--##
 
-![h-400 center](./assets/images/Iterable_01_array.png) <!-- .element: class="fragment" data-fragment-index="1" -->
+<!-- .slide -->
+
+<br />
+<br />
+
+![h-400 center](./assets/images/Iterable_01_array.png) <!-- .element: class="fragment" -->
 
 Notes:
-à utiliser sur des itérables (not only array ;) )
 
 un iterator renvoie 2 choses, si l'itérateur est fini et la valeur suivante
+{value: 'foo', done: false}
+
+##==##
+
+<!-- .slide: class="with-code" -->
+
+# Itérable : Comment les parcourir
+
+<br />
+
+## Le spread operator
+
+```javascript
+let mySet = new Set([1, 2, 3]);
+let values = [...mySet]; // [1, 2, 3]
+```
+<!-- .element: class="fragment" -->
+
+##==##
+
+<!-- .slide: class="with-code" -->
+
+# Itérable : Comment les parcourir
+
+<br />
+
+## La boucle while
+
+```javascript
+let iterableObject = {
+    a: 1, b: 2, c: 3, d: 4,
+    [Symbol.iterator]() {
+        let currentKeyIndex = 0;
+        const keys = Object.keys(this);
+        return {
+            next: () => {
+                if(currentKeyIndex >= keys.length) return {done: true, value: undefined};
+                return {done: false, value: this[keys[currentKeyIndex++]]};
+            }
+        };
+    }
+};
+let iterator = iterableObject[Symbol.iterator](), next = iterator.next();
+while(!next.done) {
+  console.log(next.value);
+  next = iterator.next();
+}
+```
+<!-- .element: class="fragment smaller-font" -->
+
+Notes:
+Petit point sur For In vs For Of :
+https://jsperf.com/foreach-vs-for-loop-vs-for-in-vs-for-of-vs-babel-for-of
+
+For In est moins performant car il réplique tout le temps l'itération -> on passe et repasse en permanence dans les boucles
+

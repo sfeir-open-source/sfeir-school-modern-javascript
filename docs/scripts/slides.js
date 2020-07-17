@@ -56,6 +56,7 @@ const iteratorGeneratorSlides = () => [
   `${iteratorGeneratorSlidesDir}/02-Set-map.md`,
   `${iteratorGeneratorSlidesDir}/03-Generator.md`,
   `${iteratorGeneratorSlidesDir}/04-Exercice.md`,
+  `${iteratorGeneratorSlidesDir}/05-AsyncIterator.md`,
 ];
 
 const symbolSlidesDir = '07-symbol';
