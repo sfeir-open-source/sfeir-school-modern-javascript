@@ -31,14 +31,8 @@
 <br/>
 
 - Avantages du Set sur l'array :
-<br/>
-<br/>
-  - Inutile d'utiliser indexOf pour chercher une valeur
-  <br/>
-  <br/>
-  - <strong>Valeurs uniques garanties</strong>
-  <br/>
-  <br/>
+  - Inutile d'utiliser IndexOf pour chercher une valeur<br/><br/>
+  - **valeurs uniques garanties**<br/><br/>
   - Suppression possible sans Splice
 
 ##--##

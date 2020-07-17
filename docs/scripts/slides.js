@@ -20,64 +20,63 @@ const closuresVariablesHoistingSlides = () => [
   `${closuresVariablesHoistingSlidesDir}/01-Variables-Template-String.md`,
   `${closuresVariablesHoistingSlidesDir}/02-Enhanced-Params-Arrays.md`,
   `${closuresVariablesHoistingSlidesDir}/03-Destructuring-Trailing-commas.md`,
-  `${closuresVariablesHoistingSlidesDir}/04-Excercice.md`,
+  `${closuresVariablesHoistingSlidesDir}/04-Exercice.md`,
 ];
 
-const propertyDescriptionObjetEnhancementsSlidesDir = '03-Property-description-objet-enhancements';
-const propertyDescriptionObjetEnhancementsSlides = () => [
-  `${propertyDescriptionObjetEnhancementsSlidesDir}/00-TITLE.md`,
-  `${propertyDescriptionObjetEnhancementsSlidesDir}/01-Property-descriptor.md`,
-  `${propertyDescriptionObjetEnhancementsSlidesDir}/02-Object.md`,
-  `${propertyDescriptionObjetEnhancementsSlidesDir}/03-This.md`,
-  `${propertyDescriptionObjetEnhancementsSlidesDir}/04-Arrow-function.md`,
+const propertyDescriptionObjectEnhancementsSlidesDir = '03-property-description-object-enhancements';
+const propertyDescriptionObjectEnhancementsSlides = () => [
+  `${propertyDescriptionObjectEnhancementsSlidesDir}/00-TITLE.md`,
+  `${propertyDescriptionObjectEnhancementsSlidesDir}/01-Property-descriptor.md`,
+  `${propertyDescriptionObjectEnhancementsSlidesDir}/02-Object.md`,
+  `${propertyDescriptionObjectEnhancementsSlidesDir}/03-This.md`,
+  `${propertyDescriptionObjectEnhancementsSlidesDir}/04-Arrow-function.md`,
 ];
 
-const asynchronismSlidesDir = '04-Asynchronism';
-const asynchronismSlides = () => [
-  `${asynchronismSlidesDir}/00-TITLE.md`,
-  `${asynchronismSlidesDir}/01-Promises-00.md`,
-  `${asynchronismSlidesDir}/01-Promises-01-excercice.md`,
-  `${asynchronismSlidesDir}/02-Async-await.md`,
-  `${asynchronismSlidesDir}/03-Pause.md`,
+const asynchronicitySlidesDir = '04-asynchronicity';
+const asynchronicitySlides = () => [
+  `${asynchronicitySlidesDir}/00-TITLE.md`,
+  `${asynchronicitySlidesDir}/01-Promises-00.md`,
+  `${asynchronicitySlidesDir}/01-Promises-01-exercice.md`,
+  `${asynchronicitySlidesDir}/02-Async-await.md`,
+  `${asynchronicitySlidesDir}/03-Pause.md`,
 ];
 
-const classesSlidesDir = '05-Classes';
+const classesSlidesDir = '05-classes';
 const classesSlides = () => [
   `${classesSlidesDir}/00-TITLE.md`,
   `${classesSlidesDir}/01-Proto.md`,
   `${classesSlidesDir}/02-Syntaxes.md`,
-  `${classesSlidesDir}/03-Excercice.md`,
+  `${classesSlidesDir}/03-Exercice.md`,
 ];
 
-const iteratorGeneratorSlidesDir = '06-Iterator_generator';
+const iteratorGeneratorSlidesDir = '06-iterator_generator';
 const iteratorGeneratorSlides = () => [
   `${iteratorGeneratorSlidesDir}/00-TITLE.md`,
   `${iteratorGeneratorSlidesDir}/01-Iterator.md`,
   `${iteratorGeneratorSlidesDir}/02-Set-map.md`,
   `${iteratorGeneratorSlidesDir}/03-Generator.md`,
-  `${iteratorGeneratorSlidesDir}/04-Excercice.md`,
+  `${iteratorGeneratorSlidesDir}/04-Exercice.md`,
 ];
 
-const symbolSlidesDir = '07-Symbol';
+const symbolSlidesDir = '07-symbol';
 const symbolSlides = () => [`${symbolSlidesDir}/00-TITLE.md`, `${symbolSlidesDir}/01-Symbols.md`];
 
-const proxySlidesDir = '08-Proxy';
+const proxySlidesDir = '08-proxy';
 const proxySlides = () => [
   `${proxySlidesDir}/00-TITLE.md`,
   `${proxySlidesDir}/01-Proxy.md`,
-  `${proxySlidesDir}/02-Excercice.md`,
+  `${proxySlidesDir}/02-Exercice.md`,
 ];
 
-const modulesSlidesDir = '09-Modules';
+const modulesSlidesDir = '09-modules';
 const modulesSlides = () => [
   `${modulesSlidesDir}/00-TITLE.md`,
   `${modulesSlidesDir}/01-Modules.md`,
-  `${modulesSlidesDir}/02-Excercice.md`,
+  `${modulesSlidesDir}/02-Exercice.md`,
   `${modulesSlidesDir}/03-Pause.md`,
 ];
 
-
-const typescriptSlidesDir = '10-Typage-statique';
+const typescriptSlidesDir = '10-static-typing';
 const typescriptSlides = () => [
   `${typescriptSlidesDir}/00-TITLE.md`,
   `${typescriptSlidesDir}/01-intro.md`,
@@ -87,8 +86,7 @@ const typescriptSlides = () => [
   `${typescriptSlidesDir}/05-advanced-type.md`,
 ];
 
-
-const functionalJavascriptSlideDir = '11-Functional-JavaScript';
+const functionalJavascriptSlideDir = '11-functional-JavaScript';
 const functionalJavascriptSlides = () => [
   `${functionalJavascriptSlideDir}/00-TITLE.md`,
   `${functionalJavascriptSlideDir}/01-intro.md`,
@@ -102,7 +100,7 @@ const functionalJavascriptSlides = () => [
 
 ];
 
-const aBetterPatternSlideDir = '12-A-Better-Pattern';
+const aBetterPatternSlideDir = '12-a-better-pattern';
 const aBetterPatternSlides = () => [
   `${aBetterPatternSlideDir}/00-TITLE.md`,
   `${aBetterPatternSlideDir}/01-Fn-JS-CQRS.md`,
@@ -110,7 +108,7 @@ const aBetterPatternSlides = () => [
   `${aBetterPatternSlideDir}/03-Fn-JS-Redux.md`,
 ];
 
-const reactiveJSSlideDir = '13-Reactive-JavaScript';
+const reactiveJSSlideDir = '13-reactive-javascript';
 const reactiveJSSlides = () => [
   `${reactiveJSSlideDir}/00-TITLE.md`,
   `${reactiveJSSlideDir}/01-Rx-JS.md`,
@@ -128,8 +126,8 @@ function formation() {
     ...schoolSlides(),
     ...introSlides(),
     ...closuresVariablesHoistingSlides(),
-    ...propertyDescriptionObjetEnhancementsSlides(),
-    ...asynchronismSlides(),
+    ...propertyDescriptionObjectEnhancementsSlides(),
+    ...asynchronicitySlides(),
     ...classesSlides(),
     ...iteratorGeneratorSlides(),
     ...symbolSlides(),
@@ -139,9 +137,7 @@ function formation() {
     ...functionalJavascriptSlides(),
     ...aBetterPatternSlides(),
     ...reactiveJSSlides(),
-  ].map((slidePath) => {
-    return { path: slidePath };
-  });
+  ].map(slidePath => ({ path: slidePath }));
 }
 
 export function usedSlides() {

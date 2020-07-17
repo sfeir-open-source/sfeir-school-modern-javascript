@@ -2,7 +2,7 @@
 
 # Fn JS : Function as values
 
-**En JavaScript, une fonction est une variable**
+**En JavaScript, une fonction est une valeur**
 
 - Elle peut être définie en tant que variable
 - Elle peut être utilisée en tant qu'argument d'une autre fonction
