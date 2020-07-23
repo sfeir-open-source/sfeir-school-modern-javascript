@@ -1,39 +1,5 @@
 <!-- .slide: class="with-code" -->
 
-# Destructuring, des Arrays
-
-```javascript
-var list = [ 1, 2, 3 ];
-// Récupérer deux valeurs
-var a = list[0], b = list[2];
-// Echanger les valeurs
-var tmp = a; a = b; b = tmp;
-```
-<!-- .element: class="fragment" -->
-
-```javascript
-const list = [ 1, 2, 3 ];
-// Récupérer la première valeur, ignorer la seconde et prendre la troisième
-let [ a, , b ] = list;
-// Echanger les valeurs
-[ b, a ] = [ a, b ];
-```
-<!-- .element: class="fragment" -->
-
-Notes:
-Primitives in Javascript : BONNUSS
-boolean
-object
-number
-null
-undefined
-symbol
-string
-
-##==##
-
-<!-- .slide: class="with-code" -->
-
 # Destructuring, des Objects
 
 ```javascript
@@ -83,6 +49,49 @@ double destructuration à évoquer {obj: {test}, name} nested object destructuri
 ##==##
 
 <!-- .slide: class="two-column-layout" -->
+
+# Destructuring, des Arrays
+
+```javascript
+var list = [ 1, 2, 3 ];
+// Récupérer deux valeurs
+var a = list[0], b = list[2];
+// Echanger les valeurs
+var tmp = a; a = b; b = tmp;
+```
+<!-- .element: class="fragment" -->
+
+```javascript
+const list = [ 1, 2, 3 ];
+// Récupérer la première valeur, ignorer la seconde et prendre la troisième
+let [ a, , b ] = list;
+// Echanger les valeurs
+[ b, a ] = [ a, b ];
+```
+<!-- .element: class="fragment" -->
+
+```javascript
+const list = [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ];
+// Récupérer la valeur à l'indice 3 (ici 4), et la dernière
+let { length: l, 3: a, [l - 1]: b } = list;
+// Utile pour éviter ceci
+let [ ,,, c,,,,,, d ] = list;
+```
+<!-- .element: class="fragment" -->
+
+Notes:
+Primitives in Javascript : BONUS
+boolean
+object
+number
+null
+undefined
+symbol
+string
+
+##==##
+
+<!-- .slide: class="with-code" -->
 
 # Destructuring, dans les fonctions
 
