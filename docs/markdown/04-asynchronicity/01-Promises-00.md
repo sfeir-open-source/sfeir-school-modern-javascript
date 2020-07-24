@@ -1,8 +1,68 @@
-<!-- .slide:-->
+<!-- .slide: class="with-code" -->
+
+# Le callback hell
+
+Le problème peut avoir plusieurs formes. La plus connue :
+
+```javascript
+a(function (resultA) {
+  b(resultA, function (resultB) {
+    c(resultB, function (resultC) {
+      d(resultC, function (resultD) {
+        e(resultD, function (resultE) {
+          console.log(resultE);
+        });
+      });
+    });
+  });
+});
+```
+
+##==##
+
+<!-- .slide: class="with-code" -->
+
+# Le callback hell
+
+Mais le vrai problème n'est pas ici l'imbrication. On peut en effet aplatir le code :
+
+```javascript
+const cb1 = function (x) {
+  b(x, cb2);
+};
+const cb2 = function (x) {
+  c(x, cb3);
+}
+const cb3 = function (x) {
+  d(x, cb4);
+};
+const cb4 = function (x) {
+  e(x, cb5);
+};
+const cb5 = function (x) {
+  console.log(x);
+};
+a(cb1);
+```
+
+##==##
+
+<!-- .slide: class="with-code" -->
+
+# Le callback hell
+
+Il y a alors plusieurs problèmes :
+- on ne peut pas faire confiance aux fonctions qui reçoivent les callbacks (appels multiples du callback, pas d'appel, etc.)
+- l'ordre d'exécution est difficile à suivre
+- on ne peut pas gérer simplement les erreurs qui arrivent dans a, b, c, d, ou e.
+
+##==##
+
+<!-- .slide -->
 
 # Promises
 
-C'est une "façon" de gérer les traitements asynchrones avec une api unique en utilisant les callbacks !
+C'est une "façon" de gérer les traitements asynchrones avec une api unique en utilisant des callbacks !
 
 ![h-700 center](./assets/images/Promises_00.png) <!-- .element: class="fragment" -->
 
@@ -35,27 +95,8 @@ p.then(value => ...);
 
 ![center h-500](./assets/images/Promises_01.png) <!-- .element: class="fragment" -->
 
-##==##
-
-<!-- .slide: class="with-code" -->
-
-# Promises
-
-Elles viennent résoudre un problème simple : aplatir une pile d'appels de **callback** aussi nommée **"Callback Hell"**
-
-```javascript
-a(function (resultA) {
-  b(resultA, function (resultB) {
-    c(resultB, function (resultC) {
-      d(resultC, function (resultD) {
-        e(resultD, function (resultE) {
-          console.log(resultE);
-        });
-      });
-    });
-  });
-});
-```
+Notes:
+Faire le parallèle avec le problème de confiance en la fonction appelant des callbacks
 
 ##==##
 
@@ -63,11 +104,14 @@ a(function (resultA) {
 
 # Promises
 
+Pour revenir à l'exemple du callback hell, on peut utiliser les promesses !
+
 ##--##
 
-<!-- .slide: class="with-code" -->
+<br />
+<br />
 
-Pour cela, on peut chaîner les promesses !
+<!-- .slide: class="with-code" -->
 
 ```javascript
 a(function (resultA) {
@@ -87,7 +131,8 @@ a(function (resultA) {
 
 <!-- .slide: class="with-code" -->
 
-&nbsp;
+<br />
+<br />
 
 ```javascript
 a()
@@ -97,6 +142,9 @@ a()
   .then(resultD => e(resultD))
   .then(resultE => console.log(resultE));
 ```
+
+Notes:
+Faire le parallèle avec le problème d'ordre d'exécution
 
 ##==##
 
@@ -104,11 +152,14 @@ a()
 
 # Promises
 
+Pour revenir à l'exemple du callback hell, on peut utiliser les promesses !
+
 ##--##
 
 <!-- .slide: class="with-code" -->
 
-Pour cela, on peut chaîner les promesses !
+<br />
+<br />
 
 ```javascript
 a()
@@ -123,7 +174,8 @@ a()
 
 <!-- .slide: class="with-code" -->
 
-&nbsp;
+<br />
+<br />
 
 ```javascript
 function a() {
@@ -143,11 +195,14 @@ etc ...
 
 # Promises
 
+On peut faire encore mieux !
+
 ##--##
 
 <!-- .slide: class="with-code" -->
 
-On peut faire encore mieux !
+<br />
+<br />
 
 ```javascript
 a()
@@ -162,7 +217,8 @@ a()
 
 <!-- .slide: class="with-code" -->
 
-&nbsp;
+<br />
+<br />
 
 ```javascript
 a()
@@ -201,6 +257,8 @@ Notes:
 /!\ un catch depuis être suivi d'un then
 
 Maintenant, il y a le .finally() qui permet d'executer un truc à la fin que l'on ait un catch ou un then
+
+Faire le parallèle avec le problème de la gestion d'erreursq
 
 ##==##
 
