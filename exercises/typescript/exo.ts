@@ -1,34 +1,35 @@
 const add = (a, b) => a + b;
-const includeInListOfString = (list) => (item) => {
+const isIncludedInListOfString = (list) => (item) => {
   return list.indexOf(item) !== -1;
 };
 
 add(12, 100);
-includeInListOfString(['1', '3'])('3');
-includeInListOfString(['1', '3'])(3); // should Error
+isIncludedInListOfString(['1', '3'])('3');
+isIncludedInListOfString(['1', '3'])(3); // should Error
 
 
 // EVehicleName
-const includeInIllegalVehicle = includeInListOfString([EVehicleName.BMW]);
+const isIllegalVehicleName = isIncludedInListOfString([EVehicleName.BMW]);
 
 
 // IVehicle
-const isIllegalVehicle = ({ name }) => includeInIllegalVehicle(name); // Type a vehicle with IVehicle
+const isIllegalVehicle = ({ name }) => isIllegalVehicleName(name); // Type a vehicle with IVehicle
 
 // Declare a vehicle
 
-isIllegalVehicle(?); // Use your vehicle here
+isIllegalVehicle(vehicule);
 
 
 // IVehicleOptions
-const getVehiclePricesOptions = (vehicleOptions) => {
+const getVehicleOptionsTotalPrice = (vehicleOptions) => {
   if (vehicleOptions && vehicleOptions.length > 0) {
-    return vehicleOptions.reduce((acc, o) => add(acc, o.pricing.netPriceInclTax), 0);
+    return vehicleOptions.reduce((total, options) => add(total, options.pricing.netPriceInclTax), 0);
   }
   return 0;
 };
 
-getVehiclePricesOptions(?);
+getVehicleOptionsTotalPrice(?);
+
 
 // Generic
 function combineData(first, second) {
@@ -39,7 +40,7 @@ function combineData(first, second) {
 const getFullVehicleInformation = (vehicle, vehicleOptions) => combineData(vehicle, vehicleOptions);
 
 
-// Typegard
+// Typeguard
 interface IPlane {
   fly: () => void
 }
@@ -48,10 +49,9 @@ interface ITrain {
   tchoo: () => void
 }
 
-const isPlane =
+const isPlane = ?;
 
-let entity: ITrain | IPlane;
-entity = { tchoo: () => console.log('tchooooo tchoooo')};
+let entity: ITrain | IPlane = { tchoo: () => console.log('tchooooo tchoooo')};
 
 if (isPlane(entity)) {
   entity.fly();

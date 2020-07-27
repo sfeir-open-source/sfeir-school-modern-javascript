@@ -1,17 +1,17 @@
 const add = (a: number, b: number): number => a + b;
-const includeInListOfString = (list: string[]) => (item: string): boolean => {
+const isIncludedInListOfString = (list: string[]) => (item: string): boolean => {
   return list.indexOf(item) !== -1;
 };
 
 add(12, 100);
-includeInListOfString(['1', '3'])('3');
-includeInListOfString(['1', '3'])(3); // should Error
+isIncludedInListOfString(['1', '3'])('3');
+isIncludedInListOfString(['1', '3'])(3); // should Error
 
 
 // EVehicleName
 enum EVehicleName { DS3 = 'DS3', BMW = 'BMW' }
 
-const includeInIllegalVehicle = includeInListOfString([EVehicleName.BMW]);
+const isIllegalVehicleName = isIncludedInListOfString([EVehicleName.BMW]);
 
 
 // IVehicle
@@ -19,7 +19,7 @@ interface IVehicle {
   name: EVehicleName;
 }
 
-const isIllegalVehicle = ({ name }: IVehicle) => includeInIllegalVehicle(name);
+const isIllegalVehicle = ({ name }: IVehicle) => isIllegalVehicleName(name);
 
 const vehicle = {
   name: EVehicleName.BMW
@@ -38,7 +38,7 @@ interface IPricing {
   netPriceNotInclTax: number;
 }
 
-const getVehiclePricesOptions = (vehicleOptions: IVehicleOptions[]): number => {
+const getVehicleOptionsTotalPrice = (vehicleOptions: IVehicleOptions[]): number => {
   if (vehicleOptions && vehicleOptions.length > 0) {
     return vehicleOptions.reduce((acc: number, o) => add(acc, o.pricing.netPriceInclTax), 0);
   }
@@ -52,7 +52,8 @@ const vehicleOptions: IVehicleOptions = {
   }
 };
 
-getVehiclePricesOptions([vehicleOptions]);
+getVehicleOptionsTotalPrice([vehicleOptions]);
+
 
 // Generic
 function combineData<First, Second>(first: First, second: Second): First & Second {
@@ -61,6 +62,7 @@ function combineData<First, Second>(first: First, second: Second): First & Secon
 
 // TFullVehicleInformation
 const getFullVehicleInformation = (vehicle: IVehicle, vehicleOption: IVehicleOptions) => combineData(vehicle, vehicleOption);
+
 
 // Typegard
 interface IPlane {
@@ -76,8 +78,7 @@ const isPlane =
     return (<IPlane>entity).fly !== undefined;
   };
 
-let entity: ITrain | IPlane;
-entity = { tchoo: () => console.log('tchooooo tchoooo')};
+let entity: ITrain | IPlane = { tchoo: () => console.log('tchooooo tchoooo')};
 
 if (isPlane(entity)) {
   entity.fly();

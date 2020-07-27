@@ -1,6 +1,6 @@
-function testDestructuring([, arrayIndex], { name: objectName } = { name: 'toto' }, ...restLength) {
+function testDestructuring([, arrayValue], { name: objectName } = { name: 'toto' }, ...rest) {
   // Vous ne devez rien changer ici, juste utiliser les mêmes noms de variable
-  return arrayIndex + objectName + restLength.length;
+  return arrayValue + objectName + rest.length;
 }
 
 module.exports = { testDestructuring };
