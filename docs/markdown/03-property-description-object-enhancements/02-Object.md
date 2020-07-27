@@ -13,14 +13,14 @@
 <br />
 
 ```javascript
-const o1 = { a: 1 }, o2 = { b: 2 };
+const object1 = { a: 1 }, object2 = { b: 2 };
 
-Object.defineProperty(o2, 'f', {
+Object.defineProperty(object2, 'f', {
     value: 6,
     enumerable: false
 });
 
-Object.defineProperty(o2, 'g', {
+Object.defineProperty(object2, 'g', {
     value: 8,
     enumerable: true
 });
@@ -36,19 +36,15 @@ Object.defineProperty(o2, 'g', {
 <br />
 
 ```javascript
-const newO = Object.assign(target, o1, o2 );
+// les propriétés sont copiées de object1 et object2 dans target
+// puis on récupère l'objet fusionné dans newObject
+const newObject = Object.assign(target, object1, object2 );
 
-// seuls a, b et Symbol('h') sont copiés
-
-target.a;                 // 1
-target.b;                 // 2
-target.f;                 // undefined
-target.g;                 // 8
-
-newO.a;                 // 1
-newO.b;                 // 2
-newO.f;                 // undefined
-newO.g;                 // 8
+// mais seules les propriétés énumérables "a, b et Symbol('h')" sont copiées
+newObject.a;                 // 1
+newObject.b;                 // 2
+newObject.f;                 // undefined
+newObject.g;                 // 8
 ```
 <!-- .element: class="fragment" -->
 
