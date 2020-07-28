@@ -85,15 +85,15 @@ Default params
 
 ```javascript
 function fn (x, y, z) {
-   x || x = 2;
-   y || y = 3;
+   y || y = 2;
+   z || z = 3;
    return x + y + z;
 }
 ```
 <!-- .element: class="fragment" -->
 
 ```javascript
-function fn (x = 2, y = 3, z) {
+function fn (x, y = 2, z = 3) {
     return x + y + z;
 }
 ```
@@ -109,7 +109,7 @@ Rest params
 ```javascript
 function fn (x, y) {
     var z = Array.prototype.slice.call(arguments, 2);
-    return (x + y) + z.length;
+    return x + y + z.length;
 }
 fn(1, 2, "hello", true, 7) === 6;
 ```
@@ -117,7 +117,7 @@ fn(1, 2, "hello", true, 7) === 6;
 
 ```javascript
 function fn (x, y, ...z) {
-    return (x + y) + z.length;
+    return x + y + z.length;
 }
 fn(1, 2, "hello", true, 7) === 6;
 ```
@@ -125,19 +125,6 @@ fn(1, 2, "hello", true, 7) === 6;
 
 Notes:
 default params -> revenir sur concept de falsy truthy
-
-```javascript
-function fn(x, y) {
-  if (x === undefined) {
-    x = 2;
-  }
-  if (y === undefined) {
-    y = 3;
-  }
-  return x + y;
-}
-```
-
 rest params -> arguments n'est pas un array à proprement parlé, du coup, on est obligé de le caster en array
 
 ##==##
