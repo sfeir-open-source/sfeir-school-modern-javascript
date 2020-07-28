@@ -8,8 +8,8 @@ Modifier la signature de la fonction testDestructuring, de telle sorte qu'elle p
 
 <br />
 
-1. la valeur au **second index du tableau qui lui est passé en premier paramètre**
-1. l'attribut **name du second paramètre**
+1. la **deuxième valeur du tableau** qui lui est passé en premier paramètre
+1. l’attribut **name de l'objet** qui lui est passé en deuxième paramètre
 1. le **reste des paramètres** dans un tableau
 
 <br />
