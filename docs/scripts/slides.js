@@ -68,6 +68,14 @@ const proxySlides = () => [
   `${proxySlidesDir}/02-Exercice.md`,
 ];
 
+const reflectSlidesDir = '08b-reflect';
+const reflectSlides = () => [
+  `${reflectSlidesDir}/00-TITLE.md`,
+  `${reflectSlidesDir}/01-Purpose.md`,
+  `${reflectSlidesDir}/02-All-Functions.md`,
+  `${reflectSlidesDir}/03-Interesting-Methods-Examples.md`,
+]
+
 const modulesSlidesDir = '09-modules';
 const modulesSlides = () => [
   `${modulesSlidesDir}/00-TITLE.md`,
@@ -132,6 +140,7 @@ function formation() {
     ...iteratorGeneratorSlides(),
     ...symbolSlides(),
     ...proxySlides(),
+    ...reflectSlides(),
     ...modulesSlides(),
     ...typescriptSlides(),
     ...functionalJavascriptSlides(),
