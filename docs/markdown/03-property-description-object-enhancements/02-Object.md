@@ -13,14 +13,14 @@
 <br />
 
 ```javascript
-const o1 = { a: 1 }, o2 = { b: 2 };
+const object1 = { a: 1 }, object2 = { b: 2 };
 
-Object.defineProperty(o2, 'f', {
+Object.defineProperty(object2, 'f', {
     value: 6,
     enumerable: false
 });
 
-Object.defineProperty(o2, 'g', {
+Object.defineProperty(object2, 'g', {
     value: 8,
     enumerable: true
 });
@@ -36,19 +36,15 @@ Object.defineProperty(o2, 'g', {
 <br />
 
 ```javascript
-const newO = Object.assign(target, o1, o2 );
+// les propriétés sont copiées de object1 et object2 dans target
+// puis on récupère l'objet fusionné dans newObject
+const newObject = Object.assign(target, object1, object2 );
 
-// seuls a, b et Symbol('h') sont copiés
-
-target.a;                 // 1
-target.b;                 // 2
-target.f;                 // undefined
-target.g;                 // 8
-
-newO.a;                 // 1
-newO.b;                 // 2
-newO.f;                 // undefined
-newO.g;                 // 8
+// mais seules les propriétés énumérables "a, b et Symbol('h')" sont copiées
+newObject.a;                 // 1
+newObject.b;                 // 2
+newObject.f;                 // undefined
+newObject.g;                 // 8
 ```
 <!-- .element: class="fragment" -->
 
@@ -60,6 +56,31 @@ f est undefined car non enumerable dans l'objet d'origine.
 De même une propriété non enumerable n'est donc pas copiée car assign copy via l'itération des propriétés d'objet
 
 l'autre manière de copier un objet est le spread operator
+
+##==##
+
+<!-- .slide: class="with-code" -->
+
+# Object.assign
+
+- Attention la copie est superficielle (shallow).
+
+```javascript
+const o1 = { a: 1, foo: { bar: 'baz' }};
+const o2 = Object.assign({}, o1);
+
+o1.foo;                   // { bar: 'baz' }
+o2.foo;                   // { bar: 'baz' }
+
+o2.a = 2;
+o2.foo.bar = 'fizz';
+
+o1.foo;                   // { bar: 'fizz' }
+o2.foo;                   // { bar: 'fizz' }
+
+o1.a                      // 1
+o2.a                      // 2
+```
 
 ##==##
 
