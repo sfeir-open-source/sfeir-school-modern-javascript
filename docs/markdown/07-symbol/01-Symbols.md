@@ -78,6 +78,34 @@ Un symbole est un type de données unique et inchangeable qui peut être utilis�
 
 # Uses Cases des Symbols
 
+- Rendre une donnée unique au sein d'un objet
+
+```javascript
+const noSymbol = {
+'a': 1,
+'a': 2,
+'b' 3,
+};
+// ça donne l'objet { a: 2, b: 3 }
+
+const a1 = new Symbol('a');
+const a2 = new Symbol('a');
+const b = new Symbol('b');
+const withSymbol = {
+[a1]: 1,
+[a2]: 2,
+[b] 3,
+};
+// ça donne à peu près l'objet { a: 1, a: 2, b: 3 }
+// sauf que pour accéder aux data on fera withSymbol[a1] et pas withSymbol['a']
+```
+
+##==##
+
+<!-- .slide: class="with-code" -->
+
+# Uses Cases des Symbols
+
 - Les propriétés "privées" (tout du moins cachées)
 
 ```javascript
