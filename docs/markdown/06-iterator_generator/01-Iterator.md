@@ -3,15 +3,23 @@
 # Itérateur et itérable
 
 Un **itérateur** est un objet sachant comment accéder aux éléments d'une collection un par un et qui connaît leur position dans la collection.
+
 <!-- .element: class="fragment" -->
+
 En JavaScript, un **itérateur** expose une méthode **next()** qui retourne l'élément suivant dans la séquence.
+
 <!-- .element: class="fragment" -->
+
 Un objet est considéré comme **itérable** s'il définit le comportement qu'il aura lors de l'itération
+
 <!-- .element: class="fragment" -->
+
 Pour qu'un objet soit **itérable**, un objet doit implémenter la méthode **@@iterator** (qui est un **Symbol**)
+
 <!-- .element: class="fragment" -->
 
 [MDN](https://developer.mozilla.org/fr/docs/Web/JavaScript/Guide/iterateurs_et_generateurs)
+
 <!-- .element: class="fragment underline" -->
 
 Notes:
@@ -40,7 +48,7 @@ boolean, object, number, null, undefined, symbol, string
 let myArray = [1, 2, 'foo', 3];
 
 for (const elem of myArray) {
-    console.log(elem);
+  console.log(elem);
 }
 
 // 1
@@ -77,6 +85,7 @@ un iterator renvoie 2 choses, si l'itérateur est fini et la valeur suivante
 let mySet = new Set([1, 2, 3]);
 let values = [...mySet]; // [1, 2, 3]
 ```
+
 <!-- .element: class="fragment" -->
 
 ##==##
@@ -90,25 +99,14 @@ let values = [...mySet]; // [1, 2, 3]
 ## La boucle while
 
 ```javascript
-let iterableObject = {
-    a: 1, b: 2, c: 3, d: 4,
-    [Symbol.iterator]() {
-        let currentKeyIndex = 0;
-        const keys = Object.keys(this);
-        return {
-            next: () => {
-                if(currentKeyIndex >= keys.length) return {done: true, value: undefined};
-                return {done: false, value: this[keys[currentKeyIndex++]]};
-            }
-        };
-    }
-};
-let iterator = iterableObject[Symbol.iterator](), next = iterator.next();
-while(!next.done) {
+let iterator = iterableObject[Symbol.iterator](),
+  next = iterator.next();
+while (!next.done) {
   console.log(next.value);
   next = iterator.next();
 }
 ```
+
 <!-- .element: class="fragment smaller-font" -->
 
 Notes:
@@ -116,4 +114,3 @@ Petit point sur For In vs For Of :
 https://jsperf.com/foreach-vs-for-loop-vs-for-in-vs-for-of-vs-babel-for-of
 
 For In est moins performant car il réplique tout le temps l'itération -> on passe et repasse en permanence dans les boucles
-

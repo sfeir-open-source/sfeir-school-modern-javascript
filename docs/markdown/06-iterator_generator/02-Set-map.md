@@ -2,16 +2,12 @@
 
 # Set & Map
 
-- ES6 introduit de nouvelles structures de données empruntées aux langages orientés objet :
-    - **Map**
-    - **Set**
-    - *WeakMap*
-    - *WeakSet*
-<br />
-<br />
+- ES6 introduit de nouvelles structures de données empruntées aux langages orientés objet : - **Map** - **Set** - _WeakMap_ - _WeakSet_
+  <br />
+  <br />
 - Contrairement aux objets, ce sont des itérables et peuvent donc être parcourus par une boucle for...of
-<br />
-<br />
+  <br />
+  <br />
 - _Les versions 'Weak' offrent un avantage de garbage collection et de prévention des fuites mémoire_
 <!-- .element: class="list-fragment" -->
 
@@ -47,6 +43,8 @@ let data = new Set();
 data.add('hello').add('goodbye').add('hello');
 data.size === 2;
 data.has('hello') === true;
+data.values(); // SetIterator {"hello", "goodbye"}
+data.keys(); // SetIterator {"hello", "goodbye"}
 for (let key of data) {
   // insertion order
   console.log(key);
@@ -56,6 +54,7 @@ for (let key of data) {
 const getUniq = (array) => [...new Set(array)];
 getUniq([1, 1, 2]); // [1, 2]
 ```
+
 <!-- .element: class="fragment" -->
 
 Notes:
@@ -79,14 +78,14 @@ https://developer.mozilla.org/fr/docs/Web/JavaScript/Guide/Collections_avec_cl%C
 <br/>
 
 - Avantages de la Map sur l'Objet :
-<br/>
-<br/>
+  <br/>
+  <br/>
   - Les clefs peuvent être de tout type
-  <br/>
+    <br/>
   - <em>Size</em> est propriété de la Map
-  <br/>
+    <br/>
   - Itération dans l'ordre d'insertion des éléments
-  <br/>
+    <br/>
   - Possède une fonction de vérification de présence de clé
 
 ##--##
@@ -98,19 +97,20 @@ https://developer.mozilla.org/fr/docs/Web/JavaScript/Guide/Collections_avec_cl%C
 
 ```javascript
 let data = new Map();
-let s = {example: "cat"}
-data.set("hello", 42);
+let s = { example: 'cat' };
+data.set('hello', 42);
 data.set(s, 34);
 data.get(s) === 34;
 data.size === 2;
-data.has("hello") === true;
-for (let [ key, val ] of data) { 
-    console.log(`${key} ${val}`);
+data.has('hello') === true;
+for (let [key, val] of data) {
+  console.log(`${key} ${val}`);
 }
 
 // hello 42
 // [object Object] 34
 ```
+
 <!-- .element: class="fragment" -->
 
 Notes:
@@ -134,17 +134,17 @@ Si on utilise **uniquement des clés de type string**, on peut simuler une Map a
 <br/>
 <br/>
 
-- On bénéficie de __certains__ avantages de la Map sur l'Objet :
-<br/>
-<br/>
+- On bénéficie de **certains** avantages de la Map sur l'Objet :
+  <br/>
+  <br/>
   - <strike>Les clefs peuvent être de tout type</strike>
-  <br/>
+    <br/>
   - <strike><em>Size</em> est propriété de la Map</strike>
-  <br/>
+    <br/>
   - <strike>Itération dans l'ordre d'insertion des éléments</strike>
-  <br/>
+    <br/>
   - Possède une fonction de vérification de présence de clé
-  
+
 ##--##
 
 <!-- .slide: class="with-code" -->
@@ -156,11 +156,12 @@ Si on utilise **uniquement des clés de type string**, on peut simuler une Map a
 
 ```javascript
 let data = Object.create(null);
-data["hello"] = 42;
-data["hello"] === 42;
-"hello" in data === true;
-for (let key in data) { 
-    console.log(`${key} ${data[key]}`);
+data['hello'] = 42;
+data['hello'] === 42;
+'hello' in data === true;
+for (let key in data) {
+  console.log(`${key} ${data[key]}`);
 }
 ```
+
 <!-- .element: class="fragment" -->
