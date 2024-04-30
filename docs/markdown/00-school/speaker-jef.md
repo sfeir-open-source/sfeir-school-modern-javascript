@@ -14,4 +14,4 @@
 
 ### @jefbinomed
 
-<!-- .element: class="icon-twitter icon-second" -->
+<!-- .element: class="icon-second" -->

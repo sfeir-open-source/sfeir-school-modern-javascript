@@ -1,8 +1,6 @@
-<!-- .slide: class="two-column-layout" -->
+<!-- .slide: class="two-column" -->
 
 # Interfaces / Function
-
-##--##
 
 <!-- .slide: class="with-code" -->
 
@@ -11,20 +9,23 @@
 &nbsp;
 
 ```typescript
-enum EGender { M, F}
+enum EGender {
+  M,
+  F,
+}
 
 interface IUser {
   name: string;
   readonly age: number; // ReadonlyArray
   gender: EGender;
   phone?: string;
-};
+}
 
 const userInformation: IUser = {
   name: 'Dexter',
   age: 22,
-  gender: EGender.M
-}
+  gender: EGender.M,
+};
 ```
 
 ##--##
@@ -36,8 +37,8 @@ const userInformation: IUser = {
 &nbsp;
 
 ```typescript
-type ReturnString = (user: IUser) => string
-const getName: ReturnString = user => user.name;
+type ReturnString = (user: IUser) => string;
+const getName: ReturnString = (user) => user.name;
 // 'Dexter'
 
 const getLastName = (user: IUser): string => user.lastName;
@@ -46,7 +47,7 @@ const getLastName = (user: IUser): string => user.lastName;
 const getPhone = (user: IUser): string => user.phone;
 // Type 'string | undefined' is not assignable to type 'string'.
 
-getName({name: 'Dexter'});
+getName({ name: 'Dexter' });
 // Argument of type '{ name: string; }' is not assignable
 // to parameter of type 'IUser'.
 userInformation.age = 10;
@@ -62,11 +63,9 @@ Bien revenir sur chaque cas et ligne histoire de bien expliquer le code et les e
 
 ##==##
 
-<!-- .slide: class="two-column-layout" -->
+<!-- .slide: class="two-column" -->
 
 # Interfaces / Function
-
-##--##
 
 <!-- .slide: class="with-code" -->
 
@@ -94,9 +93,11 @@ interface IgetLimitedUserInformation {
 &nbsp;
 
 ```typescript
-const getLimitedUserInformation = (user: IUser): {
-  name: string,
-  age: number
+const getLimitedUserInformation = (
+  user: IUser
+): {
+  name: string;
+  age: number;
 } => {
   const { name, age } = user;
   return { name, age };

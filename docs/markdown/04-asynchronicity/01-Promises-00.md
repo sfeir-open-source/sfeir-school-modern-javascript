@@ -32,7 +32,7 @@ const cb1 = function (x) {
 };
 const cb2 = function (x) {
   c(x, cb3);
-}
+};
 const cb3 = function (x) {
   d(x, cb4);
 };
@@ -52,6 +52,7 @@ a(cb1);
 # Le callback hell
 
 Il y a alors plusieurs problèmes :
+
 - on ne peut pas faire confiance aux fonctions qui reçoivent les callbacks (appels multiples du callback, pas d'appel, etc.)
 - l'ordre d'exécution est difficile à suivre
 - on ne peut pas gérer simplement les erreurs qui arrivent dans a, b, c, d, ou e.
@@ -73,11 +74,9 @@ Présent depuis ES2015
 
 ##==##
 
-<!-- .slide: class="two-column-layout"-->
+<!-- .slide: class="two-column"-->
 
 # Promises
-
-##--##
 
 <!-- .slide: class="with-code" -->
 
@@ -100,13 +99,11 @@ Faire le parallèle avec le problème de confiance en la fonction appelant des c
 
 ##==##
 
-<!-- .slide: class="two-column-layout"-->
+<!-- .slide: class="two-column"-->
 
 # Promises
 
 Pour revenir à l'exemple du callback hell, on peut utiliser les promesses !
-
-##--##
 
 <br />
 <br />
@@ -136,11 +133,11 @@ a(function (resultA) {
 
 ```javascript
 a()
-  .then(resultA => b(resultA))
-  .then(resultB => c(resultB))
-  .then(resultC => d(resultC))
-  .then(resultD => e(resultD))
-  .then(resultE => console.log(resultE));
+  .then((resultA) => b(resultA))
+  .then((resultB) => c(resultB))
+  .then((resultC) => d(resultC))
+  .then((resultD) => e(resultD))
+  .then((resultE) => console.log(resultE));
 ```
 
 Notes:
@@ -148,13 +145,11 @@ Faire le parallèle avec le problème d'ordre d'exécution
 
 ##==##
 
-<!-- .slide: class="two-column-layout"-->
+<!-- .slide: class="two-column"-->
 
 # Promises
 
 Pour revenir à l'exemple du callback hell, on peut utiliser les promesses !
-
-##--##
 
 <!-- .slide: class="with-code" -->
 
@@ -163,11 +158,11 @@ Pour revenir à l'exemple du callback hell, on peut utiliser les promesses !
 
 ```javascript
 a()
-  .then(resultA => b(resultA))
-  .then(resultB => c(resultB))
-  .then(resultC => d(resultC))
-  .then(resultD => e(resultD))
-  .then(resultE => console.log(resultE));
+  .then((resultA) => b(resultA))
+  .then((resultB) => c(resultB))
+  .then((resultC) => d(resultC))
+  .then((resultD) => e(resultD))
+  .then((resultE) => console.log(resultE));
 ```
 
 ##--##
@@ -191,13 +186,11 @@ etc ...
 
 ##==##
 
-<!-- .slide: class="two-column-layout"-->
+<!-- .slide: class="two-column"-->
 
 # Promises
 
 On peut faire encore mieux !
-
-##--##
 
 <!-- .slide: class="with-code" -->
 
@@ -206,11 +199,11 @@ On peut faire encore mieux !
 
 ```javascript
 a()
-  .then(resultA => b(resultA))
-  .then(resultB => c(resultB))
-  .then(resultC => d(resultC))
-  .then(resultD => e(resultD))
-  .then(resultE => console.log(resultE));
+  .then((resultA) => b(resultA))
+  .then((resultB) => c(resultB))
+  .then((resultC) => d(resultC))
+  .then((resultD) => e(resultD))
+  .then((resultE) => console.log(resultE));
 ```
 
 ##--##
@@ -221,12 +214,7 @@ a()
 <br />
 
 ```javascript
-a()
-  .then(b)
-  .then(c)
-  .then(d)
-  .then(e)
-  .then(console.log);
+a().then(b).then(c).then(d).then(e).then(console.log);
 ```
 
 ##==##
@@ -274,10 +262,11 @@ L'API Promise
 Créer une nouvelle promesse
 
 ```javascript
-new Promise(function(resolveFn, rejectFn) {
+new Promise(function (resolveFn, rejectFn) {
   // Votre code asynchrone
 });
 ```
+
 </div>
 
 <br/>
@@ -286,13 +275,14 @@ new Promise(function(resolveFn, rejectFn) {
 Créer une nouvelle promesse à partir d'une valeur ou d'une autre promesse
 
 ```javascript
-Promise.resolve(/* valeur ou une promesse */) // Renvoie une promesse résolue
-Promise.reject(/* valeur ou une promesse */) // Renvoie une promesse rejetée
+Promise.resolve(/* valeur ou une promesse */); // Renvoie une promesse résolue
+Promise.reject(/* valeur ou une promesse */); // Renvoie une promesse rejetée
 
 // Exemple
-Promise.resolve(4).then(value => console.log(value)) // 4
-Promise.resolve(Promise.resolve('toto')).then(value => console.log(value)) // 'toto'
+Promise.resolve(4).then((value) => console.log(value)); // 4
+Promise.resolve(Promise.resolve('toto')).then((value) => console.log(value)); // 'toto'
 ```
+
 </div>
 
 ##==##
@@ -316,6 +306,7 @@ Promise.all([Promise.resolve(4), Promise.resolve('toto')])
 .then(values => console.log(values));
 // [4, 'toto']
 ```
+
 </div>
 
 <br/>
@@ -331,17 +322,16 @@ Promise.race([Promise.resolve(4), Promise.resolve('toto')])
 .then(value => console.log(value));
 // 4
 ```
+
 </div>
 
 ##==##
 
-<!-- .slide: class="two-column-layout" -->
+<!-- .slide: class="two-column" -->
 
 # Promises
 
 "Ok ok ok, moi je veux créer une promesse, comment je fais ?"
-
-##--##
 
 <!-- .slide: class="with-code" -->
 
@@ -352,7 +342,7 @@ Promise.race([Promise.resolve(4), Promise.resolve('toto')])
 function asyncFn(callback) {
   var request = new XMLHttpRequest();
   request.open('GET', 'http://www.wikipedia.org/', false);
-  request.onreadystatechange = event => {
+  request.onreadystatechange = (event) => {
     if (request.readyState == 4) return;
     if (request.status == 200) callback(null, request.responseText);
     else callback('Erreur pendant le chargement de la page.\n');
@@ -360,7 +350,7 @@ function asyncFn(callback) {
 }
 
 asyncFn(function callback(err, value) {
-    console.log(err ? err : value);
+  console.log(err ? err : value);
 });
 ```
 
@@ -376,7 +366,7 @@ function asyncFn() {
   return new Promise((resolve, reject) => {
     var request = new XMLHttpRequest();
     request.open('GET', 'http://www.wikipedia.org/', false);
-    request.onreadystatechange = event => {
+    request.onreadystatechange = (event) => {
       if (request.readyState == 4) {
         if (request.status == 200) resolve(request.responseText);
         else reject('Erreur pendant le chargement de la page.\n');
@@ -386,6 +376,6 @@ function asyncFn() {
 }
 
 asyncFn()
-  .then(result => console.log(result))
-  .catch(error => console.error(error));
+  .then((result) => console.log(result))
+  .catch((error) => console.error(error));
 ```

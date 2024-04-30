@@ -1,11 +1,9 @@
-<!-- .slide: class="two-column-layout" -->
+<!-- .slide: class="two-column" -->
 
 # Advanced Type
 
 - Intersection -> Combine les types en un
   - IUser & ILogin
-
-##--##
 
 <!-- .slide: class="with-code" -->
 
@@ -46,18 +44,17 @@ const result: TAllUserInfo = combineData(user, login);
 const result: string = combineData(user, login);
 // Type 'IUser & ILogin' is not assignable to type 'string'.
 ```
+
 <!-- .element: class="fragment" -->
 
 ##==##
 
-<!-- .slide: class="two-column-layout" -->
+<!-- .slide: class="two-column" -->
 
 # Advanced Type
 
 - Union => Peut être un parmi plusieurs types
   - IFish | IBird
-
-##--##
 
 <!-- .slide: class="with-code" -->
 
@@ -100,14 +97,12 @@ pet.swim(); // errors
 
 ##==##
 
-<!-- .slide: class="two-column-layout" -->
+<!-- .slide: class="two-column" -->
 
 # Advanced Type
 
 - Type Guards
   - parameterName is Type
-
-##--##
 
 <!-- .slide: class="with-code" -->
 

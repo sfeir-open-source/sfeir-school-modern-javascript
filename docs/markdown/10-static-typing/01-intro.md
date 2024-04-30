@@ -12,13 +12,11 @@ TypeScript sur des grandes équipes, c'est quand même bien pour tout ce qui est
 
 ##==##
 
-<!-- .slide: class="two-column-layout" -->
+<!-- .slide: class="two-column" -->
 
 # Typage statique
 
 - `let someValue: any = "randomString";`<br/>`(<string>someValue).length / (someValue as string).length;`
-
-##--##
 
 <!-- .slide: class="with-code" -->
 

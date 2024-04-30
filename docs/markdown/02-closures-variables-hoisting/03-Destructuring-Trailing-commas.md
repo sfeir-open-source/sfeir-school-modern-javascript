@@ -3,21 +3,22 @@
 # Destructuring, des Objects
 
 ```javascript
-function getObject () {
-   return {
-     foo: 'foofoo',
-     bar: 'barbar', 
-     quux: 'quuxquux'
-   };
+function getObject() {
+  return {
+    foo: 'foofoo',
+    bar: 'barbar',
+    quux: 'quuxquux',
+  };
 }
 
 var tmp = getObject();
 
-var foo  = tmp.foo;
+var foo = tmp.foo;
 var bar = tmp.bar;
 var quux = tmp.quux;
 var toto = tmp.toto;
 ```
+
 <!-- .element: class="fragment" -->
 
 ##==##
@@ -27,12 +28,12 @@ var toto = tmp.toto;
 # Destructuring, des Objects
 
 ```javascript
-function getObject () {
-   return {
-     foo: 'foofoo',
-     bar: 'barbar',
-     quux: 'quuxquux'
-   };
+function getObject() {
+  return {
+    foo: 'foofoo',
+    bar: 'barbar',
+    quux: 'quuxquux',
+  };
 }
 
 // Variable avec le même nom que l'attribut de l'objet ou un nom différent
@@ -41,6 +42,7 @@ const { foo: otherFoo, bar, quux, toto } = getObject();
 console.log(otherFoo); // foofoo
 console.log(bar); // barbar
 ```
+
 <!-- .element: class="fragment" -->
 
 Notes:
@@ -48,35 +50,39 @@ double destructuration à évoquer {obj: {test}, name} nested object destructuri
 
 ##==##
 
-<!-- .slide: class="two-column-layout" -->
+<!-- .slide: class="two-column" -->
 
 # Destructuring, des Arrays
 
 ```javascript
-var list = [ 1, 2, 3 ];
-// Récupérer deux valeurs
-var a = list[0], b = list[2];
+var list = [1, 2, 3]; // Récupérer deux valeurs
+var a = list[0],
+  b = list[2];
 // Echanger les valeurs
-var tmp = a; a = b; b = tmp;
+var tmp = a;
+a = b;
+b = tmp;
 ```
+
 <!-- .element: class="fragment" -->
 
 ```javascript
-const list = [ 1, 2, 3 ];
-// Récupérer la première valeur, ignorer la seconde et prendre la troisième
-let [ a, , b ] = list;
+const list = [1, 2, 3]; // Récupérer la première valeur, ignorer la seconde et prendre la troisième
+let [a, , b] = list;
 // Echanger les valeurs
-[ b, a ] = [ a, b ];
+[b, a] = [a, b];
 ```
+
 <!-- .element: class="fragment" -->
 
 ```javascript
-const list = [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ];
+const list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 // Récupérer la valeur à l'indice 3 (ici 4), et la dernière
 let { length: l, 3: a, [l - 1]: b } = list;
 // Utile pour éviter ceci
-let [ ,,, c,,,,,, d ] = list;
+let [, , , c, , , , , , d] = list;
 ```
+
 <!-- .element: class="fragment" -->
 
 Notes:
@@ -100,23 +106,25 @@ string
 <!-- .slide: class="with-code" -->
 
 ```javascript
-function f (arg) {
-    var name = arg[0];
-    var val  = arg[1];
-    console.log(name, val);
+function f(arg) {
+  var name = arg[0];
+  var val = arg[1];
+  console.log(name, val);
 }
 
-f([ 'bar', 42 ]); // bar, 42
+f(['bar', 42]); // bar, 42
 ```
+
 <!-- .element: class="fragment" -->
 
 ```javascript
-function f ([ name, val ]) {
-    console.log(name, val)
+function f([name, val]) {
+  console.log(name, val);
 }
 
-f([ 'bar', 42 ]); // bar, 42
+f(['bar', 42]); // bar, 42
 ```
+
 <!-- .element: class="fragment" -->
 
 ##--##
@@ -124,23 +132,25 @@ f([ 'bar', 42 ]); // bar, 42
 <!-- .slide: class="with-code" -->
 
 ```javascript
-function f (obj) {
-    var name = obj.name;
-    var val  = obj.val;
-    console.log(name, val);
+function f(obj) {
+  var name = obj.name;
+  var val = obj.val;
+  console.log(name, val);
 }
 
-f({name: 'bar', val: 42 }); // bar, 42
+f({ name: 'bar', val: 42 }); // bar, 42
 ```
+
 <!-- .element: class="fragment" -->
 
 ```javascript
-function f ({ name, val }) {
-    console.log(name, val)
+function f({ name, val }) {
+  console.log(name, val);
 }
 
-f({name: 'bar', val: 42 }); // bar, 42
+f({ name: 'bar', val: 42 }); // bar, 42
 ```
+
 <!-- .element: class="fragment" -->
 
 ##==##
@@ -188,4 +198,5 @@ function(a,b,) { // SyntaxError
   return a + b;
 }
 ```
+
 <!-- .element: class="fragment" -->

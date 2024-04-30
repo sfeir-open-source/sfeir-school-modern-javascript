@@ -1,32 +1,31 @@
-<!-- .slide: class="two-column-layout" -->
+<!-- .slide: class="two-column" -->
 
 # Arrow function
-
-##--##
 
 <!-- .slide: class="with-code" -->
 
 ```javascript
 var nums = [2, 4, 6, 8, 10];
 
-
-var odds  = nums.map(function (v) { return v + 1; });
+var odds = nums.map(function (v) {
+  return v + 1;
+});
 ```
 
 ```javascript
 var nums = [2, 4, 6, 8, 10];
 
 var pairs = nums.map(function (v) {
-    return { even: v, odd: v + 1 }; 
+  return { even: v, odd: v + 1 };
 });
 ```
 
 ```javascript
 var nums = [1, 2, 3, 4, 5, 6];
 
-
-
-var nums  = nums.map(function (v, i) { return v + i; });
+var nums = nums.map(function (v, i) {
+  return v + i;
+});
 ```
 
 ##--##
@@ -36,24 +35,23 @@ var nums  = nums.map(function (v, i) { return v + i; });
 ```javascript
 const nums = [2, 4, 6, 8, 10];
 
-
-const odds  = nums.map(v => v + 1);
+const odds = nums.map((v) => v + 1);
 ```
 
 ```javascript
 const nums = [2, 4, 6, 8, 10];
 
-
-
-const pairs = nums.map(v => ({ even: v, odd: v + 1 }));
+const pairs = nums.map((v) => ({ even: v, odd: v + 1 }));
 ```
 
 ```javascript
 const nums = [1, 2, 3, 4, 5, 6];
 
-const add  = nums.map((v, i) => v + i)
+const add = nums.map((v, i) => v + i);
 // ou
-const add2  = nums.map((v, i) => { return v + i;});
+const add2 = nums.map((v, i) => {
+  return v + i;
+});
 ```
 
 Notes:
@@ -61,27 +59,23 @@ dans le deuxième cas, les parenthèses représentent une expression JS et perme
 
 ##==##
 
-<!-- .slide: class="two-column-layout" -->
+<!-- .slide: class="two-column" -->
 
 # Un problème de this ...
-
-##--##
 
 <!-- .slide: class="with-code" -->
 
 ```javascript
-
-   var f = {
-      nums: [1, 2, 3, 4, 5, 6],
-      even: [],
-      each() {
-        this.nums.forEach(function(v) {
-          if (v % 2 === 0)
-            this.even.push(v);//ERROR
-        });
-      }
-   };
-   f.each();
+var f = {
+  nums: [1, 2, 3, 4, 5, 6],
+  even: [],
+  each() {
+    this.nums.forEach(function (v) {
+      if (v % 2 === 0) this.even.push(v); //ERROR
+    });
+  },
+};
+f.each();
 ```
 
 ##--##
@@ -91,15 +85,14 @@ dans le deuxième cas, les parenthèses représentent une expression JS et perme
 ```javascript
 // Correction
 var f = {
-    nums: [1, 2, 3, 4, 5, 6],
-    even: [],
-    each() {
+  nums: [1, 2, 3, 4, 5, 6],
+  even: [],
+  each() {
     var self = this;
-      this.nums.forEach(function(v) {
-          if (v % 2 === 0)
-            self.even.push(v);
-      });
-    }
+    this.nums.forEach(function (v) {
+      if (v % 2 === 0) self.even.push(v);
+    });
+  },
 };
 f.each();
 ```
@@ -113,12 +106,13 @@ var f = {
   even: [],
   each() {
     var self = this;
-    this.nums.forEach(function(v) {
-      if (v % 2 === 0)
-        this.even.push(v);
-    }.bind(this));
-    console.log(this.even)
-  }
+    this.nums.forEach(
+      function (v) {
+        if (v % 2 === 0) this.even.push(v);
+      }.bind(this)
+    );
+    console.log(this.even);
+  },
 };
 
 f.each();
@@ -135,10 +129,10 @@ var f = {
   nums: [1, 2, 3, 4, 5, 6],
   even: [],
   each() {
-    this.nums.forEach(v => {
+    this.nums.forEach((v) => {
       if (v % 2 === 0) this.even.push(v);
     });
-  }
+  },
 };
 f.each(); // [2, 4, 6]
 f.even; // [2, 4, 6]

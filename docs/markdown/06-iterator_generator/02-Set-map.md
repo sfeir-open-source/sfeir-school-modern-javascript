@@ -13,13 +13,11 @@
 
 ##==##
 
-<!-- .slide: class="two-column-layout" -->
+<!-- .slide: class="two-column" -->
 
 # Set & Map
 
 - Les **Set** sont une nouvelle structure _comparable_ aux _Arrays_
-
-##--##
 
 <!-- .slide: class="with-code" -->
 
@@ -64,11 +62,9 @@ https://developer.mozilla.org/fr/docs/Web/JavaScript/Guide/Collections_avec_cl%C
 
 ##==##
 
-<!-- .slide: class="two-column-layout" -->
+<!-- .slide: class="two-column" -->
 
 # Set & Map
-
-##--##
 
 - Les **Map** sont une nouvelle structure _comparable_ aux _Objets_
 
@@ -119,13 +115,11 @@ https://developer.mozilla.org/fr/docs/Web/JavaScript/Guide/Collections_avec_cl%C
 
 ##==##
 
-<!-- .slide: class="two-column-layout" -->
+<!-- .slide: class="two-column" -->
 
 # Set & Map
 
 Si on utilise **uniquement des clés de type string**, on peut simuler une Map avec `Object.create(null)`
-
-##--##
 
 <!-- .slide -->
 

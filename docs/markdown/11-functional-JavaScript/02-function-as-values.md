@@ -1,4 +1,4 @@
-<!-- .slide: class="two-column-layout" -->
+<!-- .slide: class="two-column" -->
 
 # Fn JS : Function as values
 
@@ -7,8 +7,6 @@
 - Elle peut être définie en tant que variable
 - Elle peut être utilisée en tant qu'argument d'une autre fonction
 - Elle peut être retournée d'une autre fonction
-
-##--##
 
 <!-- .slide: class="with-code" -->
 

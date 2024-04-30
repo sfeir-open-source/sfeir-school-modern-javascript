@@ -19,7 +19,9 @@ Currying is a process in functional programming in which we can transform a func
 It keeps returning a new function until all the arguments are exhausted.
 
 ```javascript
-function multiply(a, b, c) { return a * b * c; }
+function multiply(a, b, c) {
+  return a * b * c;
+}
 multiply(1, 2, 3); // 6
 
 function multiply(a) {
@@ -41,7 +43,7 @@ bien insister sur le fait que le currying est bien un appel multiple de fonction
 
 ##==##
 
-<!-- .slide: class="two-column-layout" -->
+<!-- .slide: class="two-column" -->
 
 # Fn JS : Currying
 
@@ -50,8 +52,6 @@ bien insister sur le fait que le currying est bien un appel multiple de fonction
 The arguments are kept "alive" (via closure) and all are used in execution when the final function in the currying chain is returned and executed.
 
 Let's see in details how our function works
-
-##--##
 
 <!-- .slide: class="with-code" -->
 

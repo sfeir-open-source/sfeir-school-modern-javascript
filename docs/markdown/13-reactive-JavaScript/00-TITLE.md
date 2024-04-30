@@ -1,4 +1,3 @@
-<!-- .slide: class="transition red" -->
+<!-- .slide: class="transition" -->
 
 # Reactive Javascript
-

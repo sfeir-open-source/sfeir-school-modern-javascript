@@ -13,11 +13,9 @@ https://medium.com/@addyosmani/the-cost-of-javascript-in-2018-7d8950fbb5d4
 
 ##==##
 
-<!-- .slide: class="two-column-layout" -->
+<!-- .slide: class="two-column" -->
 
 # Modules
-
-##--##
 
 AMD <!-- .element: class="text-center" -->
 <br/>
@@ -85,11 +83,9 @@ https://parceljs.org/
 
 ##==##
 
-<!-- .slide: class="two-column-layout" -->
+<!-- .slide: class="two-column" -->
 
 # Modules
-
-##--##
 
 <!-- .slide: class="with-code" -->
 
@@ -123,15 +119,14 @@ import { square, diag } from 'lib';
 console.log(square(11)); // 121
 console.log(diag(4, 3)); // 5
 ```
+
 <!-- .element: class="fragment" -->
 
 ##==##
 
-<!-- .slide: class="two-column-layout" -->
+<!-- .slide: class="two-column" -->
 
 # Modules : export default
-
-##--##
 
 <!-- .slide: class="with-code" -->
 
@@ -162,6 +157,7 @@ import { square } from 'lib';
 import * as myLib from 'lib';
 myLib.square; // function square ...
 ```
+
 <!-- .element: class="fragment" -->
 
 <br/>
@@ -170,4 +166,5 @@ myLib.square; // function square ...
 // ------ main.js ------
 import square from 'lib';
 ```
+
 <!-- .element: class="fragment" -->

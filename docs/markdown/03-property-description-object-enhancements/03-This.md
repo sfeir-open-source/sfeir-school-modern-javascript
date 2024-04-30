@@ -42,11 +42,9 @@ Alors c'est quoi this ? <!-- .element: class="fragment bold text-center" data-fr
 
 ##==##
 
-<!-- .slide: class="two-column-layout" -->
+<!-- .slide: class="two-column" -->
 
 # This
-
-##--##
 
 <!-- .slide: class="with-code" -->
 
@@ -83,11 +81,9 @@ for (i = 0; i < 5; i++) {
 
 ##==##
 
-<!-- .slide: class="two-column-layout" -->
+<!-- .slide: class="two-column" -->
 
 # This
-
-##--##
 
 <!-- .slide: class="with-code" -->
 
@@ -102,7 +98,7 @@ function randomFn() {
     counter(i);
   }
 }
-var iterations = counter.iterations = randomFn.iterations = 0;
+var iterations = (counter.iterations = randomFn.iterations = 0);
 
 window.randomFn();
 
@@ -131,6 +127,7 @@ for (var i = 0; i < 5; i++) {
 
 // randomFn.iterations = 5 ! ENFIN !!!
 ```
+
 <!-- .element: class="fragment" -->
 
 Notes:

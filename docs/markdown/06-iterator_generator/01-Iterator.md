@@ -29,15 +29,13 @@ boolean, object, number, null, undefined, symbol, string
 
 ##==##
 
-<!-- .slide: class="two-column-layout" -->
+<!-- .slide: class="two-column" -->
 
 # Itérables : Comment les parcourir
 
 <br />
 
 ## La boucle for-of
-
-##--##
 
 <!-- .slide: class="with-code" -->
 

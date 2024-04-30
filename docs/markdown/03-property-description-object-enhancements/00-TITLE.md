@@ -1,3 +1,3 @@
-<!-- .slide: class="transition red" -->
+<!-- .slide: class="transition" -->
 
 # Property Descriptor <br/>& Object enhancements

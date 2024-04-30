@@ -2,7 +2,7 @@
 
 # Modules : On essaye !
 
-## Exercice
+## Lab
 
 <!-- .slide:-->
 

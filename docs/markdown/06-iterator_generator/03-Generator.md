@@ -6,11 +6,9 @@ C'est une fonction qui peut se mettre en pause.
 
 ##==##
 
-<!-- .slide: class="two-column-layout" -->
+<!-- .slide: class="two-column" -->
 
 # Les générateurs
-
-##--##
 
 <!-- .slide: class="with-code" -->
 
@@ -36,36 +34,44 @@ console.log(generatorHello.next());
 ```javascript
 function* () {}
 ```
+
 <!-- .element: class="fragment" data-fragment-index="1" -->
+
 Permet de créer une fonction générateur
+
 <!-- .element: class="fragment" data-fragment-index="1" -->
 
 ```javascript
-helloWorld()
+helloWorld();
 ```
+
 <!-- .element: class="fragment" data-fragment-index="2" -->
+
 On instancie un générateur
+
 <!-- .element: class="fragment" data-fragment-index="2" -->
 
 ```javascript
-generatorHello.next()
+generatorHello.next();
 ```
+
 <!-- .element: class="fragment" data-fragment-index="3" -->
+
 On va à la prochaine étape de notre générateur
+
 <!-- .element: class="fragment" data-fragment-index="3" -->
 
 <br/>
 
 => Le prochain **yield**
+
 <!-- .element: class="fragment" data-fragment-index="4" -->
 
 ##==##
 
-<!-- .slide: class="two-column-layout" -->
+<!-- .slide: class="two-column" -->
 
 # Les générateurs
-
-##--##
 
 <!-- .slide: class="with-code" -->
 
@@ -103,11 +109,9 @@ C'est une fonction avec laquelle on peut communiquer pendant son exécution.
 
 ##==##
 
-<!-- .slide: class="two-column-layout" -->
+<!-- .slide: class="two-column" -->
 
 # Les générateurs
-
-##--##
 
 <!-- .slide: class="with-code" -->
 
@@ -129,24 +133,26 @@ console.log(generatorHello.next());
 ##--##
 
 1er `console.log`, on va jusqu'au premier **yield**.
+
 <!-- .element: class="fragment" -->
 
 2ème `console.log`, on va jusqu'au second **yield**.
+
 <!-- .element: class="fragment" -->
 
 3éme `console.log`, il n'y a plus de **yield**, notre générateur est **terminé**.
+
 <!-- .element: class="fragment" -->
 
 ![](./assets/images/Generator_01.png)
+
 <!-- .element: class="fragment" -->
 
 ##==##
 
-<!-- .slide: class="two-column-layout" -->
+<!-- .slide: class="two-column" -->
 
 # Les générateurs : je peux utiliser return ?
-
-##--##
 
 <!-- .slide: class="with-code" -->
 
@@ -198,11 +204,9 @@ console.log(generatorHello.next());
 
 ##==##
 
-<!-- .slide: class="two-column-layout" -->
+<!-- .slide: class="two-column" -->
 
 # Les générateurs : communication
-
-##--##
 
 <!-- .slide: class="with-code" -->
 

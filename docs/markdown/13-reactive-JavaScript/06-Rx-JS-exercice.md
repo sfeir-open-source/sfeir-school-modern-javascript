@@ -2,7 +2,7 @@
 
 # Rx JS
 
-## Exercice
+## Lab
 
 Let's Pipe All The Functions !
 

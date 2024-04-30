@@ -1,3 +1,3 @@
-<!-- .slide: class="transition red" -->
+<!-- .slide: class="transition" -->
 
 # Proxy et protection d'objet

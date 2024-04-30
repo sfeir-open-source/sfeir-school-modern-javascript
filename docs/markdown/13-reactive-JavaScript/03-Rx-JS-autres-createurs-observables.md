@@ -1,8 +1,6 @@
-<!-- .slide: class="two-column-layout" -->
+<!-- .slide: class="two-column" -->
 
-# Rx JS : D'Autres créateurs d'observables
-
-##--##
+#
 
 <!-- .slide: class="with-code" -->
 

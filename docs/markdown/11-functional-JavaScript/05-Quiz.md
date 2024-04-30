@@ -51,15 +51,13 @@ Non
 
 ##==##
 
-<!-- .slide: class="two-column-layout" -->
+<!-- .slide: class="two-column" -->
 
 # Fn JS : Quiz
 
 **Petit Quiz 3**
 
 - La fonction Array.prototype.map est-elle pure ?
-
-##--##
 
 <!-- .slide: class="with-code" -->
 
@@ -70,8 +68,8 @@ Non
 
 ```javascript
 var numbers = [1, 4, 9];
-var doubles = numbers.map(function(num) {
-return num * 2;
+var doubles = numbers.map(function (num) {
+  return num * 2;
 });
 
 // doubles is now [2, 8, 18]

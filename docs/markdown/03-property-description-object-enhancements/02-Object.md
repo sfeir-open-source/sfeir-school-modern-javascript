@@ -1,10 +1,8 @@
-<!-- .slide: class="two-column-layout" -->
+<!-- .slide: class="two-column" -->
 
 # Object.assign
 
 - JS nous permet enfin de **copier** un objet ou d'en **fusionner** plusieurs !
-
-##--##
 
 <!-- .slide: class="with-code" -->
 
@@ -13,18 +11,20 @@
 <br />
 
 ```javascript
-const object1 = { a: 1 }, object2 = { b: 2 };
+const object1 = { a: 1 },
+  object2 = { b: 2 };
 
 Object.defineProperty(object2, 'f', {
-    value: 6,
-    enumerable: false
+  value: 6,
+  enumerable: false,
 });
 
 Object.defineProperty(object2, 'g', {
-    value: 8,
-    enumerable: true
+  value: 8,
+  enumerable: true,
 });
 ```
+
 <!-- .element: class="fragment" -->
 
 ##--##
@@ -38,14 +38,15 @@ Object.defineProperty(object2, 'g', {
 ```javascript
 // les propriétés sont copiées de object1 et object2 dans target
 // puis on récupère l'objet fusionné dans newObject
-const newObject = Object.assign(target, object1, object2 );
+const newObject = Object.assign(target, object1, object2);
 
 // mais seules les propriétés énumérables "a, b et Symbol('h')" sont copiées
-newObject.a;                 // 1
-newObject.b;                 // 2
-newObject.f;                 // undefined
-newObject.g;                 // 8
+newObject.a; // 1
+newObject.b; // 2
+newObject.f; // undefined
+newObject.g; // 8
 ```
+
 <!-- .element: class="fragment" -->
 
 Notes:
@@ -66,20 +67,20 @@ l'autre manière de copier un objet est le spread operator
 - Attention la copie est superficielle (shallow).
 
 ```javascript
-const o1 = { a: 1, foo: { bar: 'baz' }};
+const o1 = { a: 1, foo: { bar: 'baz' } };
 const o2 = Object.assign({}, o1);
 
-o1.foo;                   // { bar: 'baz' }
-o2.foo;                   // { bar: 'baz' }
+o1.foo; // { bar: 'baz' }
+o2.foo; // { bar: 'baz' }
 
 o2.a = 2;
 o2.foo.bar = 'fizz';
 
-o1.foo;                   // { bar: 'fizz' }
-o2.foo;                   // { bar: 'fizz' }
+o1.foo; // { bar: 'fizz' }
+o2.foo; // { bar: 'fizz' }
 
-o1.a                      // 1
-o2.a                      // 2
+o1.a; // 1
+o2.a; // 2
 ```
 
 ##==##
@@ -105,6 +106,7 @@ console.log(values); // ["Alice", "Nantes"]
 console.log(entries);
 // [["name", "Alice"], ["city", "Nantes"]]
 ```
+
 <!-- .element: class="fragment" -->
 
 ##==##
@@ -120,7 +122,9 @@ var person = {
   name: 'Alice',
   city: 'Nantes',
 };
-var keys = [], values = [], entries = [];
+var keys = [],
+  values = [],
+  entries = [];
 for (var key in person) {
   if (Object.prototype.hasOwnProperty.call(person, key)) {
     keys.push(key);
@@ -132,4 +136,5 @@ console.log(keys); // ["name", "city"]
 console.log(values); // ["Alice", "Nantes"]
 console.log(entries); // [["name", "Alice"], ["city", "Nantes"]]
 ```
+
 <!-- .element: class="fragment" -->

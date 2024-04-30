@@ -2,7 +2,7 @@
 
 # Proxies - Un cas d'utilisation
 
-## Exercice
+## Lab
 
 - **Dans une Array de pseudonymes, on veut que la liste ne contienne que des pseudos uniques et en lowercase**
 - **Par souci de sécurité, l'accès à la proxy liste ne doit renvoyer aucun caractère spécial (§!^\$%; etc...)**

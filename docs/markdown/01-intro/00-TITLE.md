@@ -1,4 +1,4 @@
-<!-- .slide: class="transition red" -->
+<!-- .slide: class="transition" -->
 
 # Introduction
 

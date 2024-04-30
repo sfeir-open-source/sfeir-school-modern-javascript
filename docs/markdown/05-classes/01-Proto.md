@@ -1,8 +1,6 @@
-<!-- .slide: class="two-column-layout" -->
+<!-- .slide: class="two-column" -->
 
 # \_\_proto\_\_
-
-##--##
 
 <!-- .slide -->
 

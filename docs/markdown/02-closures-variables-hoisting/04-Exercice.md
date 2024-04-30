@@ -2,7 +2,7 @@
 
 # Destructuring
 
-## Exercice
+## Lab
 
 Modifier la signature de la fonction testDestructuring, de telle sorte qu'elle prenne :
 

@@ -11,13 +11,11 @@
 
 ##==##
 
-<!-- .slide: class="two-column-layout" -->
+<!-- .slide: class="two-column" -->
 
 # Async/Await
 
 - **Avant la fonction async, le problème de l'asynchronicité**
-
-##--##
 
 <!-- .slide: class="with-code" -->
 
@@ -50,13 +48,11 @@ function main() {
 
 ##==##
 
-<!-- .slide: class="two-column-layout" -->
+<!-- .slide: class="two-column" -->
 
 # Async/Await
 
 - **Une écriture simplifiée pour une lisibilité accrue**
-
-##--##
 
 <!-- .slide: class="with-code" -->
 
@@ -81,9 +77,9 @@ function logData() {
 
 ```javascript
 async function logData() {
-    const result = await getData();
-    console.log(result);
-} 
+  const result = await getData();
+  console.log(result);
+}
 
 // ES2017 | On utilise async/await
 ```
