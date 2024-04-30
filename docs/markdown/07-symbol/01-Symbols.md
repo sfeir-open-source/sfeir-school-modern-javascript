@@ -5,10 +5,10 @@
 <ul class="fragment" data-fragment-index="1"><li>Nouveau type primitif (Donc pas besoin de new)</li></ul>
 
 ```javascript
-var key = Symbol("key");
-
-typeof key === "symbol"; // true
+var key = Symbol('key');
+typeof key === 'symbol'; // true
 ```
+
 <!-- .element: class="fragment" -->
 
 <br/>
@@ -18,8 +18,9 @@ typeof key === "symbol"; // true
 <!-- .element: class="fragment" -->
 
 ```javascript
-Symbol("toto") === Symbol("toto"); // false
+Symbol('toto') === Symbol('toto'); // false
 ```
+
 <!-- .element: class="fragment" -->
 
 Notes:
@@ -141,14 +142,14 @@ Symbols are mainly used as unique property keys – a symbol never clashes with 
 
 # Cross Realms Symbols
 
-Code Realms are contexts of execution of code. Each Web Worker and Iframe have their own realm, as well as the browser.
+Code Realms sont des contextes d'exécution de code. Chaque Web Worker et Iframe ont leur propre domaine (realm), ainsi que le navigateur.
 
-That means that Objects declared in global level (like Array, or Symbol) are considered different across realms.
-Except for native Symbols.
+Cela signifie que les objets déclarés au niveau global (comme les Array ou Symbol) sont considérés comme différents selon les domaines.
+Sauf pour les symboles natifs.
 
 ```javascript
-Array !== iframe.Array // true
-Symbol.iterator !== iframe.Symbol.iterator // false
+Array !== iframe.Array; // true
+Symbol.iterator !== iframe.Symbol.iterator; // false
 ```
 
 Notes:
@@ -160,14 +161,16 @@ En cas de questions montrer un exemple en créant une iframe (voir https://2alit
 
 # Solution: Symbol.for
 
-We can declare a symbol with Symbol.for. The created symbol is registered in a global registry, with its description as key.
+Nous pouvons déclarer un symbole avec Symbol.for. Le symbole créé est inscrit dans un registre global, avec sa description comme clé.
+
 <!-- .element: class="fragment" -->
 
 ```javascript
 const symbol = Symbol.for('foo'); // as setter
 symbol === Symbol.for('foo'); // as getter => true
-Symbol.keyFor(symbol) // foo
+Symbol.keyFor(symbol); // foo
 ```
+
 <!-- .element: class="fragment" -->
 
 ##==##
@@ -176,19 +179,21 @@ Symbol.keyFor(symbol) // foo
 
 # Solution: Symbol.for
 
-It is useful for libs that customize behavior based on property.
+C'est utile pour les bibliothèques qui personnalisent le comportement en fonction de la propriété.
+
 <!-- .element: class="fragment" -->
 
 ```javascript
 // lib.js
 const symbol = Symbol.for('foo');
 window.f = function (obj) {
-  if(Reflect.ownKeys(obj).indexOf(symbol) === -1) {
-    return "";
+  if (Reflect.ownKeys(obj).indexOf(symbol) === -1) {
+    return '';
   }
   console.log(obj[symbol]());
-}
+};
 ```
+
 <!-- .element: class="fragment" -->
 
 ```javascript
@@ -198,7 +203,8 @@ f({
   foo: 'hello',
   [symbol]() {
     return this.foo;
-  }
+  },
 }); // hello
 ```
+
 <!-- .element: class="fragment" -->
