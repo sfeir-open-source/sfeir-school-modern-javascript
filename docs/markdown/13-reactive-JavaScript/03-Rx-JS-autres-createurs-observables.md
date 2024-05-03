@@ -1,10 +1,6 @@
-<!-- .slide: class="two-column-layout" -->
+<!-- .slide: class="two-column with-code" -->
 
-# Rx JS : D'Autres créateurs d'observables
-
-##--##
-
-<!-- .slide: class="with-code" -->
+#
 
 ```typescript
 // From event
@@ -27,6 +23,8 @@ result.subscribe((x) => console.log(x));
 ##--##
 
 <!-- .slide: class="with-code" -->
+
+<br><br>
 
 ```typescript
 // Convert the Promise returned by Fetch to an Observable

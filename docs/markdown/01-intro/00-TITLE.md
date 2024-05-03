@@ -1,4 +1,4 @@
-<!-- .slide: class="transition red" -->
+<!-- .slide: class="transition" -->
 
 # Introduction
 
@@ -6,6 +6,6 @@
 
 <!-- .slide:-->
 
-# Why this course?
+# Pourquoi cette formation ?
 
-This course was designed to overcome the most common misconceptions of JavaScript, and provide sound ground to write maintainable JS.
+Ce cours a été conçu pour surmonter les idées fausses les plus courantes sur JavaScript et fournir des bases solides pour écrire du JS maintenable.

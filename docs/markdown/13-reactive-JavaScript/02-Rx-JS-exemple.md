@@ -1,10 +1,6 @@
-<!-- .slide: class="two-column-layout" -->
+<!-- .slide: class="two-column with-code" -->
 
 # Rx JS : Exemple
-
-##--##
-
-<!-- .slide: class="with-code" -->
 
 ```typescript
 var myObservable = new Observable(function (observer) {
@@ -28,6 +24,8 @@ console.log('just after subscribe');
 ##--##
 
 <!-- .slide: class="with-code" -->
+
+<br><br><br>
 
 ```typescript
 // Just before subscribe

@@ -19,6 +19,7 @@
 # Fn JS : Redux
 
 Les 3 principes de Redux (issue de la doc)
+
 <div class="fragment" data-fragment-index="1">
 - State is Read-Only
 </div>
@@ -165,11 +166,9 @@ Let's Play ! <!-- .element: class="text-center" -->
 
 ##==##
 
-<!-- .slide: class="two-column-layout" -->
+<!-- .slide: class="two-column" -->
 
 # Fn JS : Redux - DevTools
-
-##--##
 
 <!-- .slide -->
 
@@ -181,8 +180,8 @@ Let's Play ! <!-- .element: class="text-center" -->
 
 &nbsp;  
 &nbsp;  
-&nbsp;  
-  
+&nbsp;
+
 Meet your new best friend <!-- .element: class="text-center" -->
 
 Redux DevTools ! <!-- .element: class="bold text-center" -->

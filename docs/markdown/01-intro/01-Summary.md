@@ -1,8 +1,6 @@
-<!-- .slide: class="two-column-layout" -->
+<!-- .slide: class="two-column" -->
 
 # Sommaire
-
-##--##
 
 I. Back to the core
 
@@ -19,15 +17,17 @@ I. Back to the core
 
 ##--##
 
-II. Maintainable JavaScript
+<br><br><br>
+
+II. JavaScript Maintenable
 
 1. TypeScript
 1. Fn(JS)
-   - Writing Testable code (Avoid Side Effects + Modular code)
+   - Ecrire du code Testable (eviter les Side Effects + Modular code)
    - Functions as values
    - map(), filter(), reduce()
    - HOF & Currying
-   - Write a pipe()
-1. A better Front Architecture -> CQRS !
-   - Let's write our own Redux Impl°
+   - Ecrire des pipe()
+1. Meilleur Architecture Front -> CQRS !
+   - Ecrivons notre propre Redux Impl°
 1. Bonus: RxJS

@@ -2,7 +2,7 @@
 
 # Les générateurs
 
-## Exercice
+## Lab
 
 Créer un **générateur** permettant de donner les valeurs de la suite de **Fibonacci**. Pour rappel, f(0) = 0 et f(1) = 1.
 

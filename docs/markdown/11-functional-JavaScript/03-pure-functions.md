@@ -1,4 +1,4 @@
-<!-- .slide: class="two-column-layout" -->
+<!-- .slide: class="two-column with-code" -->
 
 # Fn JS : Pure Functions
 
@@ -7,13 +7,6 @@
 - Elle retourne un même résultat pour les mêmes arguments. C'est-à-dire : **Une fonction pure est _Déterministe_**
 - **Une fonction pure ne produit pas d'effets de bords**
 
-##--##
-
-<!-- .slide: class="with-code" -->
-
-<br />
-<br />
-<br />
 <br />
 <br />
 <br />
@@ -47,21 +40,13 @@ pureRectangle(10, 5); //50
 
 ##==##
 
-<!-- .slide: class="two-column-layout" -->
+<!-- .slide: class="two-column with-code" -->
 
 # Fn JS : Pure Functions
 
 - **Les avantages des fonctions pures ?**
   - Elles sont beaucoup plus simples à tester ! Il n'y a pas besoin de construire un "contexte" à la fonction (mocks). Simplement à tester son invocation.
 
-##--##
-
-<!-- .slide: class="with-code" -->
-
-<br />
-<br />
-<br />
-<br />
 <br />
 <br />
 
@@ -90,7 +75,7 @@ console.log(compteur); // 2
 ```javascript
 const compteur = 1;
 
-const incCompteur = valeur => valeur + 1;
+const incCompteur = (valeur) => valeur + 1;
 
 const nouveauCompteur = incCompteur(compteur);
 

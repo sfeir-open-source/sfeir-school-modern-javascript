@@ -1,9 +1,7 @@
+import { SfeirThemeInitializer } from '../web_modules/sfeir-school-theme/sfeir-school-theme.mjs';
+
 const schoolSlidesRootDir = '00-school';
-const schoolSlides = () => [
-  `${schoolSlidesRootDir}/00-TITLE.md`,
-  `${schoolSlidesRootDir}/speaker-anthony.md`,
-  `${schoolSlidesRootDir}/speaker-jef.md`,
-];
+const schoolSlides = () => [`${schoolSlidesRootDir}/00-TITLE.md`, `${schoolSlidesRootDir}/speaker-jef.md`];
 
 const introSlidesDir = '01-intro';
 const introSlides = () => [
@@ -75,7 +73,7 @@ const reflectSlides = () => [
   `${reflectSlidesDir}/01-Purpose.md`,
   `${reflectSlidesDir}/02-All-Functions.md`,
   `${reflectSlidesDir}/03-Interesting-Methods-Examples.md`,
-]
+];
 
 const modulesSlidesDir = '09-modules';
 const modulesSlides = () => [
@@ -106,7 +104,6 @@ const functionalJavascriptSlides = () => [
   `${functionalJavascriptSlideDir}/06-exercice.md`,
   `${functionalJavascriptSlideDir}/07-immutability.md`,
   `${functionalJavascriptSlideDir}/08-currying.md`,
-
 ];
 
 const aBetterPatternSlideDir = '12-a-better-pattern';
@@ -147,9 +144,7 @@ function formation() {
     ...functionalJavascriptSlides(),
     ...aBetterPatternSlides(),
     ...reactiveJSSlides(),
-  ].map(slidePath => ({ path: slidePath }));
+  ].map((slidePath) => ({ path: slidePath }));
 }
 
-export function usedSlides() {
-  return formation();
-}
+SfeirThemeInitializer.init(formation);

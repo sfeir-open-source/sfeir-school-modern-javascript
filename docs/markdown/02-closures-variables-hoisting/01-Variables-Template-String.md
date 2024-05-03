@@ -3,18 +3,20 @@
 # Const et let : Mais où sont les var ?
 
 ```javascript
-    var valueA = 1234;
-    var valueA = 453; //NO ERROR !!!
+var valueA = 1234;
+var valueA = 453; //NO ERROR !!!
 ```
+
 <!-- .element: class="fragment" -->
 
 ```javascript
-    const valueB = 1234;
-    valueB = 12345; //ERROR
-    let valueC = 1234;
-    valueC = 12345;
-    let valueC = 453; //ERROR
+const valueB = 1234;
+valueB = 12345; //ERROR
+let valueC = 1234;
+valueC = 12345;
+let valueC = 453; //ERROR
 ```
+
 <!-- .element: class="fragment" -->
 
 Notes:
@@ -39,6 +41,7 @@ if (true) {
 }
 console.log(j); // 2
 ```
+
 <!-- .element: class="fragment" -->
 
 ```javascript
@@ -48,6 +51,7 @@ if (true) {
 }
 console.log(j); // ERROR
 ```
+
 <!-- .element: class="fragment" -->
 
 Notes:
@@ -59,22 +63,18 @@ Le mot-clé function revient à une déclaration globale de la fonction
 
 ##==##
 
-<!-- .slide: class="two-column-layout" -->
+<!-- .slide: class="two-column with-code" -->
 
 # Const et let : Mais où sont les vars ?
 
-##--##
-
-<!-- .slide: class="with-code" -->
-
 ```javascript
-(function() {
+(function () {
   foo === undefined;
-  var foo = function() {
+  var foo = function () {
     return 1;
   };
   foo() === 1;
-  (function() {
+  (function () {
     foo() === 2;
     function foo() {
       return 2;
@@ -85,11 +85,14 @@ Le mot-clé function revient à une déclaration globale de la fonction
 })();
 foo(); // Uncaught ReferenceError: foo is not defined
 ```
+
 <!-- .element: class="fragment" -->
 
 ##--##
 
 <!-- .slide: class="with-code" -->
+
+<br><br><br><br>
 
 ```javascript
 {
@@ -107,8 +110,9 @@ foo(); // Uncaught ReferenceError: foo is not defined
   }
   foo() === 1;
 }
-foo() === 1
+foo() === 1;
 ```
+
 <!-- .element: class="fragment" -->
 
 Notes:
@@ -140,7 +144,7 @@ function f(names) {
   }
   return `${part1} ${part2}`;
 }
-console.log(f(['Jane', 'John']))
+console.log(f(['Jane', 'John']));
 ```
 
 ##==##
@@ -150,6 +154,7 @@ console.log(f(['Jane', 'John']))
 # Les var, toujours en vie
 
 ### Le do-while
+
 ```javascript
 function f(files) {
   const stack = files.slice();
@@ -168,12 +173,12 @@ console.log(f(['file1', 'file2', 'file3']));
 # Les var, toujours en vie
 
 ### Compenser la création par la syntaxe d'un bloc non voulu
+
 ```javascript
 async function foo() {
   try {
     var foo = await fetchRandomNumber();
-  }
-  catch {
+  } catch {
     var foo = Math.trunc(Math.random() * 100);
   }
   return foo + 42;
@@ -183,17 +188,19 @@ foo().then(console.log);
 
 ##==##
 
-<!-- .slide: class="with-code" -->
+<!-- .slide: class="two-column with-code" -->
 
 # Template String
 
 On utilise les back **quotes ``** et on peut créer des expressions avec **\${}**
 
+<!-- prettier-ignore -->
 ```javascript
 var welcome = 'Welcome';
 var sujet = 'ES6';
 
-var myTemplateHTML = '<div class="sfeirschool">\n<p>'+welcome+'</p>\n<p>'+sujet+'</p>\n</div>';
+var myTemplateHTML = '<div class="sfeirschool">\n<p>' 
++ welcome + '</p>\n<p>' + sujet + '</p>\n</div>';
 
 /*
 "<div class="sfeirschool">
@@ -202,15 +209,14 @@ var myTemplateHTML = '<div class="sfeirschool">\n<p>'+welcome+'</p>\n<p>'+sujet+
 </div>"
 */
 ```
+
 <!-- .element: class="fragment" -->
 
-##==##
+##--##
 
 <!-- .slide: class="with-code" -->
 
-# Template String
-
-On utilise les back **quotes ``** et on peut créer des expressions avec **\${}**
+<br><br><br><br><br>
 
 ```javascript
 const welcome = 'Welcome';
@@ -229,6 +235,7 @@ const myTemplateHTML = `
 </div>"
 */
 ```
+
 <!-- .element: class="fragment" -->
 
 Notes:
@@ -242,10 +249,10 @@ Notes:
 
 ```javascript
 function bbCode(strings, ...values) {
-    return `${strings[0].replace("[b]", "<strong>")}${values[0]}${strings[1].replace("[/b]", "</strong>")}`;
+  return `${strings[0].replace('[b]', '<strong>')}${values[0]}${strings[1].replace('[/b]', '</strong>')}`;
 }
 
-bbCode`foo [b]${42}[/b] bar` // foo <strong>42</strong> bar
+bbCode`foo [b]${42}[/b] bar`; // foo <strong>42</strong> bar
 ```
 
 Notes:

@@ -1,8 +1,6 @@
-<!-- .slide: class="two-column-layout" -->
+<!-- .slide: class="two-column" -->
 
 # \_\_proto\_\_
-
-##--##
 
 <!-- .slide -->
 
@@ -13,6 +11,8 @@
 ##--##
 
 <!-- .slide: class="with-code" -->
+
+<br><br>
 
 ```javascript
 function Aristocat(name) {

@@ -1,12 +1,8 @@
-<!-- .slide: class="two-column-layout" -->
+<!-- .slide: class="two-column with-code" -->
 
 # Generics
 
 - Nous ne savons pas quelle sera la forme du type -> generics
-
-##--##
-
-<!-- .slide: class="with-code" -->
 
 &nbsp;  
 &nbsp;  
@@ -26,9 +22,7 @@ function identity(arg: any): any {
 
 <!-- .slide: class="with-code" -->
 
-&nbsp;  
-&nbsp;  
-&nbsp;
+<br><br><br><br><br><br><br><br>
 
 ```typescript
 function identity<T>(arg: T): T {
@@ -43,13 +37,9 @@ pratique lors d'exposition d'API, … sur des choses génériques !
 
 ##==##
 
-<!-- .slide: class="two-column-layout" -->
+<!-- .slide: class="two-column with-code" -->
 
 # Generics
-
-##--##
-
-<!-- .slide: class="with-code" -->
 
 &nbsp;
 
@@ -70,16 +60,19 @@ getIn(user2, ['name', 'first', 'pseudo']);
 ```typescript
 function getIn(obj, arrayOfNestedKeys) {}
 ```
+
 <!-- .element: class="fragment" -->
 
 ```typescript
 function getIn<T>(obj: T, arrayOfNestedKeys) {}
 ```
+
 <!-- .element: class="fragment" -->
 
 ```typescript
 function getIn<T, K extend keyof T>(obj: T, arrayOfNestedKeys: [K]): … ? {}
 ```
+
 <!-- .element: class="fragment" -->
 
 &nbsp;
@@ -98,13 +91,9 @@ On utilise extend keyof pour préciser qu'on veut récupérer uniquement les cl�
 
 ##==##
 
-<!-- .slide: class="two-column-layout" -->
+<!-- .slide: class="two-column with-code" -->
 
 # Generics
-
-##--##
-
-<!-- .slide: class="with-code" -->
 
 &nbsp;  
 &nbsp;  
@@ -113,7 +102,7 @@ On utilise extend keyof pour préciser qu'on veut récupérer uniquement les cl�
 ```typescript
 function loggingIdentity<T>(arg: T): T {
   // Error: T doesn't have .length
-  console.log(arg.length); 
+  console.log(arg.length);
   return arg;
 }
 ```
@@ -132,21 +121,24 @@ interface Lengthwise {
 }
 
 function loggingIdentity<T extends Lengthwise>(arg: T): T {
-    // Now we know it has a .length property, so no more error
-    console.log(arg.length); 
-    return arg;
+  // Now we know it has a .length property, so no more error
+  console.log(arg.length);
+  return arg;
 }
 ```
+
 <!-- .element: class="fragment" -->
 
 ```typescript
 loggingIdentity(3); // Error, number doesn't have a .length property
 ```
+
 <!-- .element: class="fragment" -->
 
 ```typescript
 loggingIdentity({ length: 10, value: 3 });
 ```
+
 <!-- .element: class="fragment" -->
 
 Notes:
@@ -165,8 +157,8 @@ function getProperty<T, K extends keyof T>(obj: T, key: K) {
 
 let x = { a: 1, b: 2, c: 3, d: 4 };
 
-getProperty(x, "a"); // okay
-getProperty(x, "m"); // error: Argument of type 'm' isn't assignable to 'a' | 'b' | 'c' | 'd'.
+getProperty(x, 'a'); // okay
+getProperty(x, 'm'); // error: Argument of type 'm' isn't assignable to 'a' | 'b' | 'c' | 'd'.
 ```
 
 Notes:

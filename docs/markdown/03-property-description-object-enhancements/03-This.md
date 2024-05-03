@@ -13,42 +13,24 @@
 
 # This
 
-<ul class="fragment" data-fragment-index="1">
-    <li>Ce n'est <span class="bold">PAS</span> le this <span class="bold italic">java</span></span></li>
-    <li>Ce n'est <span class="bold">PAS</span> une référence au blocking scope</li>
-</ul>
+- Ce n'est **PAS** le this **_java_**
+- Ce n'est **PAS** une référence au blocking scope
+- En résumé **this** n'est **PAS ITSELF**
+<!-- .element: class="list-fragment" -->
 
 <br/><br/>
 
-<ul class="fragment" data-fragment-index="2" data-color="red">
-    <li>En résumé <span class="bold">this</span> n'est <span>PAS ITSELF</span></li>
-</ul>
-
-<br/><br/>
-
-Alors c'est quoi this ? <!-- .element: class="fragment bold text-center" data-fragment-index="3"-->
+Alors c'est quoi this ? <!-- .element: class="fragment bold text-center"-->
 
 <br/>
 
-<p class="fragment text-center" data-fragment-index="4">C'est une référence au contexte du <span class="bold">callsite</span></p>
+<p class="fragment text-center">C'est une référence au contexte du <span class="bold">callsite</span></p>
 
 ##==##
 
-<!-- .slide: class="full-center"-->
+<!-- .slide: class="two-column with-code" -->
 
 # This
-
-![h-450](./assets/images/This_01.gif)
-
-##==##
-
-<!-- .slide: class="two-column-layout" -->
-
-# This
-
-##--##
-
-<!-- .slide: class="with-code" -->
 
 ```javascript
 function counter(iterator) {
@@ -68,28 +50,20 @@ for (i = 0; i < 5; i++) {
 
 ##--##
 
-<ul class="fragment withdrawal-margin" data-fragment-index="1">
-    <li>this.iterations++ ne pointe pas sur la fonction counter</li>
-    <li>this fait référence au <span class="bold">contexte d'exécution (call site</span> lors du <span class="bold">runtime)</span></li>
-    <li class="red"><span class="italic">counter(i) est <span class="bold">appelé dans l'objet Global</span>, c'est son <span class="bold">call site</span></span></li>
-</ul>
+<br><br>
 
-<br/>
-
-<ul class="fragment withdrawal-margin" data-fragment-index="2">
-    <li><span>sans 'use strict'</span> si le call site est l'objet global, alors iterations est une variable globale (i.e, propriété de l'objet global) qui vaut désormais 5;</li>
-    <li><span>avec 'use strict'</span> si le call site est l'objet global, alors iterations est NaN.</li>
-</ul>
+- this.iterations++ ne pointe pas sur la fonction counter
+- this fait référence au **contexte d'exécution (call site) lors du runtime**
+- _counter(i)_ est **appelé dans l'objet Global**, c'est son **call site**
+- **sans 'use strict'** si le call site est l'objet global, alors iterations est une variable globale (i.e, propriété de l'objet global) qui vaut désormais 5;
+- **avec 'use strict'** si le call site est l'objet global, alors iterations est NaN.
+<!-- .element: class="list-fragment" -->
 
 ##==##
 
-<!-- .slide: class="two-column-layout" -->
+<!-- .slide: class="two-column with-code" -->
 
 # This
-
-##--##
-
-<!-- .slide: class="with-code" -->
 
 ```javascript
 function counter(iterator) {
@@ -102,7 +76,7 @@ function randomFn() {
     counter(i);
   }
 }
-var iterations = counter.iterations = randomFn.iterations = 0;
+var iterations = (counter.iterations = randomFn.iterations = 0);
 
 window.randomFn();
 
@@ -112,15 +86,22 @@ window.randomFn();
 ##--##
 
 <!-- .slide: class="with-code" -->
-<div class="fragment" data-fragment-index="1">
+
+<br><br><br>
+
 Petit exercice :
 
-<span class="bold">Ici lorsque l'on appel randomFn() que se passe-t-il ?</span>
+<!-- .element: class="fragment" data-fragment-index="1" -->
+
+**Ici lorsque l'on appel randomFn() que se passe-t-il ?**
+
+<!-- .element: class="fragment" data-fragment-index="1" -->
 
 <br/>
 
-<p class="bold text-center">:-)</p>
-</div>
+**:-)**
+
+<!-- .element: class="fragment" data-fragment-index="1" -->
 
 <br/>
 
@@ -131,6 +112,7 @@ for (var i = 0; i < 5; i++) {
 
 // randomFn.iterations = 5 ! ENFIN !!!
 ```
+
 <!-- .element: class="fragment" -->
 
 Notes:

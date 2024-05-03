@@ -29,20 +29,11 @@ boolean, object, number, null, undefined, symbol, string
 
 ##==##
 
-<!-- .slide: class="two-column-layout" -->
+<!-- .slide: class="two-column with-code" -->
 
 # Itérables : Comment les parcourir
 
-<br />
-
 ## La boucle for-of
-
-##--##
-
-<!-- .slide: class="with-code" -->
-
-<br />
-<br />
 
 ```javascript
 let myArray = [1, 2, 'foo', 3];

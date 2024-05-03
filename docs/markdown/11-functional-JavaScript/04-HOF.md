@@ -1,5 +1,3 @@
-<!-- .slide:-->
-
 # Fn JS : Higher Order Functions
 
 - **Qu'est-ce qu'une Higher Order Function (HOF) ?**
@@ -8,23 +6,13 @@
 
 ##==##
 
-<!-- .slide: class="two-column-layout" -->
+<!-- .slide: class="two-column with-code" -->
 
 # Fn JS : Higher Order Functions (exemple)
 
 - **Filter**
   - Prend une collection, retourne une nouvelle collection filtrée.
   - Si le callback retourne true, la valeur est incluse dans la collection retournée, sinon non.
-
-##--##
-
-<!-- .slide: class="with-code" -->
-
-<br />
-<br />
-<br />
-<br />
-<br />
 
 ```javascript
 var numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
@@ -60,7 +48,7 @@ filter est en effet une HOF partielle (elle en renvoie pas de fonction)
 
 ##==##
 
-<!-- .slide: class="two-column-layout with-code" -->
+<!-- .slide: class="two-column with-code" -->
 
 # Fn JS : Higher Order Functions (exemple)
 
@@ -74,19 +62,6 @@ var people = [
   { name: 'Kazumi', age: 30 },
 ];
 ```
-
-##--##
-
-<!-- .slide: class="with-code" -->
-
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
 
 ```javascript
 var peopleSentences = [];
@@ -122,7 +97,7 @@ peopleSentences(people);
 
 ##==##
 
-<!-- .slide: class="two-column-layout with-code" -->
+<!-- .slide: class="two-column with-code" -->
 
 # Fn JS : Higher Order Functions (exemple)
 
@@ -137,20 +112,6 @@ var orders = [
   { productTitle: 'Product 4', amount: 60 },
 ];
 ```
-
-##--##
-
-<!-- .slide: class="with-code" -->
-
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
 
 ```javascript
 var totalAmount = 0;

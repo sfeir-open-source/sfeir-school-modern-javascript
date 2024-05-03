@@ -3,23 +3,19 @@
 # Le Property Descriptor
 
 - Protéger ses objets avant ES6 : Le Property Descriptor
-<br/>
-<br/>
+  <br/>
+  <br/>
 - Permet de créer des objets immutables et donc protégés
-<br/>
-<br/>
+  <br/>
+  <br/>
 - Chaque propriété d'un objet est pourvue d'un property descriptor
 <!-- .element: class="list-fragment" -->
 
 ##==##
 
-<!-- .slide: class="two-column-layout" -->
+<!-- .slide: class="two-column with-code" -->
 
 # Le Property Descriptor
-
-##--##
-
-<!-- .slide: class="with-code" -->
 
 ```javascript
 var sword = { blade: 'iron' };
@@ -32,20 +28,22 @@ Object.getOwnPropertyDescriptor(sword, 'blade');
 //   configurable: true
 // }
 ```
+
 <!-- .element: class="fragment" -->
 
 ```javascript
 var sword = {};
 
-Object.defineProperty( sword, 'blade', {
+Object.defineProperty(sword, 'blade', {
   value: 'steel',
   writable: true,
   enumerable: true,
-  configurable: true
+  configurable: true,
 });
 
 sword.blade; // steel
 ```
+
 <!-- .element: class="fragment" -->
 
 ##--##
@@ -72,17 +70,16 @@ sword.blade; // steel
 # Proxies
 
 - Un **proxy** est un _"wrapper"_ **d'objet**
-<br/>
-<br/>
+  <br/>
+  <br/>
 - Il permet d'intercepter, **surcharger** et / ou de **remplacer** le **comportement**d'un objet
-<br/>
-<br/>
-- Le **proxy** devient *l'interface* de votre objet avec lequel vous interagissez, _votre objet est donc **intouché** et **protégé**_
-<br/>
-<br/>
+  <br/>
+  <br/>
+- Le **proxy** devient _l'interface_ de votre objet avec lequel vous interagissez, _votre objet est donc **intouché** et **protégé**_
+  <br/>
+  <br/>
 - Pas d'outil comparable pre-ES6
 <!-- .element: class="list-fragment" -->
-
 
 Notes:
 l'idée est de protéger l'accès à un objet en surchargeant le retour de ces éléments.
@@ -96,22 +93,25 @@ l'idée est de protéger l'accès à un objet en surchargeant le retour de ces �
 ```javascript
 let p = new Proxy(cible, handler);
 ```
+
 <!-- .element: class="fragment" -->
 
 "cible" : l'objet à proxifier
+
 <!-- .element: class="fragment" -->
 
 "handler" : Un objet contenant des "**traps**" qui sont des fonctions
+
 <!-- .element: class="fragment" -->
 
 ```javascript
 let handler = {
-    get: function(cible, prop){
-        return prop in cible ? cible[prop] : 42;
-    }
+  get: function (cible, prop) {
+    return prop in cible ? cible[prop] : 42;
+  },
 };
 
-let obj = {a: 4};
+let obj = { a: 4 };
 let proxy = new Proxy(obj, handler);
 proxy.b = 32;
 
@@ -119,6 +119,7 @@ console.log(proxy.a, proxy.b); // 4, 32
 console.log(proxy.c); // 42
 console.log(obj.c); // undefined
 ```
+
 <!-- .element: class="fragment" -->
 
 Notes:
@@ -126,15 +127,11 @@ ici on a pas protégé le set -> obj.b a été modifié
 
 ##==##
 
-<!-- .slide: class="two-column-layout" -->
+<!-- .slide: class="two-column with-code" -->
 
 # Proxies
 
 - Je veux protéger mon objet en écriture
-
-##--##
-
-<!-- .slide: class="with-code" -->
 
 <br/>
 <br/>
@@ -161,6 +158,8 @@ let proxy_pilote = new Proxy(pilote, traps);
 
 <br/>
 <br/>
+<br/>
+<br/>
 
 ```javascript
 pilote; // Object {name: "Le Guennec", jours_de_vol: 50}
@@ -178,6 +177,7 @@ pilote.jours_de_vol = 30;
 pilote; // Object {name: "Le Guennec", jours_de_vol: 30}
 proxy_pilote; // Proxy {name: "Le Guennec", jours_de_vol: 30}
 ```
+
 <!-- .element: class="fragment" -->
 
 ##==##
@@ -190,16 +190,16 @@ proxy_pilote; // Proxy {name: "Le Guennec", jours_de_vol: 30}
 
 ```javascript
 let traps = {
-   get() {},      // On accède à une propriété du proxy
-   set() {},      // On set une propriété sur le proxy
-   apply() {},    // Le proxy est invoqué en tant que fonction
-   has() {},      // On test l'existence d'une propriété sur le proxy ou sur sa chaîne prototypale
-   construct() {} // Le proxy est appelé en tant que constructeur
+  get() {}, // On accède à une propriété du proxy
+  set() {}, // On set une propriété sur le proxy
+  apply() {}, // Le proxy est invoqué en tant que fonction
+  has() {}, // On test l'existence d'une propriété sur le proxy ou sur sa chaîne prototypale
+  construct() {}, // Le proxy est appelé en tant que constructeur
 };
 ```
 
 <br/>
 
- - Liste complete : <a class="underline" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy" target="_blank">Global Object Proxy</a></li>
- - Awesome Use Cases : <a class="underline" href="https://github.com/mikaelbr/awesome-es2015-proxy" target="_blank">https://github.com/mikaelbr/awesome-es2015-proxy</a></li>
+- Liste complete : <a class="underline" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy" target="_blank">Global Object Proxy</a></li>
+- Awesome Use Cases : <a class="underline" href="https://github.com/mikaelbr/awesome-es2015-proxy" target="_blank">https://github.com/mikaelbr/awesome-es2015-proxy</a></li>
 <!-- .element: class="list-fragment" -->
