@@ -97,13 +97,9 @@ string
 
 ##==##
 
-<!-- .slide: class="with-code" -->
+<!-- .slide: class="two-column with-code" -->
 
 # Destructuring, dans les fonctions
-
-##--##
-
-<!-- .slide: class="with-code" -->
 
 ```javascript
 function f(arg) {
@@ -128,6 +124,8 @@ f(['bar', 42]); // bar, 42
 <!-- .element: class="fragment" -->
 
 ##--##
+
+<br><br><br>
 
 <!-- .slide: class="with-code" -->
 

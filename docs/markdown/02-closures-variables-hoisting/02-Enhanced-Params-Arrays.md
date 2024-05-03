@@ -18,12 +18,6 @@ const object = { x, y };
 
 <!-- .element: class="fragment" -->
 
-<!-- .slide: class="with-code" -->
-
-<br />
-<br />
-<br />
-<br />
 <br />
 
 Créer un attribut paramétré
@@ -52,11 +46,7 @@ const object = {
 
 <!-- .slide: class="with-code" -->
 
-<br />
-<br />
-<br />
-<br />
-<br />
+<br><br>
 
 Ajouter une fonction en tant qu'attribut
 
@@ -80,11 +70,9 @@ const object = {
 
 ##==##
 
-<!-- .slide: class="two-column" -->
+<!-- .slide: class="two-column with-code" -->
 
 # Default Params, Rest params, Spread Operator
-
-<!-- .slide: class="with-code" -->
 
 Default params
 
@@ -111,6 +99,8 @@ function fn(x, y = 2, z = 3) {
 ##--##
 
 <!-- .slide: class="with-code" -->
+
+<br><br><br><br>
 
 Rest params
 
@@ -165,7 +155,7 @@ fn(1, 2, ...array);
 
 ##==##
 
-<!-- .slide: class="with-code" -->
+<!-- .slide: class="with-code max-height" -->
 
 # Fonctions utilitaires - Array
 
@@ -192,7 +182,7 @@ var alice = people.filter((person) => person.name === 'Alice')[0];
 
 ##==##
 
-<!-- .slide: class="with-code" -->
+<!-- .slide: class="with-code max-height" -->
 
 # Fonctions utilitaires - Array
 

@@ -63,11 +63,9 @@ Le mot-clé function revient à une déclaration globale de la fonction
 
 ##==##
 
-<!-- .slide: class="two-column" -->
+<!-- .slide: class="two-column with-code" -->
 
 # Const et let : Mais où sont les vars ?
-
-<!-- .slide: class="with-code" -->
 
 ```javascript
 (function () {
@@ -93,6 +91,8 @@ foo(); // Uncaught ReferenceError: foo is not defined
 ##--##
 
 <!-- .slide: class="with-code" -->
+
+<br><br><br><br>
 
 ```javascript
 {
@@ -188,17 +188,19 @@ foo().then(console.log);
 
 ##==##
 
-<!-- .slide: class="with-code" -->
+<!-- .slide: class="two-column with-code" -->
 
 # Template String
 
 On utilise les back **quotes ``** et on peut créer des expressions avec **\${}**
 
+<!-- prettier-ignore -->
 ```javascript
 var welcome = 'Welcome';
 var sujet = 'ES6';
 
-var myTemplateHTML = '<div class="sfeirschool">\n<p>' + welcome + '</p>\n<p>' + sujet + '</p>\n</div>';
+var myTemplateHTML = '<div class="sfeirschool">\n<p>' 
++ welcome + '</p>\n<p>' + sujet + '</p>\n</div>';
 
 /*
 "<div class="sfeirschool">
@@ -210,13 +212,11 @@ var myTemplateHTML = '<div class="sfeirschool">\n<p>' + welcome + '</p>\n<p>' + 
 
 <!-- .element: class="fragment" -->
 
-##==##
+##--##
 
 <!-- .slide: class="with-code" -->
 
-# Template String
-
-On utilise les back **quotes ``** et on peut créer des expressions avec **\${}**
+<br><br><br><br><br>
 
 ```javascript
 const welcome = 'Welcome';

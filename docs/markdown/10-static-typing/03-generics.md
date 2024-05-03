@@ -1,10 +1,8 @@
-<!-- .slide: class="two-column" -->
+<!-- .slide: class="two-column with-code" -->
 
 # Generics
 
 - Nous ne savons pas quelle sera la forme du type -> generics
-
-<!-- .slide: class="with-code" -->
 
 &nbsp;  
 &nbsp;  
@@ -24,9 +22,7 @@ function identity(arg: any): any {
 
 <!-- .slide: class="with-code" -->
 
-&nbsp;  
-&nbsp;  
-&nbsp;
+<br><br><br><br><br><br><br><br>
 
 ```typescript
 function identity<T>(arg: T): T {
@@ -41,11 +37,9 @@ pratique lors d'exposition d'API, … sur des choses génériques !
 
 ##==##
 
-<!-- .slide: class="two-column" -->
+<!-- .slide: class="two-column with-code" -->
 
 # Generics
-
-<!-- .slide: class="with-code" -->
 
 &nbsp;
 
@@ -97,11 +91,9 @@ On utilise extend keyof pour préciser qu'on veut récupérer uniquement les cl�
 
 ##==##
 
-<!-- .slide: class="two-column" -->
+<!-- .slide: class="two-column with-code" -->
 
 # Generics
-
-<!-- .slide: class="with-code" -->
 
 &nbsp;  
 &nbsp;  

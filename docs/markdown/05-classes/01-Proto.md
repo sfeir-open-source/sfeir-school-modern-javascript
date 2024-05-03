@@ -12,6 +12,8 @@
 
 <!-- .slide: class="with-code" -->
 
+<br><br>
+
 ```javascript
 function Aristocat(name) {
   this.name = name;

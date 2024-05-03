@@ -6,7 +6,7 @@ CQRS : Command query responsibility segregation
 
 - Conceptualisé par Bertrand Meyer : Inventeur du langage Eiffel
 
-![h-700 center](./assets/images/Fn-JS-CQRS.png)
+![h-650 center](./assets/images/Fn-JS-CQRS.png)
 
 Notes:
 Bien séparer l'écriture de la lecture ce qui nous amène une gestion séquentielle de notre état.
@@ -19,9 +19,9 @@ Bien séparer l'écriture de la lecture ce qui nous amène une gestion séquenti
 
 CQRS : Command query responsibility segregation
 
-- _"It states that every method should either be a command that performs an action, or a query that returns data to the caller, but not both. In other words, Asking a question should not change the answer. More formally, methods should return a value only if they [...] possess no side effects." - Wikipedia_
+- _"Il indique que chaque méthode doit être soit une commande qui effectue une action, soit une requête qui renvoie des données à l'appelant, mais pas les deux. En d’autres termes, poser une question ne devrait pas changer la réponse. Plus formellement, les méthodes ne devraient renvoyer une valeur que si elles [...] ne possèdent aucun effet secondaire" - Wikipedia_
 
-- _"CQS is considered by its adherents to have a simplifying effect on a program, making its states (via queries) and state changes (via commands) more comprehensible" - Wikipedia_
+- _"CQS est considéré par ses adeptes comme ayant un effet simplificateur sur un programme, rendant ses états (via des requêtes) et ses changements d'état (via des commandes) plus compréhensibles" - Wikipedia_
 
 Notes:
 passage Wikipedia :)

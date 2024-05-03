@@ -1,12 +1,6 @@
-<!-- .slide: class="two-column" -->
+<!-- .slide: class="two-column with-code max-height" -->
 
 # Interfaces / Function
-
-<!-- .slide: class="with-code" -->
-
-&nbsp;  
-&nbsp;  
-&nbsp;
 
 ```typescript
 enum EGender {
@@ -63,11 +57,9 @@ Bien revenir sur chaque cas et ligne histoire de bien expliquer le code et les e
 
 ##==##
 
-<!-- .slide: class="two-column" -->
+<!-- .slide: class="two-column with-code" -->
 
 # Interfaces / Function
-
-<!-- .slide: class="with-code" -->
 
 &nbsp;  
 &nbsp;  

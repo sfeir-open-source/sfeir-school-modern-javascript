@@ -1,10 +1,8 @@
-<!-- .slide: class="two-column" -->
+<!-- .slide: class="two-column with-code" -->
 
 # Object.assign
 
 - JS nous permet enfin de **copier** un objet ou d'en **fusionner** plusieurs !
-
-<!-- .slide: class="with-code" -->
 
 <br />
 <br />
@@ -31,6 +29,11 @@ Object.defineProperty(object2, 'g', {
 
 <!-- .slide: class="with-code" -->
 
+<br />
+<br />
+<br />
+<br />
+<br />
 <br />
 <br />
 <br />
@@ -111,7 +114,7 @@ console.log(entries);
 
 ##==##
 
-<!-- .slide: class="with-code" -->
+<!-- .slide: class="with-code max-height" -->
 
 # Fonctions utilitaires sur Object
 

@@ -22,6 +22,7 @@ AMD <!-- .element: class="text-center" -->
 (Asynchronous Module Definition)
 
 ![center](./assets/images/Modules_01_Require.js.png)
+<br><br>
 
 CommonJS <!-- .element: class="text-center" -->
 
@@ -29,7 +30,9 @@ CommonJS <!-- .element: class="text-center" -->
 
 ##--##
 
+<br><br><br>
 UMD <!-- .element: class="text-center" -->
+<br>
 (Universal Module Definition)
 <br/>
 (SystemJS)
@@ -83,11 +86,9 @@ https://parceljs.org/
 
 ##==##
 
-<!-- .slide: class="two-column" -->
+<!-- .slide: class="two-column with-code" -->
 
 # Modules
-
-<!-- .slide: class="with-code" -->
 
 **Export** pour exposer ce que l'on souhaite
 
@@ -108,7 +109,11 @@ export function diag(x, y) {
 
 <!-- .slide: class="with-code" -->
 
-<p class="fragment text-center" data-fragment-index="1"><span class="bold">Import</span> pour récupérer ce que l'on souhaite</p>
+<br><br><br>
+
+**Import** pour récupérer ce que l'on souhaite
+
+<!-- .element: class="fragment" data-fragment-index=1 -->
 
 <br/>
 <br/>
@@ -120,15 +125,13 @@ console.log(square(11)); // 121
 console.log(diag(4, 3)); // 5
 ```
 
-<!-- .element: class="fragment" -->
+<!-- .element: class="fragment" data-fragment-index=1 -->
 
 ##==##
 
-<!-- .slide: class="two-column" -->
+<!-- .slide: class="two-column with-code" -->
 
 # Modules : export default
-
-<!-- .slide: class="with-code" -->
 
 ```javascript
 // ------ lib.js ------
@@ -149,6 +152,8 @@ export default function square(x) {
 ##--##
 
 <!-- .slide: class="with-code" -->
+
+<br><br><br><br>
 
 ```javascript
 // ------ main.js ------

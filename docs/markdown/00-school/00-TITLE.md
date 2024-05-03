@@ -1,4 +1,4 @@
-<!-- .slide: class="first-slide" sfeir-level="3" sfeir-techno="Modern Javascript" -->
+<!-- .slide: class="first-slide" sfeir-level="3" sfeir-techno="Modern JS" -->
 
 # **Welcome to Sfeir School**
 

@@ -13,11 +13,9 @@
 
 ##==##
 
-<!-- .slide: class="two-column" -->
+<!-- .slide: class="two-column with-code" -->
 
 # Le Property Descriptor
-
-<!-- .slide: class="with-code" -->
 
 ```javascript
 var sword = { blade: 'iron' };
@@ -129,13 +127,11 @@ ici on a pas protégé le set -> obj.b a été modifié
 
 ##==##
 
-<!-- .slide: class="two-column" -->
+<!-- .slide: class="two-column with-code" -->
 
 # Proxies
 
 - Je veux protéger mon objet en écriture
-
-<!-- .slide: class="with-code" -->
 
 <br/>
 <br/>
@@ -160,6 +156,8 @@ let proxy_pilote = new Proxy(pilote, traps);
 
 <!-- .slide: class="with-code" -->
 
+<br/>
+<br/>
 <br/>
 <br/>
 

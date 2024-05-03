@@ -1,15 +1,9 @@
-<!-- .slide: class="two-column" -->
+<!-- .slide: class="two-column with-code" -->
 
 # Advanced Type
 
 - Intersection -> Combine les types en un
   - IUser & ILogin
-
-<!-- .slide: class="with-code" -->
-
-&nbsp;  
- &nbsp;  
- &nbsp;
 
 ```javascript
 interface IUser {
@@ -34,6 +28,9 @@ function combineData(user: IUser, login: ILogin): TAllUserInfo {
 &nbsp;  
 &nbsp;  
 &nbsp;
+&nbsp;  
+&nbsp;  
+&nbsp;
 
 ```javascript
 const user: IUser = { name: 'Brice' };
@@ -49,18 +46,12 @@ const result: string = combineData(user, login);
 
 ##==##
 
-<!-- .slide: class="two-column" -->
+<!-- .slide: class="two-column with-code" -->
 
 # Advanced Type
 
 - Union => Peut être un parmi plusieurs types
   - IFish | IBird
-
-<!-- .slide: class="with-code" -->
-
-&nbsp;  
-&nbsp;  
-&nbsp;
 
 ```javascript
 let age: string | number;
@@ -97,17 +88,13 @@ pet.swim(); // errors
 
 ##==##
 
-<!-- .slide: class="two-column" -->
+<!-- .slide: class="two-column with-code" -->
 
 # Advanced Type
 
 - Type Guards
   - parameterName is Type
 
-<!-- .slide: class="with-code" -->
-
-&nbsp;  
-&nbsp;  
 &nbsp;
 
 ```javascript

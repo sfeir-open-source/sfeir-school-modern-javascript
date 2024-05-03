@@ -74,7 +74,7 @@ Un symbole est un type de données unique et inchangeable qui peut être utilis�
 
 ##==##
 
-<!-- .slide: class="with-code" -->
+<!-- .slide: class="with-code max-height" -->
 
 # Uses Cases des Symbols
 

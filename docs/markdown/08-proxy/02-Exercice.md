@@ -10,5 +10,7 @@
 - **À vous de jouer !**
 - **Conseil :**<br/>console.log('Set prop', prop, value);<br/>console.log('Get prop', prop);
 
+<!-- .element: style="font-size:0.8em" -->
+
 Notes:
 revenir sur le piège lié au fait qu'on set dans un array aussi la length au moment du set.

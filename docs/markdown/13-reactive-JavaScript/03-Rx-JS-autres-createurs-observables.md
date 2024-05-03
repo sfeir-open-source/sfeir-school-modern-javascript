@@ -1,8 +1,6 @@
-<!-- .slide: class="two-column" -->
+<!-- .slide: class="two-column with-code" -->
 
 #
-
-<!-- .slide: class="with-code" -->
 
 ```typescript
 // From event
@@ -25,6 +23,8 @@ result.subscribe((x) => console.log(x));
 ##--##
 
 <!-- .slide: class="with-code" -->
+
+<br><br>
 
 ```typescript
 // Convert the Promise returned by Fetch to an Observable

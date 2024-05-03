@@ -46,15 +46,14 @@ p.text-center {
   grid-template-columns: 1fr 1fr;
 }
 
-
-img[alt*=person] {
+img[alt*='person'] {
   clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
 }
 
 .person h3 {
-  color:#0B4269;
+  color: #0b4269;
 }
-
+/*
 .with-code-dark {
   @import "../node_modules/highlight.js/styles/darcula";
-}
+}*/

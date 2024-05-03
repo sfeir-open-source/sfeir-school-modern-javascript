@@ -1,11 +1,7 @@
 import { SfeirThemeInitializer } from '../web_modules/sfeir-school-theme/sfeir-school-theme.mjs';
 
 const schoolSlidesRootDir = '00-school';
-const schoolSlides = () => [
-  `${schoolSlidesRootDir}/00-TITLE.md`,
-  `${schoolSlidesRootDir}/speaker-anthony.md`,
-  `${schoolSlidesRootDir}/speaker-jef.md`,
-];
+const schoolSlides = () => [`${schoolSlidesRootDir}/00-TITLE.md`, `${schoolSlidesRootDir}/speaker-jef.md`];
 
 const introSlidesDir = '01-intro';
 const introSlides = () => [

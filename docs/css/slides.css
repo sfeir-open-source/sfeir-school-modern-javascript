@@ -1,17 +1,58 @@
-/* Error: Can't find stylesheet to import.
- *    ,
- * 59 |   @import "../node_modules/highlight.js/styles/darcula";
- *    |           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
- *    '
- *   scss/slides.scss 59:11  root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Can't find stylesheet to import.\a    \2577 \a 59 \2502    @import \"../node_modules/highlight.js/styles/darcula\";\a    \2502            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\a    \2575 \a   scss/slides.scss 59:11  root stylesheet";
+.red {
+  color: red;
 }
+
+.italic {
+  font-style: italic;
+}
+
+.underline {
+  text-decoration: underline !important;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+p.text-center {
+  text-align: center;
+}
+
+.reveal .slides pre.smaller-font {
+  font-size: 0.5em;
+}
+
+.reveal .slides .two-column-layout .withdrawal-margin {
+  margin-left: 5%;
+}
+
+.reveal .slides section[data-background].first-slide div.sfeir-logo::before, .reveal .slides section[data-background].last-slide div.sfeir-logo::before {
+  top: 258px;
+  line-height: 1;
+}
+
+/* double .slides is a little specificity hack */
+.reveal .slides.slides section.sfeir-basic-slide.present.exercice.smaller-font p {
+  font-size: 1.05em;
+}
+
+.reveal .slides .sfeir-basic-slide.two-column-layout.present {
+  display: grid;
+  grid-column-gap: 20px;
+  grid-template-columns: 1fr 1fr;
+}
+
+img[alt*=person] {
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+
+.person h3 {
+  color: #0b4269;
+}
+
+/*
+.with-code-dark {
+  @import "../node_modules/highlight.js/styles/darcula";
+}*/
+
+/*# sourceMappingURL=slides.css.map */

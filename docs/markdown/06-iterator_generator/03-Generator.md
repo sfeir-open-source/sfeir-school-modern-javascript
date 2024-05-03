@@ -6,11 +6,9 @@ C'est une fonction qui peut se mettre en pause.
 
 ##==##
 
-<!-- .slide: class="two-column" -->
+<!-- .slide: class="two-column with-code" -->
 
 # Les générateurs
-
-<!-- .slide: class="with-code" -->
 
 ```javascript
 let helloWorld = function* () {
@@ -69,11 +67,9 @@ On va à la prochaine étape de notre générateur
 
 ##==##
 
-<!-- .slide: class="two-column" -->
+<!-- .slide: class="two-column with-code" -->
 
 # Les générateurs
-
-<!-- .slide: class="with-code" -->
 
 ```javascript
 let helloWorld = function* () {
@@ -95,6 +91,8 @@ console.log(generatorHello.next());
 
 ##--##
 
+<br><br><br>
+
 1er console.log, work... <!-- .element: class="fragment" -->
 
 2eme console.log, work again ... <!-- .element: class="fragment" -->
@@ -109,11 +107,9 @@ C'est une fonction avec laquelle on peut communiquer pendant son exécution.
 
 ##==##
 
-<!-- .slide: class="two-column" -->
+<!-- .slide: class="two-column with-code" -->
 
 # Les générateurs
-
-<!-- .slide: class="with-code" -->
 
 ```javascript
 let helloWorld = function* () {
@@ -131,6 +127,8 @@ console.log(generatorHello.next());
 ```
 
 ##--##
+
+<br><br>
 
 1er `console.log`, on va jusqu'au premier **yield**.
 
@@ -150,11 +148,9 @@ console.log(generatorHello.next());
 
 ##==##
 
-<!-- .slide: class="two-column" -->
+<!-- .slide: class="two-column with-code" -->
 
 # Les générateurs : je peux utiliser return ?
-
-<!-- .slide: class="with-code" -->
 
 ```javascript
 let helloWorld = function* () {
@@ -174,6 +170,12 @@ console.log(generatorHello.next());
 
 ##--##
 
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
 <br/>
 <br/>
 
@@ -204,11 +206,9 @@ console.log(generatorHello.next());
 
 ##==##
 
-<!-- .slide: class="two-column" -->
+<!-- .slide: class="two-column with-code" -->
 
 # Les générateurs : communication
-
-<!-- .slide: class="with-code" -->
 
 ```javascript
 let helloWorld = function* () {
@@ -225,6 +225,8 @@ console.log(generatorHello.next());
 ```
 
 ##--##
+
+<br><br><br>
 
 ![](./assets/images/Generator_03.png) <!-- .element: class="fragment" -->
 

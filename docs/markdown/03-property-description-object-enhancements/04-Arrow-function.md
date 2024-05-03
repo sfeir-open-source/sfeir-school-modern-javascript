@@ -1,8 +1,6 @@
-<!-- .slide: class="two-column" -->
+<!-- .slide: class="two-column with-code" -->
 
 # Arrow function
-
-<!-- .slide: class="with-code" -->
 
 ```javascript
 var nums = [2, 4, 6, 8, 10];
@@ -32,6 +30,8 @@ var nums = nums.map(function (v, i) {
 
 <!-- .slide: class="with-code" -->
 
+<br><br><br>
+
 ```javascript
 const nums = [2, 4, 6, 8, 10];
 
@@ -59,11 +59,9 @@ dans le deuxième cas, les parenthèses représentent une expression JS et perme
 
 ##==##
 
-<!-- .slide: class="two-column" -->
+<!-- .slide: class="two-column with-code" -->
 
 # Un problème de this ...
-
-<!-- .slide: class="with-code" -->
 
 ```javascript
 var f = {
@@ -81,6 +79,8 @@ f.each();
 ##--##
 
 <!-- .slide: class="with-code" -->
+
+<br><br><br>
 
 ```javascript
 // Correction

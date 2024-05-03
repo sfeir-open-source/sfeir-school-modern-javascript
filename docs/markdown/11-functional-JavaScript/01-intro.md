@@ -2,8 +2,6 @@
 
 # Un peu d'histoire
 
-<!-- .slide:  -->
-
 <br />
 <br />
 
@@ -31,18 +29,9 @@ Logicien & Mathématicien
 
 **"Principalement connu pour son travail sur la logique combinatoire, ses travaux ont posé les bases de la programmation fonctionnelle" - Wikipedia**
 
-<!-- .slide: class="with-code" -->
-
-<br />
-<br />
-<br />
-<br />
-
 ![h-500 center](./assets/images/haskell.png)
 
 ##--##
-
-<!-- .slide: class="with-code" -->
 
 <br />
 <br />
@@ -66,21 +55,10 @@ La programmation fonctionnelle
 
 **"In 1995, Netscape Communications recruited Brendan Eich with the goal of embedding the Scheme programming language into its Netscape Navigator." - Wikipedia**
 
-<!-- .slide: -->
-
-<br />
-<br />
-<br />
-<br />
-
 ![h-500 center](./assets/images/livescript.png)
 
 ##--##
 
-<!-- .slide:  -->
-
-<br />
-<br />
 <br />
 <br />
 <br />

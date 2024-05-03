@@ -51,15 +51,13 @@ Non
 
 ##==##
 
-<!-- .slide: class="two-column" -->
+<!-- .slide: class="two-column with-code" -->
 
 # Fn JS : Quiz
 
 **Petit Quiz 3**
 
 - La fonction Array.prototype.map est-elle pure ?
-
-<!-- .slide: class="with-code" -->
 
 <br />
 <br />
