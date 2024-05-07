@@ -71,9 +71,9 @@ typings/
 docs/test.html
 
 # Exercices
-exercises/typescript/exo.js
-exercises/typescript/exo.js.map
-exercises/redux-solution/exercice/
+steps/typescript/exo.js
+steps/typescript/exo.js.map
+steps/redux-solution/exercice/
 
 # IntelliJ
 .idea/workspace.xml
