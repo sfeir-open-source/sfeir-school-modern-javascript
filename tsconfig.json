@@ -1,7 +1,8 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "module": "commonjs",
+    "target": "ES6",
+    "module": "CommonJS",
+    "lib": ["es2020", "DOM"],
     "noImplicitAny": true,
     "strict": true,
     "removeComments": true,
@@ -9,5 +10,5 @@
     "sourceMap": true,
     "alwaysStrict": true
   },
-  "files": ["exercises/typescript/exo.ts"]
+  "files": ["steps/typescript-solution/exo.ts"]
 }
