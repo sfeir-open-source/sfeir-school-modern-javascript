@@ -123,3 +123,30 @@ Call = on assigne le contexte à chaque fois
 Bind = On assigne une fois pour toute
 
 Il est conseillé de systématiquement passer le contexte pour éviter les mauvaises surprises.
+
+##==##
+
+<!-- .slide: class="transition" -->
+
+# Un this pour tous les contrôler
+
+##==##
+
+# Welcome globalThis !
+
+- **globalThis** est une propriété globale qui fournit une référence à l'objet global, quel que soit l'environnement dans lequel le code s'exécute.
+
+```javascript
+window.Math === Math; // Marche dans un contexte navigateur
+self.Math === Math; // Marche dans un contexte worker
+global.Math === Math; // Marche dans un contexte Node.js
+
+globalThis.Math === Math; // Marche dans tous les contextes
+
+// globalThis est un moyen sûr d'accéder à l'objet global
+if (typeof globalThis === 'object') {
+  console.log(globalThis); // window
+}
+```
+
+<!-- .element: class="fragment" -->

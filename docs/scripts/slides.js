@@ -18,7 +18,8 @@ const closuresVariablesHoistingSlides = () => [
   `${closuresVariablesHoistingSlidesDir}/01-Variables-Template-String.md`,
   `${closuresVariablesHoistingSlidesDir}/02-Enhanced-Params-Arrays.md`,
   `${closuresVariablesHoistingSlidesDir}/03-Destructuring-Trailing-commas.md`,
-  `${closuresVariablesHoistingSlidesDir}/04-Exercice.md`,
+  `${closuresVariablesHoistingSlidesDir}/04-OptionalChaining-nullCoallsing.md`,
+  `${closuresVariablesHoistingSlidesDir}/05-Exercice.md`,
 ];
 
 const propertyDescriptionObjectEnhancementsSlidesDir = '03-property-description-object-enhancements';
