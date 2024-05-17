@@ -9,9 +9,12 @@ document.addEventListener('DOMContentLoaded', () => {
   // Bind Listener to store
   const UnSubscribe = store.subscribe(() => {
     console.log(store.getState());
-    renderTodoList(store.getState().todoList);
-    renderPendingElements(store.getState().pendingList);
-    renderCompleteElements(store.getState().completedList);
+    /*
+    TODO Render the corect methods
+    todoList from state.todoList
+    pendingList from state.pendingList
+    completedList from state.completedList
+    */
   });
 
   // UI Binding
