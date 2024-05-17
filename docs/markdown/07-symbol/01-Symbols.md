@@ -166,7 +166,7 @@ Symbols are mainly used as unique property keys – a symbol never clashes with 
 
 ##==##
 
-<!-- .slide: class="with-code" -->
+<!-- .slide: class="with-code" data-type-show="hide" -->
 
 # Cross Realms Symbols
 
@@ -185,7 +185,7 @@ En cas de questions montrer un exemple en créant une iframe (voir https://2alit
 
 ##==##
 
-<!-- .slide: class="with-code" -->
+<!-- .slide: class="with-code" data-type-show="hide" -->
 
 # Solution: Symbol.for
 
@@ -203,7 +203,7 @@ Symbol.keyFor(symbol); // foo
 
 ##==##
 
-<!-- .slide: class="with-code" -->
+<!-- .slide: class="with-code" data-type-show="hide" -->
 
 # Solution: Symbol.for
 

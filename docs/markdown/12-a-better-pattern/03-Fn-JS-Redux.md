@@ -163,25 +163,3 @@ Let's Play ! <!-- .element: class="text-center" -->
 <div class="fragment" data-fragment-index="4">
 - BONUS - Rajouter un delete pour chaque TODO
 </div>
-
-##==##
-
-<!-- .slide: class="two-column" -->
-
-# Fn JS : Redux - DevTools
-
-<!-- .slide -->
-
-![h-800 center](./assets/images/devTools.png)
-
-##--##
-
-<!-- .slide -->
-
-&nbsp;  
-&nbsp;  
-&nbsp;
-
-Meet your new best friend <!-- .element: class="text-center" -->
-
-Redux DevTools ! <!-- .element: class="bold text-center" -->

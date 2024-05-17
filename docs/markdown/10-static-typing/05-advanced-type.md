@@ -99,7 +99,7 @@ pet.swim(); // errors
 
 ```javascript
 const isFish =
-(pet: Fish | Bird | Dog): pet is Fish => {
+(pet: Fish | Bird): pet is Fish => {
   return (<Fish>pet).swim !== undefined;
 }
 
@@ -111,7 +111,7 @@ else {
 }
 ```
 
-- TS sait que c'est un Fish dans le if et déduit un Bird ou Dog dans le else
+- TS sait que c'est un Fish dans le if et déduit un Bird dans le else
 
 ##--##
 

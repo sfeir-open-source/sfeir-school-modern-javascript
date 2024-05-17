@@ -16,12 +16,6 @@ TypeScript sur des grandes équipes, c'est quand même bien pour tout ce qui est
 
 # Typage statique
 
-- `let someValue: any = "randomString";`<br/>`(<string>someValue).length / (someValue as string).length;`
-
-&nbsp;  
- &nbsp;  
- &nbsp;
-
 ```javascript
 // primitives
 let name: string = 'Dexter';
@@ -42,6 +36,8 @@ let color: Color = Color.Red
 <!-- .slide: class="with-code" -->
 
 &nbsp;  
+&nbsp;  
+&nbsp;
 &nbsp;  
 &nbsp;
 

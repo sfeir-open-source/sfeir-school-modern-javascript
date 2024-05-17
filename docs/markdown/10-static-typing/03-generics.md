@@ -51,6 +51,11 @@ getIn(user, ['name']);
 getIn(user2, ['name', 'first', 'pseudo']);
 ```
 
+&nbsp;
+
+- Quel est le type de retour de getIn ?
+<!-- .element: class="fragment"-->
+
 ##--##
 
 <!-- .slide: class="with-code" -->
@@ -74,11 +79,6 @@ function getIn<T, K extend keyof T>(obj: T, arrayOfNestedKeys: [K]): … ? {}
 ```
 
 <!-- .element: class="fragment" -->
-
-&nbsp;
-
-- Quel est le type de retour de getIn ?
-<!-- .element: class="fragment"-->
 
 Notes:
 la partie de droite est à expliquer séquentiellement :

@@ -139,12 +139,12 @@ function formation() {
     ...iteratorGeneratorSlides(),
     ...symbolSlides(),
     ...proxySlides(),
-    ...reflectSlides(),
+    //...reflectSlides(),
     ...modulesSlides(),
-    ...typescriptSlides(),
     ...functionalJavascriptSlides(),
     ...aBetterPatternSlides(),
-    ...reactiveJSSlides(),
+    ...typescriptSlides(),
+    //...reactiveJSSlides(),
   ].map((slidePath) => ({ path: slidePath }));
 }
 

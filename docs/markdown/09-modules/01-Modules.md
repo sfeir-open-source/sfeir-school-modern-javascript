@@ -37,14 +37,42 @@ UMD <!-- .element: class="text-center" -->
 <br/>
 (SystemJS)
 
+<br><br><br><br>
+
+ES Modules <!-- .element: class="text-center" -->
+
+![h-100 center](./assets/images/jsm-logo.png)
+
 Notes:
 https://addyosmani.com/writing-modular-js/
 
-AMD : define...
+AMD :
+define(['dep1', 'dep2'], function (dep1, dep2) {
+//Define the module value by returning a value.
+return function () {};
+});
 
-CommonJS : require('') / module.exports
+CommonJS :
+//importing
+const doSomething = require('./doSomething.js');
 
-UMD : tout est géré
+//exporting
+module.exports = function doSomething(n) {
+// do something
+}
+
+UMD : tout est géré (AMD + CommonJS) mais dans le packaging
+
+ES Modules:
+import {foo, bar} from './myLib';
+
+...
+
+export default function() {
+// your Function
+};
+export const function1() {...};
+export const function2() {...};
 
 ##==##
 
