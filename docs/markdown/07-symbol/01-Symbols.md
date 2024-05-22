@@ -88,9 +88,9 @@ const noSymbol = {
 };
 // ça donne l'objet { a: 2, b: 3 }
 
-const a1 = new Symbol('a');
-const a2 = new Symbol('a');
-const b = new Symbol('b');
+const a1 = Symbol('a');
+const a2 = Symbol('a');
+const b = Symbol('b');
 const withSymbol = {
 [a1]: 1,
 [a2]: 2,
