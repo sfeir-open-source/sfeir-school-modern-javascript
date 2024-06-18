@@ -5,13 +5,13 @@
   "main": "index.js",
   "scripts": {
     "test": "jest --config=\"jest.config.js\" --watch",
-    "bases": "jasmine exercises/bases/test.spec.js",
-    "promises": "jasmine exercises/promises/test.spec.js",
-    "classes": "jasmine exercises/classes/test.spec.js",
-    "proxies": "jasmine exercises/proxies/test.spec.js",
-    "generators": "jasmine exercises/generators/test.spec.js",
-    "modules": "rollup exercises/modules/module-A.js -o exercises/modules/bundle.js",
-    "functional": "jasmine exercises/functional/test.spec.js",
+    "bases": "jest steps/bases/test.spec.js",
+    "promises": "jest steps/promises/test.spec.js",
+    "classes": "jest steps/classes/test.spec.js",
+    "proxies": "jest steps/proxies/test.spec.js",
+    "generators": "jest steps/generators/test.spec.js",
+    "modules": "rollup steps/modules/module-A.js -o steps/modules/bundle.js",
+    "functional": "jest steps/functional/test.spec.js",
     "redux": "serve steps/redux-vanilla",
     "typescript": "tsc"
   },
@@ -51,6 +51,7 @@
     "axios": "^0.18.0",
     "jest": "^26.6.3",
     "ramda": "^0.26.1",
+    "rollup": "^4.18.0",
     "ts-jest": "^26.4.4"
   }
 }
