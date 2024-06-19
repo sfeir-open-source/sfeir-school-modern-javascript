@@ -78,3 +78,5 @@ steps/redux-solution/exercice/
 # IntelliJ
 .idea/workspace.xml
 .history/
+
+/.idea/
