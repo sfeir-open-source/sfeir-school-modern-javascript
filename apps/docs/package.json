@@ -1,0 +1,22 @@
+{
+  "name": "docs",
+  "version": "1.0.0",
+  "description": "slides for  SFEIR School Modern JavaScript",
+  "scripts": {
+    "prepare": "node ./scripts/dont-touch/prepare-script.js",
+    "serve": "live-server --port=4242 --open=\"./docs/index.html\" --watch=\"./docs/markdown, .docs/scripts/\"",
+    "start": "parallelshell \"npm run serve\" \"npm run sass\"",
+    "sass": "sass ./docs/scss/slides.scss:./docs/css/slides.css --source-map --watch",
+    "sass-once": "sass ./docs/scss/slides.scss:./docs/css/slides.css --source-map"
+  },
+  "dependencies": {
+    "sfeir-school-theme": "^3.1.0"
+  },
+  "devDependencies": {
+    "chokidar-cli": "^3.0.0",
+    "live-server": "^1.1.0",
+    "sass": "^1.51.0",
+    "parallelshell": "3.0.1",
+    "shelljs": "^0.8.5"
+  }
+}
