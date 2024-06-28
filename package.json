@@ -18,7 +18,8 @@
     "jefbinomed"
   ],
   "workspaces": [
-    "./apps/*"
+    "./docs",
+    "./steps"
   ],
   "license": "MIT",
   "bugs": {
