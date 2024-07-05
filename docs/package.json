@@ -1,32 +1,14 @@
 {
-  "name": "sfeirschoolmodernjs",
+  "name": "docs",
   "version": "1.0.0",
-  "description": "Sfeir School Modern Javascript with revealJS",
-  "main": "index.js",
+  "description": "slides for  SFEIR School Modern JavaScript",
   "scripts": {
-    "sass": "sass ./scss/slides.scss:./css/slides.css --source-map --watch",
-    "sass-once": "sass ./scss/slides.scss:./css/slides.css --source-map",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "serve": "live-server --port=4242 --open=\"./index.html\" --watch=\"markdown,scripts/\"",
+    "prepare": "node ./scripts/dont-touch/prepare-script.js",
+    "serve": "live-server --port=4242 --open=\"./docs/index.html\" --watch=\"./docs/markdown, .docs/scripts/\"",
     "start": "parallelshell \"npm run serve\" \"npm run sass\"",
-    "prepare": "node ./scripts/dont-touch/prepare-script.js"
+    "sass": "sass ./docs/scss/slides.scss:./docs/css/slides.css --source-map --watch",
+    "sass-once": "sass ./docs/scss/slides.scss:./docs/css/slides.css --source-map"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/sfeir-open-source/sfeir-school-modern-javascript.git"
-  },
-  "keywords": [
-    "es6",
-    "esnext",
-    "javascript",
-    "sfeir"
-  ],
-  "author": "jefbinomed",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/sfeir-open-source/sfeir-school-modern-javascript/issues"
-  },
-  "homepage": "https://github.com/sfeir-open-source/sfeir-school-modern-javascript#readme",
   "dependencies": {
     "sfeir-school-theme": "^3.1.0"
   },
