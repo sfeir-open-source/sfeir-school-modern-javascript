@@ -30,4 +30,3 @@ II. JavaScript Maintenable
    - Ecrire des pipe()
 1. Meilleur Architecture Front -> CQRS !
    - Ecrivons notre propre Redux Impl°
-1. Bonus: RxJS
