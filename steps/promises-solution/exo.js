@@ -32,7 +32,8 @@ function exercise3Fn() {
     return value - 4;
   }
 
-  /* votre solution ici */ return exercise3.then(plusFive).then(multiplyByTwo).then(minusFour);
+  /* votre solution ici */
+  return exercise3.then(plusFive).then(multiplyByTwo).then(minusFour);
 }
 
 module.exports = { exercise1Fn, exercise2Fn, exercise3Fn };

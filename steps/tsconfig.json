@@ -10,5 +10,5 @@
     "sourceMap": true,
     "alwaysStrict": true
   },
-  "files": ["steps/typescript-solution/exo.ts"]
+  "files": ["typescript-solution/exo.ts"]
 }
