@@ -138,16 +138,3 @@ Notes:
 le type guard est un typeof evolué => l'expression renvoyée par le type guard et bonne, alors on a la garantie que qu'en sortie on a bien un FISH ici
 
 le type guard est identifié par le mot clé "is"
-
-##==##
-
-<!-- .slide -->
-
-# Typescript - Let's Play !
-
-Let's Play ! <!-- .element: class="text-center" -->
-
-![h-700 center](./assets/images/lets-play.png)
-
-Notes:
-L'objectif de l'exercice est de résoudre tous les problèmes Typescript

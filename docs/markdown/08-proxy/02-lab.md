@@ -1,0 +1,18 @@
+<!-- .slide: class="exercice" -->
+
+# Proxies - Un cas d'utilisation
+
+## Lab
+
+- **Dans une Array de pseudonymes, on veut que la liste ne contienne que des pseudos uniques et en lowercase**
+- **Par souci de sécurité, l'accès à la proxy liste ne doit renvoyer aucun caractère spécial (§!^\$%; etc...)**
+- Attention : L'accès à la liste d'origine renvoie malgré tout ces caractères si présents
+- **À vous de jouer !**
+- **Conseil :**<br/>console.log('Set prop', prop, value);<br/>console.log('Get prop', prop);
+
+<!-- .element: style="font-size:0.8em" -->
+
+### npm run proxies
+
+Notes:
+revenir sur le piège lié au fait qu'on set dans un array aussi la length au moment du set.

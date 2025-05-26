@@ -1,11 +1,12 @@
-const {MainCoon} = require('./exo.js');
+const { MainCoon } = require('./exo.js');
+
+jest.spyOn(console, 'log');
 
 describe('Test exercise for classes', function () {
-
   let instanceToTest;
 
   beforeEach(() => {
-    spyOn(console, 'log');
+    console.log.mockReset();
     instanceToTest = new MainCoon('Garfield', 'red');
   });
 
@@ -21,7 +22,6 @@ describe('Test exercise for classes', function () {
 
   it('Have a play()', () => {
     instanceToTest.play();
-    expect(console.log.calls.count()).toBe(2);
+    expect(console.log).toHaveBeenCalledTimes(2);
   });
-
 });

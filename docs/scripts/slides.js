@@ -19,7 +19,7 @@ const closuresVariablesHoistingSlides = () => [
   `${closuresVariablesHoistingSlidesDir}/02-Enhanced-Params-Arrays.md`,
   `${closuresVariablesHoistingSlidesDir}/03-Destructuring-Trailing-commas.md`,
   `${closuresVariablesHoistingSlidesDir}/04-OptionalChaining-nullCoallsing.md`,
-  `${closuresVariablesHoistingSlidesDir}/05-Exercice.md`,
+  `${closuresVariablesHoistingSlidesDir}/05-lab.md`,
 ];
 
 const propertyDescriptionObjectEnhancementsSlidesDir = '03-property-description-object-enhancements';
@@ -35,7 +35,7 @@ const asynchronicitySlidesDir = '04-asynchronicity';
 const asynchronicitySlides = () => [
   `${asynchronicitySlidesDir}/00-TITLE.md`,
   `${asynchronicitySlidesDir}/01-Promises-00.md`,
-  `${asynchronicitySlidesDir}/01-Promises-01-exercice.md`,
+  `${asynchronicitySlidesDir}/01-Promises-01-lab.md`,
   `${asynchronicitySlidesDir}/02-Async-await.md`,
   `${asynchronicitySlidesDir}/03-Pause.md`,
 ];
@@ -45,7 +45,7 @@ const classesSlides = () => [
   `${classesSlidesDir}/00-TITLE.md`,
   `${classesSlidesDir}/01-Proto.md`,
   `${classesSlidesDir}/02-Syntaxes.md`,
-  `${classesSlidesDir}/03-Exercice.md`,
+  `${classesSlidesDir}/03-lab.md`,
 ];
 
 const iteratorGeneratorSlidesDir = '06-iterator_generator';
@@ -54,7 +54,7 @@ const iteratorGeneratorSlides = () => [
   `${iteratorGeneratorSlidesDir}/01-Iterator.md`,
   `${iteratorGeneratorSlidesDir}/02-Set-map.md`,
   `${iteratorGeneratorSlidesDir}/03-Generator.md`,
-  `${iteratorGeneratorSlidesDir}/04-Exercice.md`,
+  `${iteratorGeneratorSlidesDir}/04-lab.md`,
   `${iteratorGeneratorSlidesDir}/05-AsyncIterator.md`,
 ];
 
@@ -65,7 +65,7 @@ const proxySlidesDir = '08-proxy';
 const proxySlides = () => [
   `${proxySlidesDir}/00-TITLE.md`,
   `${proxySlidesDir}/01-Proxy.md`,
-  `${proxySlidesDir}/02-Exercice.md`,
+  `${proxySlidesDir}/02-lab.md`,
 ];
 
 const reflectSlidesDir = '08b-reflect';
@@ -80,7 +80,7 @@ const modulesSlidesDir = '09-modules';
 const modulesSlides = () => [
   `${modulesSlidesDir}/00-TITLE.md`,
   `${modulesSlidesDir}/01-Modules.md`,
-  `${modulesSlidesDir}/02-Exercice.md`,
+  `${modulesSlidesDir}/02-lab.md`,
   `${modulesSlidesDir}/03-Pause.md`,
 ];
 
@@ -92,6 +92,7 @@ const typescriptSlides = () => [
   `${typescriptSlidesDir}/03-generics.md`,
   `${typescriptSlidesDir}/04-overloading.md`,
   `${typescriptSlidesDir}/05-advanced-type.md`,
+  `${typescriptSlidesDir}/99-lab.md`,
 ];
 
 const functionalJavascriptSlideDir = '11-functional-JavaScript';
@@ -102,7 +103,7 @@ const functionalJavascriptSlides = () => [
   `${functionalJavascriptSlideDir}/03-pure-functions.md`,
   `${functionalJavascriptSlideDir}/04-HOF.md`,
   `${functionalJavascriptSlideDir}/05-Quiz.md`,
-  `${functionalJavascriptSlideDir}/06-exercice.md`,
+  `${functionalJavascriptSlideDir}/06-lab.md`,
   `${functionalJavascriptSlideDir}/07-immutability.md`,
   `${functionalJavascriptSlideDir}/08-currying.md`,
 ];
@@ -110,25 +111,13 @@ const functionalJavascriptSlides = () => [
 const aBetterPatternSlideDir = '12-a-better-pattern';
 const aBetterPatternSlides = () => [
   `${aBetterPatternSlideDir}/00-TITLE.md`,
-  `${aBetterPatternSlideDir}/01-Fn-JS-CQRS.md`,
-  `${aBetterPatternSlideDir}/02-Fn-JS-MVC.md`,
-  `${aBetterPatternSlideDir}/03-Fn-JS-Redux.md`,
+  `${aBetterPatternSlideDir}/10-Fn-JS-CQRS.md`,
+  `${aBetterPatternSlideDir}/20-Fn-JS-MVC.md`,
+  `${aBetterPatternSlideDir}/30-Fn-JS-Redux.md`,
+  `${aBetterPatternSlideDir}/39-lab.md`,
 ];
 
-const reactiveJSSlideDir = '13-reactive-javascript';
-const reactiveJSSlides = () => [
-  `${reactiveJSSlideDir}/00-TITLE.md`,
-  `${reactiveJSSlideDir}/01-Rx-JS.md`,
-  `${reactiveJSSlideDir}/02-Rx-JS-exemple.md`,
-  `${reactiveJSSlideDir}/03-Rx-JS-autres-createurs-observables.md`,
-  `${reactiveJSSlideDir}/04-Rx-JS-operators.md`,
-  `${reactiveJSSlideDir}/05-Rx-JS-RX-marbles.md`,
-  `${reactiveJSSlideDir}/06-Rx-JS-exercice.md`,
-  `${reactiveJSSlideDir}/07-Rx-JS-more.md`,
-  `${reactiveJSSlideDir}/08-Rx-JS-end.md`,
-];
-
-function formation() {
+export function formation() {
   return [
     ...schoolSlides(),
     ...introSlides(),
@@ -139,12 +128,11 @@ function formation() {
     ...iteratorGeneratorSlides(),
     ...symbolSlides(),
     ...proxySlides(),
-    //...reflectSlides(),
+    ...reflectSlides(),
     ...modulesSlides(),
     ...functionalJavascriptSlides(),
     ...aBetterPatternSlides(),
     ...typescriptSlides(),
-    //...reactiveJSSlides(),
   ].map((slidePath) => ({ path: slidePath }));
 }
 
